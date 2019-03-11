@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/artists', 'ArtistsController2');
+// Route::get('/artists', 'ArtistsController@index');  
+// Route::post('/artists', 'ArtistsController@store');  
+// Route::get('/artists/create', 'ArtistsController@create');  
+// Route::get('/artists/{artist}', 'ArtistsController@show');
+// Route::get('/artists/{artist}/edit', 'ArtistsController@edit');  
+// Route::patch('/artists/{artist}', 'ArtistsController@update');  
+// Route::delete('/artists/{artist}', 'ArtistsController@destroy');  
