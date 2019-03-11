@@ -22,6 +22,16 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        Schema::create('account', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('user_id');
+            $table->string('name');
+            $table->string('skills');
+            $table->string('phone');
+            $table->string('email')->unique();
+            $table->timestamps();
+        });
     }
 
     /**
