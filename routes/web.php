@@ -10,15 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AppController@showWelcome');  
+Route::get('/account', 'AccountController@info');  
 
 Auth::routes();
-iets leuks is super cool en gaaf, niettus
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/artists', 'ArtistsController2');
+
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::resource('/account', 'AccountController');
 // Route::get('/artists', 'ArtistsController@index');  
 // Route::post('/artists', 'ArtistsController@store');  
 // Route::get('/artists/create', 'ArtistsController@create');  
