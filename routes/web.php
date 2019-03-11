@@ -10,11 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'AppController@showWelcome');  
+Route::get('/account', 'AccountController@info');  
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+// Route::resource('/account', 'AccountController');
+// Route::get('/artists', 'ArtistsController@index');  
+// Route::post('/artists', 'ArtistsController@store');  
+// Route::get('/artists/create', 'ArtistsController@create');  
+// Route::get('/artists/{artist}', 'ArtistsController@show');
+// Route::get('/artists/{artist}/edit', 'ArtistsController@edit');  
+// Route::patch('/artists/{artist}', 'ArtistsController@update');  
+// Route::delete('/artists/{artist}', 'ArtistsController@destroy');  
