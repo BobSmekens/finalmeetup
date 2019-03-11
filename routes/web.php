@@ -25,4 +25,6 @@ Route::resource('/artists', 'ArtistsController2');
 // Route::get('/artists/{artist}', 'ArtistsController@show');
 // Route::get('/artists/{artist}/edit', 'ArtistsController@edit');  
 // Route::patch('/artists/{artist}', 'ArtistsController@update');  
-// Route::delete('/artists/{artist}', 'ArtistsController@destroy');  
+// Route::delete('/artists/{artist}', 'ArtistsController@destroy');
+
+iets leuks, gaafs en cool. 
