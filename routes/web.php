@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-iets leuks is super cool en gaaf, niettus
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/artists', 'ArtistsController2');
 // Route::get('/artists', 'ArtistsController@index');  
@@ -25,6 +25,4 @@ Route::resource('/artists', 'ArtistsController2');
 // Route::get('/artists/{artist}', 'ArtistsController@show');
 // Route::get('/artists/{artist}/edit', 'ArtistsController@edit');  
 // Route::patch('/artists/{artist}', 'ArtistsController@update');  
-// Route::delete('/artists/{artist}', 'ArtistsController@destroy');
-
-iets leuks, gaafs en cool. 
+// Route::delete('/artists/{artist}', 'ArtistsController@destroy');  
