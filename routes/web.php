@@ -15,8 +15,8 @@ Route::get('/activities', 'AccountController@agenda');
 // Route::get('/account', 'AccountController@show');  
 
 Route::resource('/account', 'AccountController');
-add verdomme die web file
 
+koen is blond
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
