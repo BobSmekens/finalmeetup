@@ -21,13 +21,6 @@
 </head>
 <body>
 
-    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        {{ __('Logout') }}
-    </a>
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-        @csrf
-    </form>
-
     <div id="app">
         
         <main class="py-4">
@@ -37,12 +30,24 @@
     </div>
  
     <div>
-    @if (Auth::check())
-        <a href="/account/{{ Auth::user()->id }}">Account</a>
-    @endif
-        <a href="/activities">Activities</a>
-        <a href="/login">Login</a>/<a href="/register">Register</a>
-        <a href="/chat">Chat</a>
+        @if (Auth::check())
+            <a href="/account/{{ Auth::user()->id }}">Account</a>
+        @endif
+            <a href="/activities">Activities</a>
+
+        @if (Auth::check())
+            <a href="/chat">Chat</a>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            
+        @else
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        @endif
     </div> 
    
 
