@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Koen;
+use \App\User;
 
-class KoenController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,12 @@ class KoenController extends Controller
      */
     public function index()
     {
-        //
+        $users = \App\User::all();
+
+        // return view('account.index');
+        return view('account.index', [
+            'users' => $users
+        ]);
     }
 
     /**
@@ -46,7 +51,11 @@ class KoenController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('account.show', [
+            'user' => $user
+        ]);
     }
 
     /**
