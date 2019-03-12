@@ -12,7 +12,7 @@
 */
 Route::get('/', 'AppController@showWelcome');  
 Route::get('/activities', 'AccountController@agenda');  
-// Route::get('/account', 'AccountController@show');  
+Route::get('/account', 'AccountController@show');  
 
 Route::resource('/account', 'AccountController');
 
