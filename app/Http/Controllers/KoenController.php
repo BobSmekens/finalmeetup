@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Account;
+use \App\Koen;
 
-class AccountController extends Controller
+class KoenController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        return view('account.info');
+        //
     }
 
     /**
@@ -41,9 +46,7 @@ class AccountController extends Controller
      */
     public function show($id)
     {
-        $account = Account::findOrFail($id);
-
-        return view('account.info');
+        //
     }
 
     /**

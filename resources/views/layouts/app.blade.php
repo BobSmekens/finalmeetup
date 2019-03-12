@@ -26,6 +26,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                   FinalMeetup
                 </a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,10 +35,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                    
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -75,6 +78,16 @@
         <main class="py-4">
             @yield('content')
         </main>
+
     </div>
+ 
+    <div>
+        <a href="/account/1">Account</a>
+        <a href="/activities">Activities</a>
+        <a href="/login">Login/Register</a>
+        <a href="/chat">Chat</a>
+    </div> 
+   
+
 </body>
 </html>
