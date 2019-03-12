@@ -10,8 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'AppController@showWelcome');  
+Route::get('/agenda', 'AccountController@agenda');  
 Route::get('/account', 'AccountController@info');  
+
 
 Auth::routes();
 
