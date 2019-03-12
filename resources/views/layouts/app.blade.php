@@ -77,16 +77,17 @@
 
         <main class="py-4">
             @yield('content')
-
-            @yield('navigation')
         </main>
 
     </div>
+ 
     <div>
-    <a href="/account">Account</a>
-    <a href="/agenda">Activities</a>
-    <a href="/skillup">Skill Up</a>
-    <a href="/chat">Chat</a>
-</div> 
+        <a href="/account/1">Account</a>
+        <a href="/activities">Activities</a>
+        <a href="/login">Login/Register</a>
+        <a href="/chat">Chat</a>
+    </div> 
+   
+
 </body>
 </html>
