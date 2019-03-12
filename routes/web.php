@@ -11,10 +11,14 @@
 |
 */
 Route::get('/', 'AppController@showWelcome');  
+Route::get('/login', 'AppController@showLogin');  
+Route::get('/signup', 'AppController@showSignup');  
+
+
 Route::get('/activities', 'AccountController@agenda');  
 // Route::get('/account', 'AccountController@show');  
 
-Route::resource('/account', 'AccountController');
+Route::resource('/account', 'UserController');
 
 Auth::routes();
 

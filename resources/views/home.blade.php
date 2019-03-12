@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>The final meetup</div>
-    ferran is jay
+    <h3>The final meetup</h3>
+    <p>Meetup or skill up, we have what you want!</p>
 @endsection
