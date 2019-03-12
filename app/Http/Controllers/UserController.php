@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\User;
+use \App\Account;
 
 class UserController extends Controller
 {
@@ -66,7 +67,12 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('account.edit', [
+            'user' => $user
+        ]);
+
     }
 
     /**
@@ -76,9 +82,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->phone = request('phone');
+        $user->photo = request('photo');
+        $user->skills = request('skills');
+
+        $user->update();
+
+        return redirect('/account');
     }
 
     /**

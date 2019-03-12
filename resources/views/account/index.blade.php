@@ -2,7 +2,7 @@
 
 @section('content')
 <div>account.index section works</div>
-{{ $users[1]->email }}
+{{ $users[0]->email }}
 @endsection
 
 
