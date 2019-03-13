@@ -20,6 +20,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/koen.css') }}">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/ferran.css') }}">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/bob.css') }}">
 </head>
 <body>
 
