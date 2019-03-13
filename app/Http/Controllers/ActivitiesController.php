@@ -91,9 +91,17 @@ class ActivitiesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        $activity->activity = request('activity');
+        $activity->max_persons = request('persons');
+        $activity->category = request('category');
+
+        $activity->update();
+
+        return redirect('/activities/' . $id);
     }
 
     /**

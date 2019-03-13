@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActivitiesTable extends Migration
+class CreateChatTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('activities', function (Blueprint $table) {
+        Schema::create('chat', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('activity')->nullable();
-            $table->string('posted_by')->default('Bob');
-            $table->string('max_persons')->nullable(true);
-            $table->string('category')->default('Meetup');
-            $table->rememberToken();
+            $table->string('from_user');
+            $table->string('to_user');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activities');
+        Schema::dropIfExists('chat');
     }
 }
