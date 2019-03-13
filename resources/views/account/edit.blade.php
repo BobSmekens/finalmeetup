@@ -45,6 +45,13 @@
 
     <button type="submit">Update Account</button>
 </form>
+
+    <form action="/account/{{ $user->id }}" method="POST">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+
+        <button type="submit">Delete</button>
+    </form>
 @endsection
 
 
