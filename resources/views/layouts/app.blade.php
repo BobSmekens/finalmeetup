@@ -34,7 +34,7 @@
 
     </div>
  
-    <div>
+    <div class="card-body">
         @if (Auth::check())
             <a href="/account/{{ Auth::user()->id }}">Account</a>
         @endif
