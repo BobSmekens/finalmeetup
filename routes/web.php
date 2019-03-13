@@ -14,12 +14,8 @@ Route::get('/', 'AppController@showWelcome');
 Route::get('/login', 'AppController@showLogin');  
 Route::get('/signup', 'AppController@showSignup');  
 
-
-Route::get('/activities', 'AccountController@agenda');  
-// Route::get('/account', 'AccountController@show');  
-
 Route::resource('/account', 'UserController');
-
+Route::resource('/activities', 'ActivitiesController');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
