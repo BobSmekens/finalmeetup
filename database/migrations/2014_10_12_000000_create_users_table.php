@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('about_me')->default('Bob is geweldig');
             $table->string('phone')->nullable(true);
             $table->string('photo')->nullable(true);
             $table->string('skills')->nullable(true);
@@ -24,22 +25,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-        // Schema::create('accounts', function (Blueprint $table) {
-        //     $table->bigIncrements('id');
-        //     $table->string('name');
-        //     // $table->integer('user_id')->unsigned()->nullable();
-        //     // $table->foreign('user_id')
-        //     // ->references('id')
-        //     // ->on('users');
-        //     $table->string('email')->unique();
-        //     $table->string('phone')->default('100');
-        //     $table->string('photo')->default('100');
-        //     $table->string('skills')->default('100');
-        //     $table->timestamps();
-
-
-        // });
     }
 
     /**

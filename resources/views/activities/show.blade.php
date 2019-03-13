@@ -3,16 +3,9 @@
 @section('content')
     <h3>{{ $activity->activity}}</h3>
     
-    <p>Single activity</p>
-
+    <p>Maximum amount of people: {{ $activity->max_persons}}</p>
+    <p>Category: {{ $activity->category }}</p>
     <a href="/activities/{{ $activity->id }}/edit">Edit activity</a>
-
-    <form action="/activities/{{ $activity->id }}" method="POST">
-        {{ method_field('DELETE') }}
-        {{ csrf_field() }}
-
-        <button type="submit">Delete</button>
-    </form>
 
 
 @endsection
