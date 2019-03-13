@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\User;
-use \App\Account;
 
-class UserController extends Controller
+use \App\Activity;
+
+class ActivitiesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +15,11 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = \App\User::all();
+        $activities = \App\Activity::all();
 
         // return view('account.index');
-        return view('account.index', [
-            'users' => $users
+        return view('activities.index', [
+            'activities' => $activities
         ]);
     }
 
@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('activities.create');
     }
 
     /**
@@ -41,7 +41,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $activity = new Activity;
+        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+
+        $activity->activity = request('activity');
+        $activity->max_persons = request('persons');
+        $activity->category = request('category');
+
+        $activity->save();
+
+        return redirect('/activities');
     }
 
     /**
@@ -52,10 +61,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
+        $activity = Activity::findOrFail($id);
 
-        return view('account.show', [
-            'user' => $user
+        return view('activities.show', [
+            'activity' => $activity
         ]);
     }
 
@@ -67,10 +76,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        $activity = Activity::findOrFail($id);
 
-        return view('account.edit', [
-            'user' => $user
+        return view('activities.edit', [
+            'activity' => $activity
         ]);
 
     }
@@ -82,20 +91,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user, $id)
+    public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
-
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->phone = request('phone');
-        $user->photo = request('photo');
-        $user->skills = request('skills');
-
-        $user->update();
-
-        return redirect('/account/' . $id);
+        //
     }
 
     /**
@@ -104,8 +102,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Activity $activity)
     {
-        //
+        $activity->delete();
+
+        return redirect('/activities');
     }
 }
