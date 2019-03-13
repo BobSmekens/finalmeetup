@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Koen;
+use \App\User;
+use \App\Account;
 
-class KoenController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,12 @@ class KoenController extends Controller
      */
     public function index()
     {
-        //
+        $users = \App\User::all();
+
+        // return view('account.index');
+        return view('account.index', [
+            'users' => $users
+        ]);
     }
 
     /**
@@ -46,7 +52,11 @@ class KoenController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('account.show', [
+            'user' => $user
+        ]);
     }
 
     /**
@@ -57,7 +67,12 @@ class KoenController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('account.edit', [
+            'user' => $user
+        ]);
+
     }
 
     /**
@@ -67,9 +82,20 @@ class KoenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->phone = request('phone');
+        $user->photo = request('photo');
+        $user->skills = request('skills');
+
+        $user->update();
+
+        return redirect('/account');
     }
 
     /**

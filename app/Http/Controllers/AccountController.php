@@ -9,7 +9,12 @@ class AccountController extends Controller
 {
     public function index()
     {
-        return view('account.info');
+
+        $accounts = \App\Account::all();
+
+        return view('account.index', [
+            'accounts' => $accounts
+        ]);
     }
 
     /**
@@ -41,9 +46,9 @@ class AccountController extends Controller
      */
     public function show($id)
     {
-        $account = Account::findOrFail($id);
+        // $account = Account::findOrFail($id);
 
-        return view('account.info');
+        return view('account.show');
     }
 
     /**
