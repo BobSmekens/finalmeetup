@@ -43,6 +43,13 @@
     </span>
     <br>
 
+    <span class="form-label">About me:</span>
+
+    <span>
+        <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->about_me }}" required type="text" name="about_me">
+    </span>
+    <br>
+
     <button type="submit">Update Account</button>
 </form>
 

@@ -14,7 +14,7 @@ Route::get('/', 'AppController@showWelcome');
 Route::get('/login', 'AppController@showLogin');  
 Route::get('/signup', 'AppController@showSignup'); 
 
-// Route::get('/chat', 'ChatController@index'); 
+Route::get('/chat', 'ChatController@index');
 
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');

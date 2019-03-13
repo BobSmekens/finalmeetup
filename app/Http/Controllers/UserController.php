@@ -71,6 +71,7 @@ class UserController extends Controller
         $user->phone = request('phone');
         $user->photo = request('photo');
         $user->skills = request('skills');
+        $user->about_me = request('about_me');
 
         $user->update();
 
