@@ -16,7 +16,7 @@
         <a href="/calender">Calender</a>
 
     </div>
-    <a class="btn btn-danger m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
+    <a class="btn btn-primary m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
 </div>
 @endsection
 
