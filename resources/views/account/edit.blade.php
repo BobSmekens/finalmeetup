@@ -3,10 +3,10 @@
 @section('content')
 
 <h3>Edit Account</h3>
-<form action="/uploadphoto" enctype="multipart/form-data" method="POST">
+<!-- <form action="/account/{{ $user->id }}" enctype="multipart/form-data" method="POST">
     {{ csrf_field() }}
-    
-    <span class="form-label">Photo:</span>
+    {{ method_field('PATCH') }}
+    <span class="form-label">Photo: {{$user->photo }}</span>
 
     <span>
         <input class="col-md-6 form-control form-control-lg" required type="file" name="photo">
@@ -14,12 +14,17 @@
 
     <button type="submit">Upload profile picture</button>
 
-</form>
+</form> -->
 
 <form action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
     {{ method_field('PATCH') }}
     {{ csrf_field() }}
 
+    <span class="form-label"><img src="{{ URL::asset('storage/profilephotos/nh9MQZPX0pN78YUee9yzmJQlzjj0tBdUEEMzQeoW.png') }}" alt=""></span>
+
+    <span>
+        <input class="col-md-6 form-control form-control-lg" required type="file" name="photo">
+    </span>
     <span class="form-label">Name:</span>
 
     <span>
