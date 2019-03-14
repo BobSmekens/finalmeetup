@@ -18,7 +18,7 @@ class CreateMeetupTable extends Migration
             $table->string('user_id1');
             $table->string('user_id2');
             $table->string('activity_id');
-            $table->string('date');
+            // $table->string('date');
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
 
@@ -66,6 +67,7 @@ class ActivitiesController extends Controller
     {
         $activity = Activity::findOrFail($id);
 
+        $posted_by = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
         return view('activities.show', [
             'activity' => $activity
         ]);

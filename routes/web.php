@@ -18,6 +18,7 @@ Route::get('/chat', 'ChatController@index');
 Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
 Route::get('/calender', 'CalenderController@index');
+Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
 
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');
