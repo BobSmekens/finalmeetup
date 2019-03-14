@@ -1,6 +1,11 @@
-.my-container{
-    height:100vh;
-    }
-    .my-col{
+.my-container {
+    height: 100vh;
+}
+
+.my-col {
     height: 50vh;
-    }
+}
+
+.my-row {
+    height: 50vh;
+}
