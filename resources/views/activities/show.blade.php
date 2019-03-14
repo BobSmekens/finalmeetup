@@ -6,9 +6,9 @@
     {{ $activity->activity}}
     </div>
     <div class="my-row row m-4 p-4 justify-content-center">
-        <div class="col">Maximum amount of people: {{ $activity->max_persons}}</div>
-        <div class="col"> {{ $activity->description}}</div>
-        <div class="col"> {{ $activity->category}}</div>
+        <div class="col-12">Maximum amount of people: {{ $activity->max_persons}}</div>
+        <div class="col-12"> {{ $activity->description}}</div>
+        <div class="col-12"> {{ $activity->category}}</div>
 
     </div>
     <a class="btn btn-danger" href="">pas activiteit aan</a>
