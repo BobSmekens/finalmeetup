@@ -11,7 +11,7 @@
         <div class="col-12"> {{ $activity->category}}</div>
 
     </div>
-    <a class="btn btn-danger" href="">pas activiteit aan</a>
-    <a class="btn btn-danger" href="/activities/{{ $activity->id }}/edit">schrijf je in voor activiteit</a>
+    <a class="btn btn-danger" href="">schrijf je in voor activiteit</a>
+    <a class="btn btn-danger" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 </div>
 @endsection
