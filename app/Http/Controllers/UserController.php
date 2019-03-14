@@ -62,8 +62,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(user $user, $id)
+    public function update(user $user, Request $request, $id)
     {
+        $request->photo->store('public/photos');
+
         $user = User::findOrFail($id);
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
 
@@ -99,9 +101,9 @@ class UserController extends Controller
     {
                 // dd($request->photo);
 
-            $request->photo->store('public/profilephotos');
+            $request->photo->store('photos');
             //  dd($request->photo);
             // dd($request->hasFile('photo'));
-            return redirect('/account/' .$id);
+            return redirect('/account');
     }
 }
