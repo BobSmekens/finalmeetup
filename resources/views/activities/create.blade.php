@@ -16,7 +16,7 @@
     <span class="form-label">Max-persons:</span>
 
     <span>
-        <input class="col-md-6 form-control form-control-lg" required type="text" name="persons">
+        <input class="col-md-6 form-control form-control-lg" required type="number" name="persons">
     </span>
     <br>
 
@@ -30,7 +30,7 @@
     </span>
     <br>
 
-    <span class="form-label">Max-persons:</span>
+    <span class="form-label">omschrijving</span>
 
     <span>
         <input class="col-md-6 form-control form-control-lg" required type="textarea" name="description">
