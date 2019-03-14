@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\User;
 use \App\Account;
+use \App\Input;
 
 class UserController extends Controller
 {
@@ -61,7 +62,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user, $id)
+    public function update(user $user, $id)
     {
         $user = User::findOrFail($id);
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
@@ -69,9 +70,10 @@ class UserController extends Controller
         $user->name = request('name');
         $user->email = request('email');
         $user->phone = request('phone');
-        $user->photo = request('photo');
         $user->skills = request('skills');
         $user->about_me = request('about_me');
+        
+        
 
         $user->update();
 
@@ -91,5 +93,15 @@ class UserController extends Controller
         $user->delete();
 
         return redirect('/');
+    }
+
+    public function uploadPhoto (Request $request, $id) 
+    {
+                // dd($request->photo);
+
+            $request->photo->store('public/profilephotos');
+            //  dd($request->photo);
+            // dd($request->hasFile('photo'));
+            return redirect('/account/' .$id);
     }
 }

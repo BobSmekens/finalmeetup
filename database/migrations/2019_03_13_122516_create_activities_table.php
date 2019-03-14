@@ -18,6 +18,7 @@ class CreateActivitiesTable extends Migration
             $table->string('activity')->nullable();
             $table->string('posted_by')->default('Bob');
             $table->string('max_persons')->nullable(true);
+            $table->string('description')->nullable(true);
             $table->string('category')->default('Meetup');
             $table->rememberToken();
             $table->timestamps();
