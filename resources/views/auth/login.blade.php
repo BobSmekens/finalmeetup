@@ -65,6 +65,8 @@
                             </div>
                         </div>
                     </form>
+                    <br>
+                    <a href="/signup">Don't have an account? Register here!</a>
                 </div>
             </div>
         </div>

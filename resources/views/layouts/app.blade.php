@@ -47,7 +47,7 @@
             <button type="button" class="btn btn-secondary"><a href="/chat">Chat</a></button>
     </div>
     <div class="btn-group" role="group" aria-label="Fourth group">
-            <button type="button" class="btn btn-secondary"><a href="/calender">Calender</button>
+            <button type="button" class="btn btn-secondary"><a href="/account/{{Auth::user()->id}}">Account</button>
     </div>
     
     @if (Auth::check())
