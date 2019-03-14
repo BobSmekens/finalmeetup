@@ -70,20 +70,23 @@ class UserController extends Controller
     public function update(user $user, Request $request, $id)
     {
         if (Auth::user()->id==$id) {
-            $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+            if($request->hasFile('photo')){
+                $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+            }
 
             $user = User::findOrFail($id);
-            // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
-
-            $user->name = request('name');
-            $user->email = request('email');
-            $user->phone = request('phone');
-            $user->skills = request('skills');
-            $user->about_me = request('about_me');
+            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
             
-            $user->update();
-
             return redirect('/account/' . $id);
+
+            // $user->name = request('name');
+            // $user->email = request('email');
+            // $user->phone = request('phone');
+            // $user->skills = request('skills');
+            // $user->about_me = request('about_me');
+            
+            // $user->update();
+
         } else {
             return redirect('/');
         }

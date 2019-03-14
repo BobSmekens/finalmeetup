@@ -23,7 +23,7 @@
     <span class="form-label"><img src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt=""></span>
 
     <span>
-        <input class="col-md-6 form-control form-control-lg" required type="file" name="photo">
+        <input class="col-md-6 form-control form-control-lg" type="file" name="photo">
     </span>
     <span class="form-label">Name:</span>
 

@@ -19,6 +19,7 @@ Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');
+Route::resource('/bob', 'bobtest');
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
