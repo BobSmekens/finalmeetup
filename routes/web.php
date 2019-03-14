@@ -17,6 +17,8 @@ Route::get('/signup', 'AppController@showSignup');
 Route::get('/chat', 'ChatController@index');
 Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
+Route::get('/calender', 'CalenderController@index');
+
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');
 Auth::routes();

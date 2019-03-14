@@ -33,12 +33,27 @@
         </main>
 
     </div>
+
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+
+    <div class="btn-group" role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary"><a href="/">Home</a></button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Second group">
+            <button type="button" class="btn btn-secondary"><a href="/activities">Activities</a></button>
+    </div>
+    
+    <div class="btn-group" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary"><a href="/chat">Chat</a></button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Fourth group">
+            <button type="button" class="btn btn-secondary"><a href="/calender">Calender</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="Fifth group">
+            <button type="button" class="btn btn-secondary"><a href="/login">Login</a></button>
+    </div>
+    </div>
  
-    <!-- DropUp menu -->
-    <div class="btn-group dropup">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Menu
-    </button>
 
 
     <!-- Dropup menu links -->
@@ -47,7 +62,11 @@
         @if (Auth::check())
             <a href="/account/{{ Auth::user()->id }}">Account</a>
         @endif
-            <a href="/activities">Activities</a><br>
+            <a href="/activities">Activities</a>
+
+        @if (Auth::check())
+            <a href="/calender/{{ Auth::user()->id }}">Calender</a>
+        @endif
 
         @if (Auth::check())
             <a href="/chat">Chat</a>
@@ -59,14 +78,12 @@
             </form>
             
         @else
-            <a href="/login">Login</a><br>
-            <a href="/register">Register</a>
+            <a href="/login">Login</a>
         @endif
     
         </div>
     </div> 
 </div>
    
-
 </body>
 </html>
