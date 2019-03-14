@@ -4,7 +4,7 @@
 <div class="container m-0 p-0 vh-100 justify-content-center ">
     <div class="row m-0 p-0 vh-50 vertical-align bg-info ">
         <div class="col-12 mt-4 ml-4 p-0 h1 "><span>{{ $user->name}}</div>
-        <div class="col-12 mt-4 ml-4 p-0"><span>photo: </span>{{ $user->photo}}</div>
+        <div class="col-12 mt-4 ml-4 p-0"><span>photo: </span><img src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}"></div>
         <div class="col-12 mt-4 ml-4 p-0 h5"><span>skills:</span>{{ $user->skills}}</div>
     </div>
     <div class="row mt-4 p-0 vh-50">
