@@ -2,101 +2,20 @@
 
 @section('content')
 
-<div class="container m-0 p-0 vh-100 my-container">
-        <div class="col-12 bg-info align-top my-col">
-        <div class="m-0 p-0col card-title d-flex justify-content-center">
-                <h1>{{ $user->name}}</h1>
-            </div>
+<div class="container m-0 p-0 fluid justify-content-center ">
+        <div class="row m-0 p-0 vertical-align">
+                <div class="col-12 m-4 h1"><span>{{ $user->name}}</div>
+                <div class="col-12 m-4"><span>photo: </span>{{ $user->photo}}</div>
+                <div class="col-12 m-4 h5"><span>skills:</span>{{ $user->skills}}</div>
         </div>
-        <div class="m-0 p-0 col card-title d-flex justify-content-center">
-                <img src=" {{ URL::asset ('img/koen.jpg')}}">
-            </div>
+        <div class="row mt-4 p-0">
+                <div class="col-12 m-4 h4"><span>About: </span> {{$user->about_me}}</div>
+                <div class="col-12 m-4 h4"><span>email: </span>{{ $user->email}}</div>
+                <div class="col-12 m-4 h4"><span>phone: </span>{{ $user->phone}}</div>
         </div>
-        <div class="m-0 p-0 col card-title d-flex justify-content-center">
-                <h5>{{ $user->skill}}</h5>
-            </div>
-        </div>
-        
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="m-0 p-0 col card-title d-flex justify-content-center">
-                <h4>{{ $user->skills}}</h4>
-            </div>
-        </div>
-        <div class="col-12 my-col">
-        </div>
+        <a class="btn btn-danger m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
 </div>
-
-
-<!-- <div class="container m-0 p-0 fill">
-    <div class="container m-0 p-0 bg-info h-50">
-        <div class="m-0 p-0 col ml-4 col-lg-6">
-            <div class="m-0 p-0 col">
-                <img src="">
-            </div>
-        </div>
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="m-0 p-0col card-title d-flex justify-content-center">
-                </h1>{{ $user->name}}</h1>
-            </div>
-        </div>
-        <div class="m-0 p-0row ml-4 col-lg-6">
-            <div class="m-0 p-0 col card-title d-flex justify-content-center">
-                <h4>{{ $user->skills}}</h4>
-            </div>
-        </div>
-    </div>
-    <div class="m-0 p-0 container bg-light h-50">
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="col ml-4">
-                <div>
-                    <h6>about me: </h6>Happy to learn other people the ways to solve a rubiks cube
-                    {{ $user->skills}}
-                </div>
-                <div>
-                    <h6>email: </h6>{{ $user->email}}
-                </div>
-                <div>
-                    <h6>phone: </h6>{{ $user->phone}}
-                </div>
-            </div>
-        </div>
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="m-0 p-0 col ml-4">
-                <div>
-                    <h6>achievements: </h6>{{ $user->phone}}
-                </div>
-            </div>
-        </div>
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="m-0 p-0 col ml-4">
-                <div>
-                    <h6>reviews: </h6>
-                </div>
-            </div>
-        </div>
-        <div class="m-0 p-0 row ml-4 col-lg-6">
-            <div class="m-0 p-0 col card-title d-flex justify-content-center">
-                <a class="m-0 p-0 btn btn-success" href="/account/{{ $user->id }}/edit">Edit account</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-
-
-
-<!-- <h3>My account</h3>
-
-<div><span>Name: </span>{{ $user->name}}</div>
-<div><span>email: </span>{{ $user->email}}</div>
-<div><span>phone: </span>{{ $user->phone}}</div>
-<div><span>photo: </span>{{ $user->photo}}</div>
-<div><span>skills: </span>{{ $user->skills}}</div>
-                $user->about_me
-
-<a href="/account/{{ $user->id }}/edit">Edit account</a> -->
 @endsection
+
 
 
