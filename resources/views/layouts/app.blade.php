@@ -49,9 +49,21 @@
     <div class="btn-group" role="group" aria-label="Fourth group">
             <button type="button" class="btn btn-secondary"><a href="/calender">Calender</button>
     </div>
+    
+    @if (Auth::check())
+        <button type="button" class="btn btn-secondary">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </button>
+    @else
     <div class="btn-group" role="group" aria-label="Fifth group">
             <button type="button" class="btn btn-secondary"><a href="/login">Login</a></button>
     </div>
+    @endif
     </div>
  
 
