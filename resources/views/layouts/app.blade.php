@@ -28,17 +28,26 @@
 
     <div id="app">
         
-        <main class="py-4">
+        <main class="py-4 fill m-0 p-0">
             @yield('content')
         </main>
 
     </div>
  
-    <div class="card-body">
+    <!-- DropUp menu -->
+    <div class="btn-group dropup">
+    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menu
+    </button>
+
+
+    <!-- Dropup menu links -->
+    <div class="dropdown-menu">
+        
         @if (Auth::check())
             <a href="/account/{{ Auth::user()->id }}">Account</a>
         @endif
-            <a href="/activities">Activities</a>
+            <a href="/activities">Activities</a><br>
 
         @if (Auth::check())
             <a href="/chat">Chat</a>
@@ -50,10 +59,13 @@
             </form>
             
         @else
-            <a href="/login">Login</a>
+            <a href="/login">Login</a><br>
             <a href="/register">Register</a>
         @endif
+    
+        </div>
     </div> 
+</div>
    
 
 </body>
