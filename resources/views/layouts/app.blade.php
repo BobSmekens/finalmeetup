@@ -37,18 +37,18 @@
     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
 
     <div class="btn-group" role="group" aria-label="First group">
-            <button type="button" class="btn btn-secondary"><a href="/">Home</a></button>
+            <button type="button" class="btn btn-secondary"><a href="/"><img src="{{ URL::asset ('img/home.png') }}" alt="Italian Trulli"></a></button>
     </div>
     <div class="btn-group" role="group" aria-label="Second group">
-            <button type="button" class="btn btn-secondary"><a href="/activities">Activities</a></button>
+            <button type="button" class="btn btn-secondary"><a href="/activities"><img src="{{ URL::asset ('img/activities.png') }}" alt="Italian Trulli"></a></button>
     </div>
     
     <div class="btn-group" role="group" aria-label="Third group">
-            <button type="button" class="btn btn-secondary"><a href="/chat">Chat</a></button>
+            <button type="button" class="btn btn-secondary"><a href="/chat"><img src="{{ URL::asset ('img/chat.png') }}" alt="Italian Trulli"></a></button>
     </div>
     <div class="btn-group" role="group" aria-label="Fourth group">
         @if (Auth::check())
-            <button type="button" class="btn btn-secondary"><a href="/account/{{Auth::user()->id}}">Account</button>
+            <button type="button" class="btn btn-secondary"><a href="/account/{{Auth::user()->id}}"><img src="{{ URL::asset ('img/account.png') }}" alt="Italian Trulli"></button>
         @endif
     </div>
     
@@ -63,7 +63,7 @@
         </button>
     @else
     <div class="btn-group" role="group" aria-label="Fifth group">
-            <button type="button" class="btn btn-secondary"><a href="/login">Login</a></button>
+            <button type="button" class="btn btn-secondary"><a href="/login"><img src="{{ URL::asset ('img/account.png') }}" alt="Italian Trulli"></a></button>
     </div>
     @endif
     </div>
