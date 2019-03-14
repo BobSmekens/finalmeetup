@@ -13,10 +13,11 @@
         <div class="col-12 m-0 p-0 ml-4 sh6 text-secondary"><span>phone: </span>{{ $user->phone}}</div>
         <div class="col-12 m-4 p-0 h4"><span>achievement: </span> {{$user->achievement}}</div>
         <div class="col-12 m-4 p-0 h4"><span>review: </span> {{$user->review}}</div>
-        <a href="/calender">Calender</a>
+        
 
     </div>
     <a class="btn btn-primary m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
+    <a class="btn btn-primary m-4" href="/calender">Calender</a>
 </div>
 @endsection
 
