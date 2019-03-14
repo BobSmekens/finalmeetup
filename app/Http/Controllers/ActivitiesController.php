@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 use \App\Activity;
 
@@ -45,6 +47,7 @@ class ActivitiesController extends Controller
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
 
         $activity->activity = request('activity');
+        $activity->posted_by = Auth::user()->id;
         $activity->max_persons = request('persons');
         $activity->category = request('category');
         $activity->description = request('description');
