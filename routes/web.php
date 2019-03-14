@@ -15,6 +15,7 @@ Route::get('/login', 'AppController@showLogin');
 Route::get('/signup', 'AppController@showSignup'); 
 
 Route::get('/chat', 'ChatController@index');
+Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');

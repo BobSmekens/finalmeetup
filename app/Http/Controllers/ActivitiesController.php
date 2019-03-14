@@ -47,6 +47,7 @@ class ActivitiesController extends Controller
         $activity->activity = request('activity');
         $activity->max_persons = request('persons');
         $activity->category = request('category');
+        $activity->description = request('description');
 
         $activity->save();
 
@@ -98,6 +99,7 @@ class ActivitiesController extends Controller
         $activity->activity = request('activity');
         $activity->max_persons = request('persons');
         $activity->category = request('category');
+        $activity->description = request('description');
 
         $activity->update();
 

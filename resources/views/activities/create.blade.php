@@ -30,6 +30,13 @@
     </span>
     <br>
 
+    <span class="form-label">Max-persons:</span>
+
+    <span>
+        <input class="col-md-6 form-control form-control-lg" required type="textarea" name="description">
+    </span>
+    <br>
+
     <button type="submit">Create activity</button>
 </form>
 

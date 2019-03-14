@@ -3,8 +3,20 @@
 @section('content')
 
 <h3>Edit Account</h3>
+<form action="/uploadphoto" enctype="multipart/form-data" method="POST">
+    {{ csrf_field() }}
+    
+    <span class="form-label">Photo:</span>
 
-<form action="/account/{{ $user->id }}" method="POST">
+    <span>
+        <input class="col-md-6 form-control form-control-lg" required type="file" name="photo">
+    </span>
+
+    <button type="submit">Upload profile picture</button>
+
+</form>
+
+<form action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
     {{ method_field('PATCH') }}
     {{ csrf_field() }}
 
@@ -29,13 +41,6 @@
     </span>
     <br>
 
-    <span class="form-label">Photo:</span>
-
-    <span>
-        <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->photo }}" required type="text" name="photo">
-    </span>
-    <br>
-
     <span class="form-label">Skills:</span>
 
     <span>
@@ -55,7 +60,7 @@
 
     <form action="/account/{{ $user->id }}" method="POST">
         {{ method_field('DELETE') }}
-        {{ csrf_field() }}
+        {{ csrf_field() }} 
 
         <button type="submit">Delete</button>
     </form>
