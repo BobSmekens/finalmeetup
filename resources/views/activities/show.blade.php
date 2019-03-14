@@ -1,25 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-    
-<div class="container m-0 p-0 vh-100 justify-content-center ">
-    <div class="row m-0 p-0 vh-50 vertical-align bg-danger">
-    <p>Maximum amount of people: {{ $activity->max_persons}}</p>
-    <p>Category: {{ $activity->category}}</p>
-    <a href="/activities/{{ $activity->id }}/edit">Edit activity</a>
+<div class="container m-0 p-0 justify-content-center">
+    <div class="my-row row m-0 p-0 bg-danger align-content-center justify-content-center">
+    {{ $activity->activity}}
     </div>
-    <div class="row mt-4 p-0 vh-50">
+    <div class="my-row row m-4 p-4 justify-content-center">
+        <div class="col-12">Maximum amount of people: {{ $activity->max_persons}}</div>
+        <div class="col-12"> {{ $activity->description}}</div>
+        <div class="col-12"> {{ $activity->category}}</div>
+
     </div>
+    <a class="btn btn-danger" href="">schrijf je in voor activiteit</a>
+    <a class="btn btn-danger" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 </div>
-
-
-
-
-<h3>{{ $activity->activity}}</h3>
-    
-
-
-
-
-
 @endsection

@@ -4,8 +4,8 @@
 <div class="container m-0 p-0 vh-100 justify-content-center ">
     <div class="row m-0 p-0 vh-50 vertical-align bg-info ">
         <div class="col-12 mt-4 ml-4 p-0 h1 "><span>{{ $user->name}}</div>
-        <div class="col-12 mt-4 ml-4 p-0"><span>photo: </span><img src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}"></div>
-        <div class="col-12 mt-4 ml-4 p-0 h5"><span>skills:</span>{{ $user->skills}}</div>
+        <div class="col-12 mt-4 ml-4 p-0"><span><img class="rounded-circle" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}"></div>
+        <div class="col-12 mt-4 ml-4 p-0 h5">{{ $user->skills}}</div>
     </div>
     <div class="row mt-4 p-0 vh-50">
         <div class="col-12 mt-4 ml-4 p-0 h4"><span>About: </span> {{$user->about_me}}</div>
@@ -16,7 +16,7 @@
         <a href="/calender">Calender</a>
 
     </div>
-    <a class="btn btn-danger m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
+    <a class="btn btn-primary m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
 </div>
 @endsection
 
