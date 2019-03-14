@@ -2,12 +2,30 @@
 
 @section('content')
 
-<div class="container m-0 p-0 vertical-align fill">
-        <div class="col-12 bg-info vh-50">
+<div class="container m-0 p-0 vh-100 my-container">
+        <div class="col-12 bg-info align-top my-col">
+        <div class="m-0 p-0col card-title d-flex justify-content-center">
+                <h1>{{ $user->name}}</h1>
+            </div>
         </div>
-        <div class="col-12 bg-warning vh-50">
+        <div class="m-0 p-0 col card-title d-flex justify-content-center">
+                <img src=" {{ URL::asset ('img/koen.jpg')}}">
+            </div>
+        </div>
+        <div class="m-0 p-0 col card-title d-flex justify-content-center">
+                <h5>{{ $user->skill}}</h5>
+            </div>
+        </div>
+        
+        <div class="m-0 p-0 row ml-4 col-lg-6">
+            <div class="m-0 p-0 col card-title d-flex justify-content-center">
+                <h4>{{ $user->skills}}</h4>
+            </div>
+        </div>
+        <div class="col-12 my-col">
         </div>
 </div>
+
 
 <!-- <div class="container m-0 p-0 fill">
     <div class="container m-0 p-0 bg-info h-50">
@@ -76,6 +94,8 @@
 <div><span>phone: </span>{{ $user->phone}}</div>
 <div><span>photo: </span>{{ $user->photo}}</div>
 <div><span>skills: </span>{{ $user->skills}}</div>
+                $user->about_me
+
 <a href="/account/{{ $user->id }}/edit">Edit account</a> -->
 @endsection
 
