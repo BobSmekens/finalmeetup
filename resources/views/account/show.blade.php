@@ -8,11 +8,11 @@
         <div class="col-12 mt-4 ml-4 p-0 h5">{{ $user->skills}}</div>
     </div>
     <div class="row mt-4 p-0 vh-50">
-        <div class="col-12 mt-4 ml-4 p-0 h4"><span>About: </span> {{$user->about_me}}</div>
-        <div class="col-12 m-0 p-0 ml-4 h6 text-secondary"><span>email: </span>{{ $user->email}}</div>
-        <div class="col-12 m-0 p-0 ml-4 sh6 text-secondary"><span>phone: </span>{{ $user->phone}}</div>
-        <div class="col-12 m-4 p-0 h4"><span>achievement: </span> {{$user->achievement}}</div>
-        <div class="col-12 m-4 p-0 h4"><span>review: </span> {{$user->review}}</div>
+        <div class="my-col col-12 mt-4 ml-4 p-0 h4"><span>About: </span> {{$user->about_me}}</div>
+        <div class="my-col col-12 m-0 p-0 ml-4 h6 text-secondary"><span>email: </span>{{ $user->email}}</div>
+        <div class="my-col col-12 m-0 p-0 ml-4 sh6 text-secondary"><span>phone: </span>{{ $user->phone}}</div>
+        <div class="my-col col-12 m-4 p-0 h4"><span>achievement: </span> {{$user->achievement}}</div>
+        <div class="my-col col-12 m-4 p-0 h4"><span>review: </span> {{$user->review}}</div>
         
 
     </div>
