@@ -3,7 +3,15 @@
 @section('content')
 
     @foreach($meetups as $meetup)
-        <a href="">{{ $meetup->activity_id }}</a><br>
+
+        
+        <form action="/calendar/{{ $meetup->id }}" method="POST">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+            <a href="">{{ $meetup->activity_id }}</a>
+            <button type="submit">Delete</button>
+        </form>
+    
     @endforeach
    
 @endsection
