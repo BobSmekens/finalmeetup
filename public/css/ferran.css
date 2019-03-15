@@ -22,7 +22,7 @@
 
 }
 
-.btn-toolbar {
+/* .btn-toolbar {
     display: flex;
     margin-top: 30%;
     bottom: 0;
@@ -30,7 +30,7 @@
     align-items: center;
     background-color: none;
     justify-content: center;
-}
+} */
 
 .btn {
     display: flex;
