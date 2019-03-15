@@ -21,7 +21,14 @@ class AppController extends Controller
                 'user' => $user
             ]);
         } else {
-            return redirect('/login');
+            $userobj = new User;
+
+            $user = [$userobj];
+            $user[0]->name = 'new meeter';
+
+            return view('home', [
+                'user' => $user
+            ]);
         }
     }
 
@@ -40,11 +47,24 @@ class AppController extends Controller
         $meetup = new Meetup;
 
         $meetup->user_id1 = $activity->posted_by;
-        $meetup->user_id2 = Auth::user()->id;
+        $meetup->user_id2 = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
         $meetup->activity_id = $activity->activity;
             // dd($meetup);
         $meetup->save();
         }
         return redirect('/');
+    }
+
+    public function showCalendar() {
+        if(Auth::check()){
+            $logged_user = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
+            $meetups = DB::table('meetups')
+                        ->where('user_id1', '=', $logged_user)
+                        ->orWhere('user_id2', $logged_user)->get();
+                        
+            return view('calender.index', [
+                'meetups' => $meetups
+            ]);
+        };
     }
 }
