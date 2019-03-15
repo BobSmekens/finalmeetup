@@ -1,7 +1,3 @@
-body{
-    background: white;
-}
-
 .my-container {
     height: 100vh;
 }
@@ -11,5 +7,10 @@ body{
 }
 
 .my-row {
-    height: 50vh;
+    height: 40vh;
+}
+
+button{
+    color:black;
+    border:1pc solid black;
 }
