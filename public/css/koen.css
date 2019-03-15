@@ -13,3 +13,8 @@ body{
 .my-row {
     height: 50vh;
 }
+
+button{
+    color:black;
+    border:1pc solid black;
+}

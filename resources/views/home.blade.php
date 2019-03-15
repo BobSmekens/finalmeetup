@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="card" style="width: 24rem;">
+<div class="card">
   <img class="card-img-top" src="{{ URL::asset ('img/one.jpg') }}" alt="Card image cap">
   <div class="card-body"><h2 class="card-title">MEETUP</h2>
     <p class="text-wrap">Meetup or skill up, we have what you want!</p>
