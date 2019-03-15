@@ -43,14 +43,14 @@ class AppController extends Controller
     public function addToMeetup($id)
     {
         if(Auth::check()){
-        $activity = Activity::findOrFail($id);
-        $meetup = new Meetup;
+            $activity = Activity::findOrFail($id);
+            $meetup = new Meetup;
 
-        $meetup->user_id1 = $activity->posted_by;
-        $meetup->user_id2 = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
-        $meetup->activity_id = $activity->activity;
-            // dd($meetup);
-        $meetup->save();
+            $meetup->user_id1 = $activity->posted_by;
+            $meetup->user_id2 = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
+            $meetup->activity_id = $activity->activity;
+
+            $meetup->save();
         }
         return redirect('/');
     }
@@ -61,10 +61,18 @@ class AppController extends Controller
             $meetups = DB::table('meetups')
                         ->where('user_id1', '=', $logged_user)
                         ->orWhere('user_id2', $logged_user)->get();
-                        
+
             return view('calender.index', [
                 'meetups' => $meetups
             ]);
         };
+    }
+
+    public function deleteCalendarItem($id) {
+        // dd($id);
+        $meetup = Meetup::findOrFail($id);
+        $meetup->delete();
+
+        return redirect('/calendar');
     }
 }

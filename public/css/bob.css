@@ -3,6 +3,12 @@
     background-color: white;
 }
 
+.bob-btn-visable, button, a {
+    color: black;
+    text-decoration: underline;
+    border: 1px solid black;
+}
+
 .login-btn {
     color: black;
     border: 1px solid black;
