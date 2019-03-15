@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    calender works too
+
+    @foreach($meetups as $meetup)
+        <a href="">{{ $meetup->activity_id }}</a><br>
+    @endforeach
+   
 @endsection

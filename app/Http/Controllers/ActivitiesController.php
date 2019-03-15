@@ -45,9 +45,9 @@ class ActivitiesController extends Controller
     {
         $activity = new Activity;
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
-
+        // $poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
         $activity->activity = request('activity');
-        $activity->posted_by = Auth::user()->id;
+        $activity->posted_by = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
         $activity->max_persons = request('persons');
         $activity->category = request('category');
         $activity->description = request('description');
@@ -67,7 +67,6 @@ class ActivitiesController extends Controller
     {
         $activity = Activity::findOrFail($id);
 
-        $posted_by = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
         return view('activities.show', [
             'activity' => $activity
         ]);
