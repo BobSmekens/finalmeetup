@@ -2,10 +2,13 @@
 
 @section('content')
 
-<div class="card">
-  <img class="card-img-top" src="{{ URL::asset ('img/one.jpg') }}" alt="Card image cap">
-  <div class="card-body"><h2 class="card-title">MEETUP</h2>
-    <p class="text-wrap">Meetup or skill up, we have what you want!</p>
+<div class="home-container">
+  <div class="top">
+    <img class="" src="{{ URL::asset ('img/activity1.jpg') }}" alt="Card image cap">
+  </div>
+  
+  <div class="bottom"><h2 class="">MEETUP</h2>
+    <p class="">Meetup or skill up, we have what you want!</p>
     <p>Welcome {{ $user[0]->name }}</p>
   </div>
 
