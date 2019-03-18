@@ -2,22 +2,23 @@
 
 @section('content')
 <div class="account-container">
-    <div class="account-top">
+    <div class="card account-top">
         <div class="account-name">{{ $user->name}}</div>
         <div class="account-image-container"><img class="account-image" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}"></div>
-        <div class="account-property">{{ $user->skills}}</div>
+        <div class="account-property"><span>{{ $user->email}}</span></div>
+        <div class="account-property"><span>{{ $user->phone}}</span></div>
     </div>
-    <div class="account-bottom">
-        <div class=""><span>About: </span> {{$user->about_me}}</div>
-        <div class=""><span>email: </span>{{ $user->email}}</div>
-        <div class=""><span>phone: </span>{{ $user->phone}}</div>
-        <div class="my-col col-12 m-4 p-0 h4"><span>achievement: </span> {{$user->achievement}}</div>
-        <div class="my-col col-12 m-4 p-0 h4"><span>review: </span> {{$user->review}}</div>
-        <a href="/calendar">Calender</a>
-        <a href="/account/{{ $user->id }}/edit">Edit account</a>
+    <div class="card account-bottom">
+        <div class="account-property"><span>Skills: </span>{{ $user->skills}}</div>
+        <div class="account-property"><span>About: </span> {{$user->about_me}}</div>
+        <div class="account-property"><span>Achievements: </span> {{$user->achievement}}</div>
+        <div class="account-property"><span>Reviews: </span> {{$user->review}}</div>
+        <div class="account-links-container">
+            <a class="account-link-btn" href="/account/{{ $user->id }}/edit">Edit account</a>
+            <a class="account-link-btn" href="/calendar">Calendar</a>
+        </div>
     </div>
-    <a class="btn btn-primary m-4" href="/account/{{ $user->id }}/edit">Edit account</a>
-    <a class="btn btn-primary m-4" href="/calendar">Calender</a>
+   
 </div>
 @endsection
 

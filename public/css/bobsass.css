@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.debug {
+  border: 1px solid green;
+}
+
 form {
   position: relative;
 }
@@ -146,8 +150,9 @@ form {
 }
 
 .account-container .account-top {
-  height: 30vh;
+  min-height: 30vh;
   text-align: center;
+  padding: 10px 20px;
 }
 
 .account-container .account-top .account-name {
@@ -164,15 +169,65 @@ form {
   width: 160px;
   border-radius: 50%;
   padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .account-container .account-top .account-property {
   font-size: 18px;
-  background-color: red;
-  height: 200px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.account-container .account-top span {
+  font-size: 12px;
+  display: block;
+  font-weight: bold;
 }
 
 .account-container .account-bottom {
   height: 60vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.account-container .account-bottom .account-property {
+  font-size: 18px;
+  text-align: left;
+  padding: 0 20px;
+  word-wrap: break-word;
+}
+
+.account-container .account-bottom .account-property span {
+  width: 120px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.account-container .account-bottom .account-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.account-container .account-bottom .account-links-container .account-link-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+/*                    edit account  */
+.form-container {
+  height: 90vh;
+  background: blue;
+}
+
+.form-container #edit-profile-pic {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=bobsass.css.map */

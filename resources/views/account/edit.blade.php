@@ -2,21 +2,17 @@
 
 @section('content')
 
-<div class="container m-0 p-0 justify-content-center">
-        <div class="my-row row m-0 p-0 bg-primary align-content-center justify-content-center">
-                <h3>Edit Account</h3>
-        </div>
-        <div class="my-row row m-4 p-4 ">
-                <form action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
+<h3>Edit Account</h3>
+
+<div class="card form-container">
+        <form id="edit-profile-form" action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
                         {{ method_field('PATCH') }}
                         {{ csrf_field() }}
+                <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
 
-                        <span class="form-label"><img src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}"
-                                        alt=""></span>
-
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" type="file" name="photo">
-                        </span>
+                <span>
+                        <input class="" type="file" name="photo">
+                </span>
                         <span class="form-label">Name:</span>
 
                         <span>

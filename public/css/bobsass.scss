@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+.debug {
+    border: 1px solid green;
+}
+
 form {
     position: relative;
 }
@@ -121,8 +125,9 @@ form {
     min-height: 90vh;
 
     .account-top {
-        height: 30vh;
+        min-height: 30vh;
         text-align: center;
+        padding: 10px 20px;
 
         .account-name {
             font-size: 24px;
@@ -138,16 +143,61 @@ form {
             width: 160px;
             border-radius: 50%;
             padding: 10px;
+            box-sizing: border-box;
         }
 
         .account-property {
             font-size: 18px;
-            background-color: red;
-            height: 200px;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        span {
+            font-size: 12px;
+            display: block;
+            font-weight: bold;
         }
     }
 
     .account-bottom {
         height: 60vh;
+        box-sizing: border-box;
+        padding: 10px 20px;
+
+        .account-property {
+            font-size: 18px;
+            text-align: left;
+            padding: 0 20px;
+            word-wrap: break-word;
+
+            span {
+                width: 120px;
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+
+        .account-links-container {
+            display: flex;
+            padding: 20px;
+    
+            .account-link-btn {
+                flex: 1;
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*                    edit account  */
+
+.form-container {
+    height: 90vh;
+    background: blue;
+
+    #edit-profile-pic {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
     }
 }
