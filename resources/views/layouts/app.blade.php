@@ -24,43 +24,44 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/koen.css') }}">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/ferran.css') }}">
-    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/bob.css') }}">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/bobsass.css') }}">
 </head>
 
 <body>
 
     <div id="app m-0 p-0">
 
-        <main class="m-0 p-0">
+        <main class="content-container">
             @yield('content')
         </main>
 
     </div>
     <div class="whitespace"></div>
-    <div id="bob-navbar" class="btn-toolbar fixed-bottom d-flex justify-content-around" role="toolbar" aria-label="Toolbar with button groups">
+    <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
 
-        <div class="btn-group m-0 p-0" role="group" aria-label="First group">
+        <div class="nav-link" role="group" aria-label="First group">
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/"><img src="{{ URL::asset ('img/home.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
-        <div class="btn-group m-0 p-0" role="group" aria-label="Second group">
+        <div class="nav-link" role="group" aria-label="Second group">
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/activities"><img src="{{ URL::asset ('img/activities.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
 
-        <div class="btn-group m-0 p-0" role="group" aria-label="Third group">
+        <div class="nav-link" role="group" aria-label="Third group">
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/chat"><img src="{{ URL::asset ('img/chat.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
-        <div class="btn-group m-0 p-0" role="group" aria-label="Fourth group">
-            @if (Auth::check())
+        @if (Auth::check())
+        <div class="nav-link" role="group" aria-label="Fourth group">
+           
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/account/{{Auth::user()->id}}"><img src="{{ URL::asset ('img/account.png') }}"
                         alt="Italian Trulli"></button>
-            @endif
+           
         </div>
-
+        @endif
         @if (Auth::check())
-        <button type="button m-0 p-0" class="btn btn-secondary">
+        <button type="button m-0 p-0" class="nav-link">
             <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
             </a>
@@ -69,8 +70,8 @@
             </form>
         </button>
         @else
-        <div class="btn-group m-0 p-0" role="group" aria-label="Fifth group">
-            <button type="button" class="btn btn-secondary m-0 p-0"><a href="/login"><img src="{{ URL::asset ('img/account.png') }}"
+        <div class="nav-link" role="group" aria-label="Fifth group">
+            <button type="button" class=""><a href="/login"><img src="{{ URL::asset ('img/account.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
         @endif
