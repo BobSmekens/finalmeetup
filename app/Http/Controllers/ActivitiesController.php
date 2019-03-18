@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
+use \App\Meetup;
 
 class ActivitiesController extends Controller
 {
@@ -43,12 +46,22 @@ class ActivitiesController extends Controller
     {
         $activity = new Activity;
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
-
+        // $poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
         $activity->activity = request('activity');
+        $activity->posted_by = Auth::user()->id;
         $activity->max_persons = request('persons');
         $activity->category = request('category');
+        $activity->description = request('description');
+   
 
         $activity->save();
+       $newMeetup = new Meetup;
+       $newMeetup->user_id = Auth::user()->id;
+       $newMeetup->activity_id = $activity->id;
+
+       $newMeetup->save();
+    
+       //$meetup->user_id = $activity->posted_by;
 
         return redirect('/activities');
     }
@@ -98,6 +111,7 @@ class ActivitiesController extends Controller
         $activity->activity = request('activity');
         $activity->max_persons = request('persons');
         $activity->category = request('category');
+        $activity->description = request('description');
 
         $activity->update();
 

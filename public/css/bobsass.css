@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+}
+
+.debug {
+  border: 1px solid green;
+}
+
+form {
+  position: relative;
+}
+
+#bob-navbar {
+  position: absolute;
+  bottom: 0;
+}
+
+/*                        layouts.app               */
+.navbar-container {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-container .nav-link {
+  display: inline-block;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/*                             login/register          */
+.section-title {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.register-container {
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-label {
+  display: inline-block;
+  min-width: 120px;
+  padding: 5px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-input {
+  display: inline-block;
+  min-width: 200px;
+  padding: 5px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-control {
+  height: 30px;
+  border-radius: 15px;
+}
+
+.form-check {
+  padding: 20px;
+}
+
+.form-check .form-check-input {
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.button-centered-container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 30px;
+}
+
+.button-centered-container .general-button {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 120px;
+  border-radius: 15px;
+  height: 30px;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(teal), to(silver));
+  background: linear-gradient(to right, teal, silver);
+}
+
+.button-centered-container .pw-reset-link {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  padding: 0 30px;
+}
+
+.signup-link-container {
+  text-align: center;
+  padding: 30px;
+}
+
+/*                         home.blade              */
+.home-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-container .top {
+  width: 100%;
+  height: 35vh;
+  position: relative;
+}
+
+.home-container .top img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/*                               account               */
+.account-container {
+  min-height: 90vh;
+}
+
+.account-container .account-top {
+  min-height: 30vh;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.account-container .account-top .account-name {
+  font-size: 24px;
+  text-align: center;
+}
+
+.account-container .account-top .account-image-container {
+  height: 160px;
+}
+
+.account-container .account-top .account-image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.account-container .account-top .account-property {
+  font-size: 18px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.account-container .account-top span {
+  font-size: 12px;
+  display: block;
+  font-weight: bold;
+}
+
+.account-container .account-bottom {
+  height: 60vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.account-container .account-bottom .account-property {
+  font-size: 18px;
+  text-align: left;
+  padding: 0 20px;
+  word-wrap: break-word;
+}
+
+.account-container .account-bottom .account-property span {
+  width: 120px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.account-container .account-bottom .account-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+}
+
+.account-container .account-bottom .account-links-container .account-link-btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+/*                    edit account  */
+.form-container {
+  height: 90vh;
+  background: blue;
+}
+
+.form-container #edit-profile-pic {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=bobsass.css.map */

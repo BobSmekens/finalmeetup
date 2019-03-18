@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use \App\Chat;
+use \App\Calender;
 
-class ChatController extends Controller
+class CalenderController extends Controller
 {
 
     public function index() {
-        return view('chat.index');
+        return view('calender.index');
     }
 }

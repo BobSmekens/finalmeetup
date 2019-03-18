@@ -2,23 +2,16 @@
 
 @section('content')
 
-<div class="card" style="width: 24rem;">
-  <img class="card-img-top" src="/img/one.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h3 class="card-title">MEETUP</h3>
-    <p class="card-text">Meetup or skill up, we have what you want!</p>
+<div class="home-container">
+  <div class="top">
+    <img class="" src="{{ URL::asset ('img/activity1.jpg') }}" alt="Card image cap">
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Cras justo odio</li>
-    <li class="list-group-item">Dapibus ac facilisis in</li>
-    <li class="list-group-item">Vestibulum at eros</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Activities</a>
-    <a href="#" class="card-link">Messages</a>
-    <a href="#" class="card-link">Calender</a>
-    <a href="#" class="card-link">menu</a>
+  
+  <div class="bottom"><h2 class="">MEETUP</h2>
+    <p class="">Meetup or skill up, we have what you want!</p>
+    <p>Welcome {{ $user[0]->name }}</p>
   </div>
+
 </div>
 
 

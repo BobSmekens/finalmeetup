@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use \App\User;
 use \App\Account;
+use \App\Input;
 
 class UserController extends Controller
 {
@@ -46,12 +49,15 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        if (Auth::user()->id==$id) {
+            $user = User::findOrFail($id);
 
-        return view('account.edit', [
-            'user' => $user
-        ]);
-
+            return view('account.edit', [
+                'user' => $user
+            ]);
+        } else {
+            return redirect('/');
+        }
     }
 
     /**
@@ -61,20 +67,30 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user, $id)
+    public function update(user $user, Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+        if (Auth::user()->id==$id) {
+            if($request->hasFile('photo')){
+                $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+            }
 
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->phone = request('phone');
-        $user->photo = request('photo');
-        $user->skills = request('skills');
+            $user = User::findOrFail($id);
+            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
+            
+            return redirect('/account/' . $id);
 
-        $user->update();
+            // $user->name = request('name');
+            // $user->email = request('email');
+            // $user->phone = request('phone');
+            // $user->skills = request('skills');
+            // $user->about_me = request('about_me');
+            
+            // $user->update();
 
-        return redirect('/account/' . $id);
+        } else {
+            return redirect('/');
+        }
+        
     }
 
     /**
@@ -85,10 +101,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        if (Auth::user()->id==$id) {
         $user = User::findOrFail($id);
 
         $user->delete();
+        }
 
         return redirect('/');
     }
+
 }
