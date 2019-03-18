@@ -5,6 +5,6 @@
     <div class="my-row row m-0 p-0 vh-50 vertical-align bg-warning ">
         <h2>Chat</h2>
     </div>
-    <div class="my-row row mt-4 p-0 vh-50">
+    <div class="row mt-4 p-0 vh-50">
 </div>
 @endsection

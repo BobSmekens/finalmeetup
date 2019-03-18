@@ -37,6 +37,8 @@
 
         </div>
 
+        <div class="row white-space"></div>
+
         <div class="btn-toolbar fixed-bottom d-flex justify-content-around" role="toolbar" aria-label="Toolbar with button groups">
 
                 <div class="btn-group m-0 p-0" role="group" aria-label="First group">
