@@ -12,23 +12,4 @@
 .login-btn {
     color: black;
     border: 1px solid black;
-} */
-/* 
-body {
-    position: relative;
-    border: 1px solid black;
-    min-height: 100vh;
-} */
 
-form {
-    position: relative;
-}
-
-#bob-navbar {
-    position: absolute;
-    bottom: 0;
-}
-
-.whitespace {
-    min-height: 110px;
-}
