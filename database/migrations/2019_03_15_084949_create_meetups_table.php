@@ -23,7 +23,7 @@ class CreateMeetupsTable extends Migration
                 // $table->string('date');
                 $table->timestamps();
                 $table->index('user_id');
-                $table->index('activity_id');
+                $table->index('activity_id'); 
             
 
 
