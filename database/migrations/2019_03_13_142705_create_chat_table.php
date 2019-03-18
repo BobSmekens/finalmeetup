@@ -15,10 +15,12 @@ class CreateChatTable extends Migration
     {
         Schema::create('chat', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('from_user');
+            $table->bigInteger('from_user')->unsigned();
+            $table->foreign('from_user')->references('id')->on('users');
             $table->string('to_user');
             $table->string('message');
             $table->timestamps();
+            $table->index('from_user');
         });
     }
 

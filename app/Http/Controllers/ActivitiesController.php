@@ -47,7 +47,7 @@ class ActivitiesController extends Controller
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
         // $poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
         $activity->activity = request('activity');
-        $activity->posted_by = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
+        $activity->posted_by = Auth::user()->id;
         $activity->max_persons = request('persons');
         $activity->category = request('category');
         $activity->description = request('description');
