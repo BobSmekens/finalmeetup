@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
+use \App\Meetup;
 
 class ActivitiesController extends Controller
 {
@@ -51,8 +52,16 @@ class ActivitiesController extends Controller
         $activity->max_persons = request('persons');
         $activity->category = request('category');
         $activity->description = request('description');
+   
 
         $activity->save();
+       $newMeetup = new Meetup;
+       $newMeetup->user_id = Auth::user()->id;
+       $newMeetup->activity_id = $activity->id;
+
+       $newMeetup->save();
+    
+       //$meetup->user_id = $activity->posted_by;
 
         return redirect('/activities');
     }
