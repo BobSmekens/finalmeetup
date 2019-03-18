@@ -11,7 +11,8 @@
         <div class="col-12"> {{ $activity->category}}</div>
 
     </div>
-    <a class="btn btn-danger bob-btn-visable" href="">schrijf je in voor activiteit</a>
-    <a class="btn btn-danger bob-btn-visable" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
+    <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/meetup">schrijf je in voor activiteit</a>
+    <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
+
 </div>
 @endsection

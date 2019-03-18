@@ -18,7 +18,14 @@
     <div class="my-row row m-0 p-0 ">
         @foreach($activities as $activity)
         <div class="h-25 my-col  col-12 m- p-0 d-flex justify-content-start">
-        <div class="my-col col-3">1/<span>{{$activity->max_persons}}</div> 
+        <div class="my-col col-3">  
+        
+        
+        var opgeteld  
+
+
+
+          /<span>{{$activity->max_persons}}</div> 
         <div class="my-col col-5"><a href="/activities/{{ $activity->id }}">
         {{ $activity->activity }} </a></div>
         <div class="my-col col-4"><span class=>{{$activity->posted_by}}</div>
