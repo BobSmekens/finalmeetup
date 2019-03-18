@@ -15,13 +15,15 @@ class CreateMeetupsTable extends Migration
     {
         Schema::create('meetups', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->bigInteger('user_id1')->unsigned();
-                $table->foreign('user_id1')->references('id')->on('users');
-                $table->integer('user_id2');
-                $table->integer('activity_id');
+                $table->bigInteger('user_id')->unsigned();
+                $table->foreign('user_id')->references('id')->on('users');
+                //$table->integer('user_id2');
+                $table->bigInteger('activity_id')->unsigned();
+                $table->foreign('activity_id')->references('id')->on('activities');
                 // $table->string('date');
                 $table->timestamps();
-                $table->index('user_id1');
+                $table->index('user_id');
+                $table->index('activity_id');
             
 
 
