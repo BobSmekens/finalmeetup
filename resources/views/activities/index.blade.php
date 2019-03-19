@@ -23,7 +23,7 @@
         
         var opgeteld  
 
-
+this.activity count 
 
           /<span>{{$activity->max_persons}}</div> 
         <div class="my-col col-5"><a href="/activities/{{ $activity->id }}">

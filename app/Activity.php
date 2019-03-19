@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Activity extends Model
 {
-    //belongstomany
+   public function users(){
+       return $this->belongsToMany(users::class);
+   }
 }

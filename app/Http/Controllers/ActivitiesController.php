@@ -23,6 +23,7 @@ class ActivitiesController extends Controller
         // return view('account.index');
 
 //eerst filteren 
+
 $countedUsers= DB::table('meetups')->where('activity_id', '=', '1')->get();
 dd($countedUsers);
 
