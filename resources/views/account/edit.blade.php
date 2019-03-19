@@ -64,24 +64,11 @@
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
 
-                <button class="account-eddit-button" type="submit">Delete account</button>
+                <button class="account-delete-button" type="submit">Delete account</button>
         </form>
 </div>
 </div>
 
-
-<!-- <form action="/account/{{ $user->id }}" enctype="multipart/form-data" method="POST">
-    {{ csrf_field() }}
-    {{ method_field('PATCH') }}
-    <span class="form-label">Photo: {{$user->photo }}</span>
-
-    <span>
-        <input class="col-md-6 form-control form-control-lg" required type="file" name="photo">
-    </span>
-
-    <button type="submit">Upload profile picture</button>
-
-</form> -->
 
 
 @endsection

@@ -1,3 +1,7 @@
+* {
+    outline: none;
+}
+
 body {
     margin: 0;
 }
@@ -197,6 +201,7 @@ form {
 
 .form-container {
     height: 90vh;
+    padding-top: 20px;
 
     #edit-profile-pic {
         height: 160px;
@@ -208,6 +213,7 @@ form {
     form {
         text-align: center;
         display: inline-block;
+        width: 100%;
 
         .add-file {
             padding: 10px 20px;
@@ -218,6 +224,7 @@ form {
         .form-label {
             font-weight: bold;
             text-align: left;
+            min-width: 140px;
         }
 
         .form-input {
@@ -231,11 +238,59 @@ form {
             align-content: center;
             display: inline-block;
             width: 130px;
-            margin: 10px;
+            margin-top: 30px;
             border-radius: 15px;
             height: 30px;
             border: none;
             background: linear-gradient(to right, teal, silver);
         }
+        .account-delete-button {
+            align-content: center;
+            display: inline-block;
+            width: 130px;
+            margin: 10px;
+            align-self: center;
+            border-radius: 15px;
+            height: 30px;
+            border: none;
+            background: linear-gradient(to right, red, silver);
+        }
+    }
+}
+
+/*/////////////////////////////activities///////////////////////*/
+.activities-index-top {
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.activities-table-titles-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    .activity-index-col {
+        flex: 2;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .activity-table {
+        flex: 10;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+.activity-add-container {
+    padding: 20px;
+
+    .activity-index-add {
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
     }
 }
