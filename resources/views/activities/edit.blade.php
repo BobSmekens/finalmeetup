@@ -1,48 +1,53 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container m-0 p-0 justify-content-center">
-        <div class="my-row row m-0 p-0 bg-danger align-content-center justify-content-center">
-                <h3>Edit "{{ $activity->activity}}"</h3>
-        </div>
-        <div class="my-row row m-4 p-4 justify-content-center">
-                <form class="col-12" action="/activities/{{ $activity->id }}" method="POST">
-                        {{ csrf_field() }}
-                        {{ method_field('PATCH') }}
+<div class="card activities-index-top">
+        <h3>Edit "{{ $activity->activity}}"</h3>
+</div>
+    <div class="card form-container">
+        <form action="/activities/{{ $activity->id }}" method="POST">
+            {{ csrf_field() }}
+            {{ method_field('PATCH') }}
 
-                        <span class="form-label">Activity:</span>
+            <div class="form-label">Activity name:</div>
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" required type="text" name="activity">
-                        </span>
-                        <br>
 
-                        <span class="form-label">Max-persons:</span>
+                <input class="form-input" required type="text" name="activity" placeholder="{{ $activity->activity}}">
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" required type="number" name="persons">
-                        </span>
-                        <br>
+            <br>
+            <span class="form-label">Description:</span>
 
-                        <span class="form-label">Category:</span>
+            <span>
+                <input class="form-input" required type="text" name="description" placeholder="{{ $activity->description}}">
+            </span>
+            <br>
 
-                        <span>
-                                <select name="category" id="m-4">
-                                        <option value="Skill-up">Skill-up</option>
-                                        <option value="Meetup">Meetup</option>
-                                </select>
-                        </span>
-                        <br>
+            <span class="form-label">Max-persons:</span>
 
-                        <button type="submit">Edit activity</button>
-                </form>
+            <span>
+                <input class="form-input" required type="number" name="persons" placeholder="{{ $activity->max_persons}}">
+            </span>
+            <br>
 
-                <form  class="col-12" action="/activities/{{ $activity->id }}" method="POST">
-                        {{ method_field('DELETE') }}
-                        {{ csrf_field() }}
+            <span class="form-label">Category:</span>
 
-                        <button type="submit">Delete</button>
-                </form>
-        </div>
+            <span>
+                <select name="category" class="form-input">
+                    <option value="Skill-up">Skill-up</option>
+                    <option value="Meetup">Meet-up</option>
+                </select>
+            </span>
+            <br>
+
+            <button class="account-eddit-button" type="submit">Edit activity</button>
+        </form>
+
+        <form action="/activities/{{ $activity->id }}" method="POST">
+            {{ method_field('DELETE') }}
+            {{ csrf_field() }}
+
+            <button class="account-delete-button" type="submit">Delete activity</button>
+        </form>
+    </div>
 </div>
 @endsection
