@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use \App\Activity;
 use \App\User;
-use \App\Meetup;
+
 
 class AppController extends Controller
 {
@@ -43,14 +43,12 @@ class AppController extends Controller
     public function addToMeetup($id)
     {
         if(Auth::check()){
-            $activity = Activity::findOrFail($id);
-            $meetup = new Meetup;
+           // $activity = Activity::with ('users')->post()($id);
+            //Activity::with('users')->get();
+            $activity = Activity::find($id);
+            $user = User::find(Auth::user()->id);
+            $activity->users()->save($user);
 
-            $meetup->activity_id = $activity->id;
-            $meetup->user_id = $activity->posted_by;
-
-
-            $meetup->save();
         }
         return redirect('/activities');
     }
