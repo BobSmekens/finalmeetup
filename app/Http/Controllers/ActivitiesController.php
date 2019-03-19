@@ -18,7 +18,10 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
-        $activities = \App\Activity::all();
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->get();
+       //dd($activities);
+    
 
         // return view('account.index');
 
@@ -68,6 +71,8 @@ class ActivitiesController extends Controller
 
         $user_id = Auth::user()->id;
         $activity->users()->attach($user_id);
+        //dd($activity::find(1));
+
 
         return redirect('/activities');
     }
@@ -81,7 +86,11 @@ class ActivitiesController extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
+        $user = Auth::user()->id;
+        
+        $check = Activity::with('users')->get()->unique('user_id');
 
+        //dd($check);
         return view('activities.show', [
             'activity' => $activity
         ]);
