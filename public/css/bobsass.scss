@@ -223,14 +223,15 @@ form {
         .form-input {
             z-index: 5;
             margin: 5px 0;
-            border-radius: 5px;
+            border-radius: 15px;
+            height: 30px;
         }
 
         .account-eddit-button {
             align-content: center;
             display: inline-block;
             width: 130px;
-            margin: 15px;
+            margin: 10px;
             border-radius: 15px;
             height: 30px;
             border: none;

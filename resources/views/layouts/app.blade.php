@@ -28,6 +28,13 @@
 </head>
 
 <body>
+    @if(Session::has('success'))
+    <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    {{Session::get('success')}}
+    
+    </div>
+    @endif
     <div id="app m-0 p-0">
         <main class="content-container">
             @yield('content')
