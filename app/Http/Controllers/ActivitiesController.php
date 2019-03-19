@@ -66,20 +66,8 @@ class ActivitiesController extends Controller
    
         $activity->save();
 
-
         $user_id = Auth::user()->id;
         $activity->users()->attach($user_id);
-
-        // weghalen???
-    //    $newMeetup = new User;
-    //    $newMeetup->user_id = Auth::user()->id;
-    //    $newMeetup->activity_id = $activity->id;
-
-    //    $newMeetup->save();
-   
-       
-
-       //$meetup->user_id = $activity->posted_by;
 
         return redirect('/activities');
     }
