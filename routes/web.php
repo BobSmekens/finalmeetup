@@ -15,6 +15,7 @@ Route::get('/login', 'AppController@showLogin');
 Route::get('/signup', 'AppController@showSignup'); 
 Route::get('/calendar', 'AppController@showCalendar'); 
 Route::delete('/calendar/{id}', 'AppController@deleteCalendarItem'); 
+Route::get('/registered', 'UserController@registered');
 
 Route::get('/chat', 'ChatController@index');
 Route::post('/uploadphoto', 'UserController@uploadPhoto');

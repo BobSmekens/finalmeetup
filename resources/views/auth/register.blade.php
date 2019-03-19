@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="register-container">
     <div class="">
         <div class="col-md-8">

@@ -57,14 +57,15 @@
 
         <button class="account-eddit-button" type="submit">Update account</button>
         
-        <form action="/account/{{ $user->id }}" method="POST">
+        
+
+    </form>   
+    <form action="/account/{{ $user->id }}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
 
                 <button class="account-eddit-button" type="submit">Delete account</button>
         </form>
-
-    </form>   
 </div>
 </div>
 
