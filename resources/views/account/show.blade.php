@@ -10,7 +10,7 @@
     </div>
     <div class="card account-bottom">
         <div class="account-property"><span>Skills: </span>{{ $user->skills}}</div>
-        <div class="account-property"><span>About: </span> {{$user->about_me}}</div>
+        <div class="account-property"><span>About: </span>{{$user->about_me}}</div>
         <div class="account-property"><span>Achievements: </span> {{$user->achievement}}</div>
         <div class="account-property"><span>Reviews: </span> {{$user->review}}</div>
         <div class="account-links-container">

@@ -15,6 +15,11 @@ form {
   bottom: 0;
 }
 
+.top-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*                        layouts.app               */
 .navbar-container {
   position: absolute;
@@ -222,12 +227,47 @@ form {
 /*                    edit account  */
 .form-container {
   height: 90vh;
-  background: blue;
 }
 
 .form-container #edit-profile-pic {
   height: 160px;
   width: 160px;
   border-radius: 50%;
+  margin: 10px auto 10px auto;
+}
+
+.form-container form {
+  text-align: center;
+  display: inline-block;
+}
+
+.form-container form .add-file {
+  padding: 10px 20px;
+  display: block;
+  margin: auto;
+}
+
+.form-container form .form-label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.form-container form .form-input {
+  z-index: 5;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+.form-container form .account-eddit-button {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: inline-block;
+  width: 130px;
+  margin: 15px;
+  border-radius: 15px;
+  height: 30px;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, from(teal), to(silver));
+  background: linear-gradient(to right, teal, silver);
 }
 /*# sourceMappingURL=bobsass.css.map */
