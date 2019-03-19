@@ -5,64 +5,67 @@
 <h3>Edit Account</h3>
 
 <div class="card form-container">
-        <form id="edit-profile-form" action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
-                        {{ method_field('PATCH') }}
-                        {{ csrf_field() }}
-                <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
 
-                <span>
-                        <input class="" type="file" name="photo">
-                </span>
-                        <span class="form-label">Name:</span>
+    <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->name }}"
-                                        required type="text" name="name">
-                        </span>
-                        <br>
+    <form id="edit-profile-form" action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
+        {{ method_field('PATCH') }}
+        {{ csrf_field() }}
 
-                        <span class="form-label">E-mail:</span>
+        <span>
+            <input class="add-file" type="file" name="photo">
+        </span>
+        <span class="form-label">Name:</span>
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->email }}"
-                                        required type="text" name="email">
-                        </span>
-                        <br>
+        <span>
+            <input class="form-input" placeholder="{{ $user->name }}" required type="text"
+                name="name">
+        </span>
+        <br>
 
-                        <span class="form-label">Phone:</span>
+        <span class="form-label">E-mail:</span>
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->phone }}"
-                                        required type="text" name="phone">
-                        </span>
-                        <br>
+        <span>
+            <input class="form-input" placeholder="{{ $user->email }}" required type="text"
+                name="email">
+        </span>
+        <br>
 
-                        <span class="form-label">Skills:</span>
+        <span class="form-label">Phone:</span>
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->skills }}"
-                                        required type="text" name="skills">
-                        </span>
-                        <br>
+        <span>
+            <input class="form-input" placeholder="{{ $user->phone }}" required type="text"
+                name="phone">
+        </span>
+        <br>
 
-                        <span class="form-label">About me:</span>
+        <span class="form-label">Skills:</span>
 
-                        <span>
-                                <input class="col-md-6 form-control form-control-lg" placeholder="{{ $user->about_me }}"
-                                        required type="text" name="about_me">
-                        </span>
-                        <br>
+        <span>
+            <input class="form-input" placeholder="{{ $user->skills }}" required type="text"
+                name="skills">
+        </span>
+        <br>
 
-                        <button type="submit">Update Account</button>
-                </form>
+        <span class="form-label">About me:</span>
 
-                <form action="/account/{{ $user->id }}" method="POST">
-                        {{ method_field('DELETE') }}
-                        {{ csrf_field() }}
+        <span>
+            <input class="form-input" placeholder="{{ $user->about_me }}" required type="text"
+                name="about_me">
+        </span>
+        <br>
 
-                        <button type="submit">Delete</button>
-                </form>
-        </div>
+        <button class="account-eddit-button" type="submit">Update account</button>
+        
+        <form action="/account/{{ $user->id }}" method="POST">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+
+                <button class="account-eddit-button" type="submit">Delete account</button>
+        </form>
+
+    </form>   
+</div>
 </div>
 
 
