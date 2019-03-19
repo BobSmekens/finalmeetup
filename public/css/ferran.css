@@ -1,15 +1,33 @@
-/* body {
-    background-color: #ffcb43;
-    background-image: linear-gradient(319deg, #fdbb2d 0%, #b21f1f 37%, #1a2a6c  100%);
-} */
+body {
+    background-image: url(../img/phone.png);
+} 
 
 #app {
     display: flex;
     margin-top: 100px;
 }
 
+.top-image {
+    margin-top: 10px;
+    border-radius: 5%;
+}
+
+.bottom {
+    margin-top: 85%;
+    margin-left: 10%;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    padding: 3%;
+    font-size: 12px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 8px #50A8C2);
+}
+
+
 .card-title {
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: 30%;
@@ -21,6 +39,19 @@
     align-items: center;
 
 }
+
+#bob-navbar {
+    width: 90%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+#bob:hover {
+    transition: All 1s ease-in-out;
+}
+
+
 
 /* .btn-toolbar {
     display: flex;
