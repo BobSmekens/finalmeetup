@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
-use \App\Meetup;
+use \App\User;
 
 class ActivitiesController extends Controller
 {
@@ -24,8 +24,7 @@ class ActivitiesController extends Controller
 
 //eerst filteren 
 
-$countedUsers= DB::table('meetups')->where('activity_id', '=', '1')->get();
-dd($countedUsers);
+//$countedUsers= DB::table('activity_user')->where('activity_id', '=', '1')->get();
 
 ///tellen
 
@@ -67,12 +66,19 @@ dd($countedUsers);
    
         $activity->save();
 
-       $newMeetup = new Meetup;
-       $newMeetup->user_id = Auth::user()->id;
-       $newMeetup->activity_id = $activity->id;
 
-       $newMeetup->save();
-    
+        $user_id = Auth::user()->id;
+        $activity->users()->attach($user_id);
+
+        // weghalen???
+    //    $newMeetup = new User;
+    //    $newMeetup->user_id = Auth::user()->id;
+    //    $newMeetup->activity_id = $activity->id;
+
+    //    $newMeetup->save();
+   
+       
+
        //$meetup->user_id = $activity->posted_by;
 
         return redirect('/activities');
