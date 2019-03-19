@@ -21,9 +21,21 @@ class ActivitiesController extends Controller
         $activities = \App\Activity::all();
 
         // return view('account.index');
+
+//eerst filteren 
+
+$countedUsers= DB::table('meetups')->where('activity_id', '=', '1')->get();
+dd($countedUsers);
+
+///tellen
+
+
         return view('activities.index', [
             'activities' => $activities
         ]);
+
+
+
     }
 
     /**
@@ -53,8 +65,8 @@ class ActivitiesController extends Controller
         $activity->category = request('category');
         $activity->description = request('description');
    
-
         $activity->save();
+
        $newMeetup = new Meetup;
        $newMeetup->user_id = Auth::user()->id;
        $newMeetup->activity_id = $activity->id;
