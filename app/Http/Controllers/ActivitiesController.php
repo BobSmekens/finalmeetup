@@ -24,7 +24,7 @@ class ActivitiesController extends Controller
 
 //eerst filteren 
 
-$countedUsers= DB::table('meetups')->where('activity_id', '=', '1')->get();
+$countedUsers= DB::table('activity_user')->where('activity_id', '=', '1')->get();
 dd($countedUsers);
 
 ///tellen
