@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Final Meetup</title>
+    <title>MEETUP APP</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,6 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
 
@@ -28,20 +29,29 @@
 </head>
 
 <body>
+ 
+ <!-- KOEN -->
+    <div id="hero">  
     @if(Session::has('success'))
     <div class="alert alert-warning alert-dismissible" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
     {{Session::get('success')}}
-    
     </div>
+ <!-- KOEN -->
     @endif
     <div id="app m-0 p-0">
-        <main class="content-container">
+        <main class="content-container"><h2>MEETUP</h2>
             @yield('content')
         </main>
-
     </div>
+    </div>
+
+
+    <img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
+
     <div class="whitespace"></div>
+
+<!--
     <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
 
         <div class="nav-link" role="group" aria-label="First group">
@@ -81,7 +91,7 @@
         </div>
         @endif
     </div>
-
+-->
 </body>
 
 </html>

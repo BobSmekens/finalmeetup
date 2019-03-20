@@ -1,10 +1,29 @@
 body {
-    background-image: url(../img/phone.png);
+    
 } 
 
-#app {
-    display: flex;
-    margin-top: 100px;
+#hero {
+    height: 60vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 4%;
+    margin-left: 10%;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+#hero h2{
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 100px;
+    color: white;
+    padding: 20%;
+}
+
+.iphone {
+    margin-top: -400px;
+    margin-left: 45%;
 }
 
 .top-image {
@@ -13,7 +32,6 @@ body {
 }
 
 .bottom {
-    margin-top: 85%;
     margin-left: 10%;
     font-weight: bold;
     text-align: center;
