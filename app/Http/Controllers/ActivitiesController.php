@@ -74,7 +74,8 @@ class ActivitiesController extends Controller
         //dd($activity::find(1));
 
 
-        return redirect('/activities');
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity created');
     }
 
     /**
