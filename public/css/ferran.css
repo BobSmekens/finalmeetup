@@ -1,15 +1,51 @@
-/* body {
-    background-color: #ffcb43;
-    background-image: linear-gradient(319deg, #fdbb2d 0%, #b21f1f 37%, #1a2a6c  100%);
-} */
+body {
+    
+} 
 
-#app {
-    display: flex;
-    margin-top: 100px;
+#hero {
+    height: 60vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 4%;
+    margin-left: 10%;
+    background: #C6FFDD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+#hero h2{
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 100px;
+    color: white;
+    padding: 20%;
+}
+
+.iphone {
+    margin-top: -400px;
+    margin-left: 45%;
+}
+
+.top-image {
+    margin-top: 10px;
+    border-radius: 5%;
+}
+
+.bottom {
+    margin-left: 10%;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    padding: 3%;
+    font-size: 12px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 8px #50A8C2);
+}
+
+
 .card-title {
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: 30%;
@@ -21,6 +57,19 @@
     align-items: center;
 
 }
+
+#bob-navbar {
+    width: 90%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+#bob:hover {
+    transition: All 1s ease-in-out;
+}
+
+
 
 /* .btn-toolbar {
     display: flex;
