@@ -144,5 +144,6 @@ class ActivitiesController extends Controller
         $activity->delete();
 
         return redirect('/activities');
+        return redirect('/activities/'); . Auth::user()->id)->with('successactivity', 'activity deleted');
     }
 }
