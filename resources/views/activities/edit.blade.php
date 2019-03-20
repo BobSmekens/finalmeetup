@@ -12,20 +12,20 @@
             <div class="form-label">Activity name:</div>
 
 
-                <input class="form-input" required type="text" name="activity" placeholder="{{ $activity->activity}}">
+                <input class="form-input" required type="text" name="activity" value="{{ $activity->activity}}">
 
             <br>
             <span class="form-label">Description:</span>
 
             <span>
-                <input class="form-input" required type="text" name="description" placeholder="{{ $activity->description}}">
+                <input class="form-input" required type="text" name="description" value="{{ $activity->description}}">
             </span>
             <br>
 
             <span class="form-label">Max-persons:</span>
 
             <span>
-                <input class="form-input" required type="number" name="persons" placeholder="{{ $activity->max_persons}}">
+                <input class="form-input" required type="number" name="persons" value="{{ $activity->max_persons}}">
             </span>
             <br>
 
