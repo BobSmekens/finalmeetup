@@ -15,5 +15,15 @@
     <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/meetup">schrijf je in voor activiteit</a>
     <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 
+
+    <form action="/activities/{{ $activity->id }}" method="POST">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+
+                <button class="account-delete-button" type="submit">Delete activity</button>
+        </form>
+
+
+
 </div>
 @endsection

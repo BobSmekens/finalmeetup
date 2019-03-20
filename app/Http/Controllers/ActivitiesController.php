@@ -19,7 +19,7 @@ class ActivitiesController extends Controller
     public function index()
     {
         // $activities = \App\Activity::all();        
-        $activities = Activity::with('users')->get();
+        $activities = Activity::with('users')->paginate(4);
        //dd($activities);
     
 
@@ -144,5 +144,6 @@ class ActivitiesController extends Controller
         $activity->delete();
 
         return redirect('/activities');
+        return redirect('/activities/'); . Auth::user()->id)->with('successactivity', 'activity deleted');
     }
 }
