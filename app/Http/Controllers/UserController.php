@@ -77,7 +77,8 @@ class UserController extends Controller
             $user = User::findOrFail($id);
             $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
             
-            return redirect('/account/' . $id);
+            //return redirect('/account/' . $id);
+            return redirect('/account/' . $id)->with('success', 'Account info updated');
 
             // $user->name = request('name');
             // $user->email = request('email');
