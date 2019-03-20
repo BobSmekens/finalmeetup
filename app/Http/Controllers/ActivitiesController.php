@@ -19,7 +19,7 @@ class ActivitiesController extends Controller
     public function index()
     {
         // $activities = \App\Activity::all();        
-        $activities = Activity::with('users')->get();
+        $activities = Activity::with('users')->paginate(3);
        //dd($activities);
     
 

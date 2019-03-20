@@ -21,6 +21,8 @@
     </div>
     @endforeach
 
+
+{{$activities->links()}}
 <div class="activity-add-container">
     <a class="activity-index-add" href="/activities/create">Add activity</a>
 </div>
