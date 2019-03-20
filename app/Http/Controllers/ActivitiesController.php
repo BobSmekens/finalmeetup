@@ -130,7 +130,8 @@ class ActivitiesController extends Controller
 
         $activity->update();
 
-        return redirect('/activities/' . $id);
+        //return redirect('/activities/' . $id);
+        return redirect('/activities/' . $id)->with('success', 'activity updated');
     }
 
     /**
