@@ -142,8 +142,9 @@ class ActivitiesController extends Controller
     public function destroy(Activity $activity)
     {
         $activity->delete();
+        
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity deleted');
 
-        return redirect('/activities');
-        return redirect('/activities/'); . Auth::user()->id)->with('successactivity', 'activity deleted');
     }
 }
