@@ -12,7 +12,7 @@
 
     </div>
     @if ($activity->users->count()>=$activity->max_persons)
-            <span class="alert">activiteit is vol
+            <span class="">activiteit is vol
             </span>
             @else
             <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/meetup">schrijf je in voor activiteit</a>

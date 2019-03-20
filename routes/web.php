@@ -28,6 +28,9 @@ Route::resource('/activities', 'ActivitiesController');
 Route::resource('/bob', 'bobtest');
 Auth::routes();
 
+Route::get('search', 'AutoCompleteController@index');
+Route::get('autocomplete', 'AutoCompleteController@search');
+
 // Route::get('/home', 'HomeController@index')->name('home');
 
 // Route::resource('/account', 'AccountController');
