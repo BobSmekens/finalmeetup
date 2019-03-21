@@ -17,7 +17,7 @@ class CreateChatTable extends Migration
             $table->bigIncrements('id');
             $table->bigInteger('from_user')->unsigned();
             $table->foreign('from_user')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('to_user');
+            $table->string('to_user')->references('id')->on('users');
             $table->string('message');
             $table->timestamps();
             $table->index('from_user');
