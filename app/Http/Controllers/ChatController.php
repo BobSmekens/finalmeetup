@@ -17,6 +17,7 @@ class ChatController extends Controller
         $recepient = User::findOrFail($id);
 
         if(Auth::check()){
+            // $messages = Chat::with('users');
             $messages = DB::table('chats')
             ->where('to_user', '=', Auth::user()->id)
             ->orWhere('from_user', '=', Auth::user()->id)
