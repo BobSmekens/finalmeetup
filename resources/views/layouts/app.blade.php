@@ -66,16 +66,17 @@
                         alt="Italian Trulli"></a></button>
         </div>
 
-        <div class="nav-link" role="group" aria-label="Third group">
-            <button type="button" class="btn btn-secondary m-0 p-0"><a href="/chat"><img src="{{ URL::asset ('img/chat.png') }}"
-                        alt="Italian Trulli"></a></button>
-        </div>
+        
         @if (Auth::check())
         <div class="nav-link" role="group" aria-label="Fourth group">
            
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/account/{{Auth::user()->id}}"><img src="{{ URL::asset ('img/account.png') }}"
                         alt="Italian Trulli"></button>
            
+        </div>
+        <div class="nav-link" role="group" aria-label="Third group">
+            <button type="button" class="btn btn-secondary m-0 p-0"><a href="/account/{{ Auth::user()->id}}/chat"><img src="{{ URL::asset ('img/chat.png') }}"
+                        alt="Italian Trulli"></a></button>
         </div>
         @endif
         @if (Auth::check())
