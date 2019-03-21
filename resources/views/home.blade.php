@@ -8,6 +8,7 @@
     <div class="section1"><h4>QUICK INFO</h4>
         <div class="section1a">Meetup</div>
         <div class="section1b">Skill up</div>
+        <div class="section1c">A platform to engage with others in leisure activities or to learn new skills!<br>"meetup or skillup" the choice is yours!
     </div>
 
 

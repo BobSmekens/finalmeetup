@@ -7,7 +7,7 @@
             <div class="">
                 <div class="section-title">Welcome to meetup!</div>
 
-                <div class="">
+                <div class="loginpage">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
