@@ -1,6 +1,18 @@
-body {
+* { margin: 0; padding: 0; }
+html { overflow-y: scroll;}
+img { display: block; margin-bottom: 10px;}
+
+.section1, .section2, .section3, .section4
+{ 
+    display: block;
+    }
     
-} 
+#wrapper {
+	width: 96%;	
+	max-width: 920px;
+	margin: auto;
+	padding: 2%;
+	} 
 
 #hero {
     height: 60vh;
@@ -12,19 +24,29 @@ body {
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+
 
 #hero h2{
     font-family: 'Baloo Chettan', cursive;
     font-size: 100px;
     color: white;
     padding: 20%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 
 .iphone {
     margin-top: -400px;
     margin-left: 45%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* This will result on two rows, each one of 300px */
+    grid-template-rows: 300px 300px;
 }
 
 .section1 {
@@ -98,6 +120,13 @@ body {
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+@media screen and (max-width: 480px) {
+
+    .section2 {
+        display:none;
+    }
+}
+
 .section2 h4 {
     margin-top: 4%;
     font-family: 'Lalezar', cursive;
@@ -111,6 +140,14 @@ body {
     justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+
+    .section2 h4 {
+        display:none;
+    }
+}
+
+
 .section3 {
     display: grid;
     height: 40vh;
@@ -123,6 +160,13 @@ body {
     text-align: center;
     background-color: white;
     box-shadow: 0px 3px 15px rgba(255, 102, 0, 0.2);
+}
+
+@media screen and (max-width: 480px) {
+
+    .section3 {
+        display:none;
+    }
 }
 
 .containerbutton {
@@ -164,10 +208,6 @@ body {
   }
 
 
-
-
-
-
 .section4 {
     display: grid;
     height: 20vh;
@@ -183,12 +223,26 @@ body {
     background-color: white;
 }
 
+@media screen and (max-width: 480px) {
+
+    .section4 {
+        display:none;
+    }
+}
+
+
 .iphone2 {
     margin-top: -200px;
     margin-left: 20%;
     transform: rotate(-40deg) scale(0.7);
 }
 
+@media screen and (max-width: 480px) {
+
+    .iphone2 {
+        display:none;
+    }
+}
   
 
 .bottom {
@@ -204,6 +258,12 @@ body {
     filter: drop-shadow(0 0 8px #50A8C2);
 }
 
+@media screen and (max-width: 480px) {
+
+    .bottom {
+        display:none;
+    }
+}
 
 .card-title {
     flex-direction: column;
@@ -217,6 +277,7 @@ body {
     align-items: center;
 
 }
+
 
 #bob-navbar {
     width: 90%;
