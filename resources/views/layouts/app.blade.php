@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Comfortaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
 
@@ -61,21 +62,22 @@
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/"><img src="{{ URL::asset ('img/home.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
+
+
         <div class="nav-link" role="group" aria-label="Second group">
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/activities"><img src="{{ URL::asset ('img/activities.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
 
-        
         @if (Auth::check())
         <div class="nav-link" role="group" aria-label="Fourth group">
            
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/account/{{Auth::user()->id}}"><img src="{{ URL::asset ('img/account.png') }}"
                         alt="Italian Trulli"></button>
-           
         </div>
+        
         <div class="nav-link" role="group" aria-label="Third group">
-            <button type="button" class="btn btn-secondary m-0 p-0"><a href="/account/{{ Auth::user()->id}}/chat"><img src="{{ URL::asset ('img/chat.png') }}"
+            <button type="button" class="btn btn-secondary m-0 p-0" ><a href="/account/{{ Auth::user()->id}}/chat"><img src="{{ URL::asset ('img/chat.png') }}"
                         alt="Italian Trulli"></a></button>
         </div>
         @endif

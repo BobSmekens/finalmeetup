@@ -45,8 +45,6 @@ img  { display: block; margin-bottom: 10px;}
     }
     }
 
-
-
 #hero h2{
     font-family: 'Baloo Chettan', cursive;
     font-size: 100px;
@@ -84,7 +82,7 @@ img  { display: block; margin-bottom: 10px;}
 
 .section1 {
     display: grid;
-    font-family: 'Comfortaa', cursive;
+    font-family: "Nunito",sans-serif;
     background-color: white;
     height: 60vh;
     width: 80vw;
@@ -111,14 +109,13 @@ img  { display: block; margin-bottom: 10px;}
 }
 
 .section1 h4 {
-    margin-top: 4%;
-    font-family: 'Lalezar', cursive;
+    display: grid;
+    position: absolute;
+    font-family: "Nunito",sans-serif;
     font-weight: bold;
     font-size: 30px;
     letter-spacing: 5px;
-    position: absolute;
-    text-align: center;
-    justify-content: center;
+    padding: 50px;
     background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -139,23 +136,27 @@ img  { display: block; margin-bottom: 10px;}
 .section1a {
     display: grid;
     float: left;
+    font-size: 1vw;
+    margin-top: 10vh;
     padding: 10px;
-    height: 80%;
-    width: 260px;
+    height: 15vh;
+    width: 50vw;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 .section1b {
     display: grid;
     float: left;
+    margin-top: 10%;
+    font-size: 1vw;
     padding: 10px;
-    height: 80%;
-    width: 260px;
+    height: 15vh;
+    width: 50vw;
     border-radius: 15px;
     background-color: white;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
 }
 
 @media screen and (max-width: 480px) {
@@ -177,6 +178,7 @@ img  { display: block; margin-bottom: 10px;}
 
 
 .section2 {
+    display: grid;
     height: 80vh;
     width: 80vw;
     border-radius: 15px;
@@ -197,8 +199,9 @@ img  { display: block; margin-bottom: 10px;}
 }
 
 .section2 h4 {
+    display: grid;
     margin-top: 4%;
-    font-family: 'Lalezar', cursive;
+    font-family: "Nunito",sans-serif;
     font-weight: bold;
     font-size: 30px;
     padding: 4%;
@@ -224,8 +227,8 @@ img  { display: block; margin-bottom: 10px;}
     display: grid;
     height: 40vh;
     width: 80vw;
+    margin-top: 10%;
     border-radius: 15px;
-    margin-top: 4%;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -243,7 +246,7 @@ img  { display: block; margin-bottom: 10px;}
 .containerbutton {
     display: flex;
     justify-content: center;
-    font-family: 'Lalezar', cursive;
+    font-family: "Nunito",sans-serif;
     align-items: center;
     color: white;
     align-content: center;
@@ -376,16 +379,6 @@ img  { display: block; margin-bottom: 10px;}
 
 
 
-/* .btn-toolbar {
-    display: flex;
-    margin-top: 30%;
-    bottom: 0;
-    flex-direction: row;
-    align-items: center;
-    background-color: none;
-    justify-content: center;
-} */
-
 .btn {
     display: flex;
     padding: 10px;
@@ -398,15 +391,17 @@ img  { display: block; margin-bottom: 10px;}
 
 
 
+
+
+
 /* LOGIN PAGE ----------------------------------------------------------------------------------------------------------------*/
 
 
 .loginpage {
     display: grid;
     width: 100vw;
-    margin-top: -50px;
     font-size: 16px;
-    background: white;   
+    background: transparent;   
 }
 
 
@@ -415,4 +410,46 @@ img  { display: block; margin-bottom: 10px;}
     .loginpage {
         display:none;
     }
+}
+
+ .general-button {
+    
+
+
+
+
+
+ }
+
+
+
+
+
+/* ACTIVITIES PAGE ----------------------------------------------------------------------------------------------------------------*/
+
+.card.activities-index-top {
+    display: grid;
+    width: 100vw;
+    margin-top: 10px;
+    font-size: 16px;
+    background: white;   
+
+}
+
+.activities-table-titles-container {
+    display: grid;
+    width: 100vw;
+    margin-top: 10px;
+    font-size: 16px;
+    background: white;   
+
+}
+
+.activity-add-container {
+    display: grid;
+    width: 100vw;
+    margin-top: 10px;
+    font-size: 16px;
+    background: white;   
+
 }

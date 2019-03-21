@@ -5,7 +5,7 @@
     <div class="">
         <div class="">
             <div class="">
-                <div class="section-title">Welcome to meetup!</div>
+                <div class="section-title">Welcome to the platform!</div>
 
                 <div class="loginpage">
                     <form method="POST" action="{{ route('login') }}">
