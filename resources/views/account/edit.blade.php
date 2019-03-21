@@ -18,7 +18,7 @@
         <span class="form-label">Name:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->name }}" required type="text"
+            <input class="form-input" value="{{ $user->name }}" required type="text"
                 name="name">
         </span>
         <br>
@@ -26,7 +26,7 @@
         <span class="form-label">E-mail:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->email }}" required type="text"
+            <input class="form-input" value="{{ $user->email }}" required type="text"
                 name="email">
         </span>
         <br>
@@ -34,7 +34,7 @@
         <span class="form-label">Phone:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->phone }}" required type="text"
+            <input class="form-input" value="{{ $user->phone }}" required type="text"
                 name="phone">
         </span>
         <br>
@@ -42,7 +42,7 @@
         <span class="form-label">Skills:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->skills }}" required type="text"
+            <input class="form-input" value="{{ $user->skills }}" required type="text"
                 name="skills">
         </span>
         <br>
@@ -50,7 +50,7 @@
         <span class="form-label">About me:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->about_me }}" required type="text"
+            <input class="form-input" value="{{ $user->about_me }}" required type="text"
                 name="about_me">
         </span>
         <br>

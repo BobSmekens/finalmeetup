@@ -74,7 +74,8 @@ class ActivitiesController extends Controller
         //dd($activity::find(1));
 
 
-        return redirect('/activities');
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity created');
     }
 
     /**
@@ -130,7 +131,8 @@ class ActivitiesController extends Controller
 
         $activity->update();
 
-        return redirect('/activities/' . $id);
+        //return redirect('/activities/' . $id);
+        return redirect('/activities/' . $id)->with('success', 'activity updated');
     }
 
     /**
@@ -142,8 +144,9 @@ class ActivitiesController extends Controller
     public function destroy(Activity $activity)
     {
         $activity->delete();
+        
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity deleted');
 
-        return redirect('/activities');
-        return redirect('/activities/'); . Auth::user()->id)->with('successactivity', 'activity deleted');
     }
 }
