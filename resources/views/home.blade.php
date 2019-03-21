@@ -2,17 +2,27 @@
 
 @section('content')
 
-<!-- <div class="home-container"> 
-  <div class="top">
-    <img class="top-image" src="{{ URL::asset ('.png') }}" alt="Card image cap">
-  </div> -->
-  
-  <!--<div class="bottom"><h1 class=""></h1>
-    <p class="">A PLATFORM TO ENGAGE IN ACTIVITIES OR TO LEARN NEW SKILLS</p>
-    <p>Welcome {{ $user[0]->name }}</p>
-  </div>
 
-</div> -->
+<img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
 
+    <div class="section1"><h4>QUICK INFO</h4>
+        <div class="section1a">Meetup</div>
+        <div class="section1b">Skill up</div>
+    </div>
+
+
+    <div class="section2"><h4>AMAZING FEATURES</h4>
+    </div>
+
+    <div class="section3">THANK YOU FOR USING THE APP
+    <div class="containerbutton">
+        <a class="btn btn-1">DOWNLOAD APP</a>
+    </div>
+
+
+    </div>
+
+    <img class="iphone2" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
+    <div class="section4">CONTACT</div>
 
 @endsection
