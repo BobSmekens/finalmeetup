@@ -21,15 +21,175 @@ body {
     padding: 20%;
 }
 
+
 .iphone {
     margin-top: -400px;
     margin-left: 45%;
+}
+
+.section1 {
+    display: flex;
+    font-family: 'Comfortaa', cursive;
+    background-color: white;
+    height: 60vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 4%;
+    margin-left: 10%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.section1 h4 {
+    margin-top: 4%;
+    font-family: 'Lalezar', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .top-image {
     margin-top: 10px;
     border-radius: 5%;
 }
+
+.section1a {
+    display: grid;
+    float: left;
+    padding: 10px;
+    height: 80%;
+    width: 260px;
+    margin: 10%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.section1b {
+    display: grid;
+    float: left;
+    padding: 10px;
+    height: 80%;
+    width: 260px;
+    margin: 10%;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.section2 {
+    height: 80vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 4%;
+    margin-left: 10%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.section2 h4 {
+    margin-top: 4%;
+    font-family: 'Lalezar', cursive;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 4%;
+    letter-spacing: 5px;
+    color: white;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+}
+
+.section3 {
+    display: grid;
+    height: 40vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 4%;
+    margin-left: 10%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgba(255, 102, 0, 0.2);
+}
+
+.containerbutton {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lalezar', cursive;
+    align-items: center;
+    color: white;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 15vw;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+  .btn {
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+   }
+  
+  /* Demo Stuff End -> */
+  
+  /* <- Magic Stuff Start */
+  
+  .btn:hover {
+    background-position: right center; /* change the direction of the change here */
+  }
+  
+  .btn-1 {
+    background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+  }
+
+
+
+
+
+
+.section4 {
+    display: grid;
+    height: 20vh;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: -100px;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.iphone2 {
+    margin-top: -200px;
+    margin-left: 20%;
+    transform: rotate(-40deg) scale(0.7);
+}
+
+  
 
 .bottom {
     margin-left: 10%;

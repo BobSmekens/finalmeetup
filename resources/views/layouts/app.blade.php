@@ -16,7 +16,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
         crossorigin="anonymous">
 
@@ -49,7 +50,25 @@
 
     <img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
 
-    <div class="whitespace"></div>
+    <div class="section1"><h4>QUICK INFO</h4>
+        <div class="section1a">Meetup</div>
+        <div class="section1b">Skill up</div>
+    </div>
+
+
+    <div class="section2"><h4>AMAZING FEATURES</h4>
+    </div>
+
+    <div class="section3">THANK YOU FOR USING THE APP
+    <div class="containerbutton">
+        <a class="btn btn-1">DOWNLOAD APP</a>
+    </div>
+
+
+    </div>
+
+    <img class="iphone2" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
+    <div class="section4">CONTACT</div>
 
 <!--
     <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
