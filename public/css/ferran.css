@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; }
 html { overflow-y: scroll;}
-img { display: block; margin-bottom: 10px;}
+img  { display: block; margin-bottom: 10px;}
 
 .section1, .section2, .section3, .section4
 { 
@@ -8,11 +8,11 @@ img { display: block; margin-bottom: 10px;}
     }
     
 #wrapper {
-	width: 96%;	
-	max-width: 920px;
-	margin: auto;
-	padding: 2%;
+	width: 100%;	
 	} 
+
+/* HERO BANNER SECTION ------------------------------------------------------------------------------------------------ */
+
 
 #hero {
     height: 60vh;
@@ -20,14 +20,31 @@ img { display: block; margin-bottom: 10px;}
     border-radius: 15px;
     margin-top: 4%;
     margin-left: 10%;
-    background: #C6FFDD;  /* fallback for old browsers */
+    background: #C6FFDD;                                                           /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     display: grid;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+
+@media screen and (max-width: 480px) {
+
+    #hero {
+            font-size: 60px;
+            height: 280px;
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+    #hero h2 {
+        transform: rotate(-10deg);
+        font-size: 60px;
+        margin-top: 10%;
+    }
+    }
+
 
 
 #hero h2{
@@ -40,6 +57,12 @@ img { display: block; margin-bottom: 10px;}
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+@media screen and (max-width: 480px) {
+
+#hero h2 {
+        font-size: 60px;
+    }
+}
 
 .iphone {
     margin-top: -400px;
@@ -49,18 +72,42 @@ img { display: block; margin-bottom: 10px;}
     grid-template-rows: 300px 300px;
 }
 
+@media screen and (max-width: 480px) {
+
+    .iphone {
+        display: none;
+    }
+}
+
+/* SECTION 1 ----------------------------------------------------------------------------------------------------------------*/
+
+
 .section1 {
-    display: flex;
+    display: grid;
     font-family: 'Comfortaa', cursive;
     background-color: white;
     height: 60vh;
     width: 80vw;
     border-radius: 15px;
     margin-top: 4%;
-    margin-left: 10%;
     justify-content: center;
     align-content: center;
     text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+
+    .section1 {
+        display: grid;
+        height: 200px;
+        margin-top: 100px;
+        font-size: 20px;
+        width: 100%;
+        margin-top: 10%;
+        border-radius: 0;
+        padding: 5px;
+        
+    }
 }
 
 .section1 h4 {
@@ -77,6 +124,13 @@ img { display: block; margin-bottom: 10px;}
     -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 480px) {
+
+    .section1 h4 {
+        display: none;
+    }
+}
+
 .top-image {
     margin-top: 10px;
     border-radius: 5%;
@@ -88,7 +142,6 @@ img { display: block; margin-bottom: 10px;}
     padding: 10px;
     height: 80%;
     width: 260px;
-    margin: 10%;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
@@ -100,18 +153,34 @@ img { display: block; margin-bottom: 10px;}
     padding: 10px;
     height: 80%;
     width: 260px;
-    margin: 10%;
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
+
+@media screen and (max-width: 480px) {
+
+    .section1a, .section1b {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 480px) {
+
+    .section1c {
+        display: none;
+    }
+}
+
+
+/* SECTION 2 ----------------------------------------------------------------------------------------------------------------*/
+
 
 .section2 {
     height: 80vh;
     width: 80vw;
     border-radius: 15px;
     margin-top: 4%;
-    margin-left: 10%;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -148,13 +217,15 @@ img { display: block; margin-bottom: 10px;}
 }
 
 
+/* SECTION 3 ----------------------------------------------------------------------------------------------------------------*/
+
+
 .section3 {
     display: grid;
     height: 40vh;
     width: 80vw;
     border-radius: 15px;
     margin-top: 4%;
-    margin-left: 10%;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -195,9 +266,6 @@ img { display: block; margin-bottom: 10px;}
     border-radius: 10px;
    }
   
-  /* Demo Stuff End -> */
-  
-  /* <- Magic Stuff Start */
   
   .btn:hover {
     background-position: right center; /* change the direction of the change here */
@@ -208,13 +276,15 @@ img { display: block; margin-bottom: 10px;}
   }
 
 
+/* SECTION 4 ----------------------------------------------------------------------------------------------------------------*/
+
+
 .section4 {
     display: grid;
     height: 20vh;
     width: 80vw;
     border-radius: 15px;
     margin-top: -100px;
-    margin-left: 10%;
     margin-bottom: 100px;
     justify-content: center;
     align-content: center;
@@ -246,7 +316,6 @@ img { display: block; margin-bottom: 10px;}
   
 
 .bottom {
-    margin-left: 10%;
     font-weight: bold;
     text-align: center;
     width: 80%;
@@ -279,15 +348,30 @@ img { display: block; margin-bottom: 10px;}
 }
 
 
+/* NAVBAR ----------------------------------------------------------------------------------------------------------------*/
+
+
 #bob-navbar {
+    display: flex;
     width: 90%;
     border-radius: 15px;
     margin-bottom: 10px;
-    margin-left: 5%;
+    margin-left: 10%;
+    position: fixed;
+    align-content: center;
+    justify-content: center;
 }
+
 
 #bob:hover {
     transition: All 1s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+
+    #bob-navbar {
+        display:none;
+    }
 }
 
 
@@ -310,4 +394,25 @@ img { display: block; margin-bottom: 10px;}
     border: 0 none;
     margin: 25px;
     background-color: rgba(0,0,0,0) !important;
+}
+
+
+
+/* LOGIN PAGE ----------------------------------------------------------------------------------------------------------------*/
+
+
+.loginpage {
+    display: grid;
+    width: 100vw;
+    margin-top: -50px;
+    font-size: 16px;
+    background: white;   
+}
+
+
+@media screen and (min-width: 480px) {
+
+    .loginpage {
+        display:none;
+    }
 }
