@@ -294,3 +294,26 @@ form {
         font-weight: bold;
     }
 }
+
+/*    ///////////////////////chat ////////////////////*/
+.recieved-message {
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.send-message {
+    padding: 30px;
+    border: 1px solid green;
+    text-align: right;
+}
+
+#chat-pic-sender {
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chat-message {
+    display: inline-block;
+}
