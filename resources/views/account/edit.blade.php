@@ -18,54 +18,49 @@
         <span class="form-label">Name:</span>
 
         <span>
-            <input class="form-input" value="{{ $user->name }}" required type="text"
-                name="name">
+            <input class="form-input" placeholder="{{ $user->name }}" required type="text" name="name">
         </span>
         <br>
 
         <span class="form-label">E-mail:</span>
 
         <span>
-            <input class="form-input" value="{{ $user->email }}" required type="text"
-                name="email">
+            <input class="form-input" placeholder="{{ $user->email }}" required type="text" name="email">
         </span>
         <br>
 
         <span class="form-label">Phone:</span>
 
         <span>
-            <input class="form-input" value="{{ $user->phone }}" required type="text"
-                name="phone">
+            <input class="form-input" placeholder="{{ $user->phone }}" required type="text" name="phone">
         </span>
         <br>
 
         <span class="form-label">Skills:</span>
 
         <span>
-            <input class="form-input" value="{{ $user->skills }}" required type="text"
-                name="skills">
+            <input class="form-input" placeholder="{{ $user->skills }}" required type="text" name="skills">
         </span>
         <br>
 
         <span class="form-label">About me:</span>
 
         <span>
-            <input class="form-input" value="{{ $user->about_me }}" required type="text"
-                name="about_me">
+            <input class="form-input" placeholder="{{ $user->about_me }}" required type="text" name="about_me">
         </span>
         <br>
 
         <button class="account-eddit-button" type="submit">Update account</button>
-        
-        
 
-    </form>   
+
+
+    </form>
     <form action="/account/{{ $user->id }}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
 
-                <button class="account-delete-button" type="submit">Delete account</button>
-        </form>
+        <button class="account-delete-button" type="submit">Delete account</button>
+    </form>
 </div>
 </div>
 
