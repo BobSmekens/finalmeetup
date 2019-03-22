@@ -101,12 +101,13 @@ form {
     min-width: 200px;
     padding: 5px 20px;
     box-sizing: border-box;
+    border: none;
 
-    input {
+
         -webkit-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
         -moz-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
         box-shadow: inset 1px 1px 3px 1px #4BC0C8;
-    }
+
 }
 
 .form-control {
@@ -252,8 +253,9 @@ form {
 /*                    edit account  */
 
 .form-container {
-    height: 90vh;
+    min-height: 90vh;
     padding-top: 20px;
+    width: 100vw;
 
     #edit-profile-pic {
         height: 160px;
@@ -265,12 +267,14 @@ form {
     form {
         text-align: center;
         display: inline-block;
-        width: 100%;
+        width: 80%;
+        margin-left: 10%;
 
         .add-file {
-            padding: 10px 20px;
+            padding: 5px 10px;
             display: block;
             margin: auto;
+            font-size: 16px;
         }
 
         .form-label {
