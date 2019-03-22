@@ -1,2 +1,6 @@
-
-
+.send-message:nth-child(odd){
+background-color:rgba(255, 255, 255, 0.171);
+}
+.send-message:nth-child(even){
+background-color:rgba(0, 0, 0, 0.199);
+}
