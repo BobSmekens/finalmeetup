@@ -3,20 +3,23 @@
 @section('content')
 <div class="activities-index-top">
     <h3>Activities</h3>
+    <div class="activities-table-titles-container">
+    <div class="activity-index-col  white-text">Deelnemers</div>
+    <div class="activity-table  white-text">Activiteit</div>
+    <div class="activity-index-col  white-text">Organisator</div>
 </div>
-<div class="activities-table-titles-container">
-    <div class="activity-index-col">Deelnemers</div>
-    <div class="activity-table">Activiteit</div>
-    <div class="activity-index-col">Organisator</div>
 </div>
 
 
+<div class="activity-list-container">
 @foreach($activities as $activity)
 <div class="activities-table-titles-container">
-    <div class="activity-index-col">{{$activity->users->count()}}/{{$activity->max_persons}}
+    <div class="activity-index-col">
+        {{$activity->users->count()}}/{{$activity->max_persons}}
         @if ($activity->users->count()>=$activity->max_persons)
-        <span class="alert">activiteit is vol</span>
-        @endif</div>
+            <span class="alert">activiteit is vol</span>
+        @endif
+    </div>
     <div class="activity-table">
         <a href="/activities/{{ $activity->id }}">{{ $activity->activity }}</a>
     </div>
@@ -24,6 +27,8 @@
 </div>
 
 @endforeach
+</div>
+
 
 
 {{$activities->links()}}
