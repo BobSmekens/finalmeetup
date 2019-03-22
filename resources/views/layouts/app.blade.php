@@ -28,7 +28,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/koen.css') }}">
-    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/ferran.css') }}">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/ferran2.css') }}">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/bobsass.css') }}">
 </head>
 
