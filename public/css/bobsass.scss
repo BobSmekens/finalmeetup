@@ -2,8 +2,12 @@
     outline: none;
 }
 
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
+    // overflow-x: hidden;
 }
 
 .debug {
@@ -14,14 +18,17 @@ form {
     position: relative;
 }
 
-#bob-navbar {
-    position: absolute;
-    bottom: 0;
-}
+// #bob-navbar {
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+// }
 
 .top-image {
     object-fit: cover;
 }
+
+
 
 /*                        layouts.app               */
 .navbar-container {
@@ -41,32 +48,65 @@ form {
     }
 }
 
+.user-feedback {
+    font-size: 14px;
+}
+
+.form-container {
+    font-size: 20px;
+}
+
 /*                             login/register          */
-.section-title {
-    font-size: 20px; 
+.login-title {
+    font-size: 24px; 
     text-align: center;
-    padding: 20px;
+    padding-top: 30px;
+    margin: 30px;
+    color: white;
+}
+
+.register-title {
+    font-size: 24px; 
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .register-container {
     min-height: 90vh;
-    display: flex;
+    // display: flex;
     align-items: center;
 }
 
 .form-label {
-    display: inline-block;
-    min-width: 120px;
+    display: block;
     padding: 5px 20px;
     box-sizing: border-box;
 }
 
+.login-form {
+    background-color: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    z-index: 9;
+    border-radius: 10px;
+}
+
 .form-input {
-    display: inline-block;
+    display: block;
     min-width: 200px;
     padding: 5px 20px;
     box-sizing: border-box;
+
+    input {
+        -webkit-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
+        -moz-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
+        box-shadow: inset 1px 1px 3px 1px #4BC0C8;
+    }
 }
 
 .form-control {
@@ -84,7 +124,7 @@ form {
     }
 }
 
-.button-centered-container {
+.login-bottom {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -93,7 +133,7 @@ form {
     .general-button {
         align-content: center;
         flex: 1;
-        max-width: 120px;
+        max-width: 150px;
         border-radius: 15px;
         height: 30px;
         border: none;
@@ -128,6 +168,11 @@ form {
     }
 }
 
+.user-feedback {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
 /*                               account               */
 .account-container {
     min-height: 90vh;
@@ -135,7 +180,9 @@ form {
     .account-top {
         min-height: 30vh;
         text-align: center;
-        padding: 10px 20px;
+        padding: 10px 20px;                                                       /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
 
         .account-name {
             font-size: 24px;
@@ -144,15 +191,20 @@ form {
 
         .account-image-container {
             height: 160px;
+            text-align: center;
+
+            .account-image {
+                height: 160px;
+                width: 160px;
+                border-radius: 50%;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                box-sizing: border-box;
+            }
         }
 
-        .account-image {
-            height: 160px;
-            width: 160px;
-            border-radius: 50%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
+        
 
         .account-property {
             font-size: 18px;
@@ -263,7 +315,13 @@ form {
     height: 30vh;
     width: 100%;
     text-align: center;
-    padding-top: 10vh;
+    padding-top: 10vh;                                                         /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
+
+    h3 {
+        background-color: rgba(0,0,0,0);
+    }
 }
 
 .activities-table-titles-container {

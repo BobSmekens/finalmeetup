@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card activities-index-top">
+<div class="activities-index-top">
     <h3>Activities</h3>
 </div>
 <div class="activities-table-titles-container">
@@ -20,7 +20,7 @@
     <div class="activity-table">
         <a href="/activities/{{ $activity->id }}">{{ $activity->activity }}</a>
     </div>
-    <div class="activity-index-col">{{$activity->posted_by}}</div>
+    <div class="activity-index-col">{{$activity->users[0]->name}}</div>
 </div>
 
 @endforeach

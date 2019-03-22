@@ -21,8 +21,8 @@ img  { display: block; margin-bottom: 10px;}
     margin-top: 4%;
     margin-left: 10%;
     background: #C6FFDD;                                                           /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);          /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
     display: grid;
     align-items: center;
@@ -32,7 +32,7 @@ img  { display: block; margin-bottom: 10px;}
 @media screen and (max-width: 480px) {
 
     #hero {
-            font-size: 60px;
+
             height: 280px;
             width: 100%;
             margin: 0;
@@ -139,7 +139,7 @@ img  { display: block; margin-bottom: 10px;}
     font-size: 1vw;
     margin-top: 10vh;
     padding: 10px;
-    height: 15vh;
+    /* height: 15vh; */
     width: 50vw;
     border-radius: 15px;
     background-color: white;
@@ -356,10 +356,9 @@ img  { display: block; margin-bottom: 10px;}
 
 #bob-navbar {
     display: flex;
-    width: 90%;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    margin-left: 10%;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
     position: fixed;
     align-content: center;
     justify-content: center;

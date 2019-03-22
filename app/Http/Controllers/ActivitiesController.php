@@ -20,17 +20,8 @@ class ActivitiesController extends Controller
     {
         // $activities = \App\Activity::all();        
         $activities = Activity::with('users')->paginate(4);
-       //dd($activities);
-    
 
-        // return view('account.index');
-
-//eerst filteren 
-
-//$countedUsers= DB::table('activity_user')->where('activity_id', '=', '1')->get();
-
-///tellen
-
+        //dd($activities);
 
         return view('activities.index', [
             'activities' => $activities
