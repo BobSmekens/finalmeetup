@@ -2,11 +2,7 @@
 
 @section('content')
 <div class="activities-index-top">
-    <h3>Activities</h3>
-    <div class="activities-table-titles-container">
-    <div class="activity-index-col  white-text">Plekken</div>
-    <div class="activity-table  white-text">Activiteit</div>
-    <div class="activity-index-col  white-text">Host</div>
+
 </div>
 </div>
 

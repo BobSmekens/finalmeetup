@@ -1,6 +1,7 @@
-.send-message:nth-child(odd){
-background-color:rgba(255, 255, 255, 0.171);
+.name-activity{
+    font-family: 'Baloo Chettan', cursive;
 }
-.send-message:nth-child(even){
-background-color:rgba(0, 0, 0, 0.199);
+
+.koenh2{
+   margin-top:-100px!important ;
 }
