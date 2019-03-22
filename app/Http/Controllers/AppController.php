@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 use \App\Activity;
 use \App\User;
-use \App\Meetup;
+
 
 class AppController extends Controller
 {
@@ -43,34 +43,42 @@ class AppController extends Controller
     public function addToMeetup($id)
     {
         if(Auth::check()){
-            $activity = Activity::findOrFail($id);
-            $meetup = new Meetup;
+           // $activity = Activity::with ('users')->post()($id);
+            //Activity::with('users')->get();
+            $activity = Activity::find($id);
+            $user = User::find(Auth::user()->id);
+            $activity->users()->save($user);
 
-            $meetup->activity_id = $activity->id;
-            $meetup->user_id = $activity->posted_by;
-
-
-            $meetup->save();
         }
         return redirect('/activities');
     }
 
     public function showCalendar() {
         if(Auth::check()){
-            $logged_user = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
-            $meetups = DB::table('meetups')
-                        ->where('user_id', '=', $logged_user)->get();
+
+            // $activities = Activity::with('users')
+            // ->where('id', '=', Auth::user()->id)
+            // ->get();
+            $user = User::with('activity')
+            ->where('id', '=', Auth::user()->id)
+            ->first();
+            //dd($user);
+
+            //dd($user[0]->activity);
 
             return view('calender.index', [
-                'meetups' => $meetups
+                'user' => $user
             ]);
         };
     }
 
     public function deleteCalendarItem($id) {
         // dd($id);
-        $meetup = Meetup::findOrFail($id);
-        $meetup->delete();
+        $user = User::with('activity')
+            ->where('id', '=', Auth::user()->id)
+            ->first();
+
+        $user->activity()->detach($id);
 
         return redirect('/calendar');
     }

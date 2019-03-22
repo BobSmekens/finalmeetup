@@ -17,7 +17,7 @@ class CreateActivitiesTable extends Migration
             $table->bigIncrements('id');
             $table->string('activity')->nullable();
             $table->bigInteger('posted_by')->unsigned();
-            $table->foreign('posted_by')->references('id')->on('users');
+            $table->foreign('posted_by')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('max_persons')->nullable(true);
             $table->string('description')->nullable(true);
             $table->string('category')->default('Meetup');

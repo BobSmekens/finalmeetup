@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section1, .section2, .section3, .section4 {
+  display: block;
+}
+
+#wrapper {
+  width: 100%;
+}
+
+/* HERO BANNER SECTION ------------------------------------------------------------------------------------------------ */
+#hero {
+  height: 60vh;
+  width: 80vw;
+  border-radius: 15px;
+  margin: auto;
+  background: #C6FFDD;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media screen and (max-width: 480px) {
+  #hero {
+    height: 280px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  #hero h2 {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+    font-size: 60px;
+    margin-top: 10%;
+  }
+}
+
+#hero h2 {
+  font-family: 'Baloo Chettan', cursive;
+  font-size: 100px;
+  color: white;
+  padding: 20%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media screen and (max-width: 480px) {
+  #hero h2 {
+    font-size: 60px;
+  }
+}
+
+.iphone {
+  margin-top: -400px;
+  margin-left: 45%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* This will result on two rows, each one of 300px */
+  -ms-grid-rows: 300px 300px;
+      grid-template-rows: 300px 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .iphone {
+    display: none;
+  }
+}
+
+/* SECTION 1 ----------------------------------------------------------------------------------------------------------------*/
+.section1 {
+  display: -ms-grid;
+  display: grid;
+  font-family: "Nunito",sans-serif;
+  background-color: white;
+  height: 60vh;
+  width: 80vw;
+  border-radius: 15px;
+  margin-top: 4%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .section1 {
+    display: -ms-grid;
+    display: grid;
+    height: 200px;
+    margin-top: 100px;
+    font-size: 20px;
+    width: 100%;
+    margin-top: 10%;
+    border-radius: 0;
+    padding: 5px;
+  }
+}
+
+.section1 h4 {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  font-family: "Nunito",sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 5px;
+  padding: 50px;
+  background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 480px) {
+  .section1 h4 {
+    display: none;
+  }
+}
+
+.top-image {
+  margin-top: 10px;
+  border-radius: 5%;
+}
+
+.section1a {
+  display: -ms-grid;
+  display: grid;
+  float: left;
+  font-size: 1vw;
+  margin-top: 10vh;
+  padding: 10px;
+  /* height: 15vh; */
+  width: 50vw;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section1b {
+  display: -ms-grid;
+  display: grid;
+  float: left;
+  margin-top: 10%;
+  font-size: 1vw;
+  padding: 10px;
+  height: 15vh;
+  width: 50vw;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+  .section1a, .section1b {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section1c {
+    display: none;
+  }
+}
+
+/* SECTION 2 ----------------------------------------------------------------------------------------------------------------*/
+.section2 {
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  width: 80vw;
+  border-radius: 15px;
+  margin-top: 4%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f7797d), color-stop(#FBD786), to(#C6FFDD));
+  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section2 ul {
+  font-family: "Nunito",sans-serif;
+  font-size: 20px;
+  margin: 5px;
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 480px) {
+  .section2 {
+    display: none;
+  }
+}
+
+.section2 h4 {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 4%;
+  font-family: "Nunito",sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 4%;
+  letter-spacing: 5px;
+  color: white;
+  position: relative;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .section2 h4 {
+    display: none;
+  }
+}
+
+/* SECTION 3 ----------------------------------------------------------------------------------------------------------------*/
+.section3 {
+  display: -ms-grid;
+  display: grid;
+  height: 40vh;
+  width: 80vw;
+  margin-top: 10%;
+  border-radius: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 15px rgba(255, 102, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(255, 102, 0, 0.2);
+}
+
+#play {
+  margin: 30px;
+}
+
+#android {
+  margin: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  .section3 {
+    display: none;
+  }
+}
+
+.containerbutton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Nunito",sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 15vw;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+  -webkit-box-shadow: 0 0 20px #eee;
+          box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f6d365), color-stop(51%, #fda085), to(#f6d365));
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+/* SECTION 4 ----------------------------------------------------------------------------------------------------------------*/
+.section4 {
+  display: -ms-grid;
+  display: grid;
+  height: 20vh;
+  width: 80vw;
+  border-radius: 15px;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .section4 {
+    display: none;
+  }
+}
+
+.iphone2 {
+  margin-top: -200px;
+  margin-left: 20%;
+  -webkit-transform: rotate(-40deg) scale(0.7);
+          transform: rotate(-40deg) scale(0.7);
+}
+
+@media screen and (max-width: 480px) {
+  .iphone2 {
+    display: none;
+  }
+}
+
+.bottom {
+  font-weight: bold;
+  text-align: center;
+  width: 80%;
+  padding: 3%;
+  font-size: 12px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-filter: drop-shadow(0 0 8px #50A8C2);
+          filter: drop-shadow(0 0 8px #50A8C2);
+}
+
+@media screen and (max-width: 480px) {
+  .bottom {
+    display: none;
+  }
+}
+
+.card-title {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30%;
+}
+
+.card-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* NAVBAR ----------------------------------------------------------------------------------------------------------------*/
+
+
+#bob:hover {
+  -webkit-transition: All 1s ease-in-out;
+  transition: All 1s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+  #bob-navbar {
+    display: none;
+  }
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 0 none;
+  margin: 25px;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/* LOGIN PAGE ----------------------------------------------------------------------------------------------------------------*/
+.loginpage {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  font-size: 16px;
+  background: transparent;
+}
+
+@media screen and (min-width: 480px) {
+  .loginpage {
+    display: none;
+  }
+}
+
+/* ACCOUNT PAGE ----------------------------------------------------------------------------------------------------------------*/
+.account-container {
+  display: -ms-grid;
+  display: grid;
+  max-height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  background: transparent;
+}
+
+.account-container-top {
+  height: 200px;
+  width: 100vw;
+  font-size: 16px;
+  background: transparent;
+}
+
+.card.account-bottom {
+  width: 100vw;
+  height: 100px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .account-container {
+    display: none;
+  }
+}
+
+/* ACTIVITIES PAGE ----------------------------------------------------------------------------------------------------------------*/
+.card.activities-index-top {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  margin-top: 10px;
+  font-size: 16px;
+  background: white;
+}
+
+.activities-table-titles-container {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  margin-top: 10px;
+  font-size: 16px;
+  background: white;
+}
+
+.activity-add-container {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  margin-top: 10px;
+  font-size: 16px;
+  background: white;
+}
+/*# sourceMappingURL=ferran2.css.map */

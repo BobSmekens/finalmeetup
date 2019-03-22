@@ -19,11 +19,11 @@ class UserController extends Controller
     public function index()
     {
         $users = \App\User::all();
-
-        // return view('account.index');
-        return view('account.index', [
-            'users' => $users
-        ]);
+        
+        return redirect('/account/' . Auth::user()->id)->with('success', 'You are successfully logged in');
+        // return view('account.index', [
+        //     'users' => $users
+        // ]);
     }
 
     /**
@@ -71,13 +71,15 @@ class UserController extends Controller
     {
         if (Auth::user()->id==$id) {
             if($request->hasFile('photo')){
+                // dd($request->photo);
                 $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
             }
 
             $user = User::findOrFail($id);
             $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
             
-            return redirect('/account/' . $id);
+            //return redirect('/account/' . $id);
+            return redirect('/account/' . $id)->with('success', 'Account info updated');
 
             // $user->name = request('name');
             // $user->email = request('email');
@@ -106,8 +108,15 @@ class UserController extends Controller
 
         $user->delete();
         }
+        return redirect('/signup')->with('success', 'Account deleted');
+    }
 
-        return redirect('/');
+    public function registered()
+    {
+        return redirect('/account/' . Auth::user()->id)->with('success', 'Thank you for registering');
+        // return view('account.index', [
+        //     'users' => $users
+        // ]);
     }
 
 }

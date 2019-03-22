@@ -15,17 +15,23 @@ Route::get('/login', 'AppController@showLogin');
 Route::get('/signup', 'AppController@showSignup'); 
 Route::get('/calendar', 'AppController@showCalendar'); 
 Route::delete('/calendar/{id}', 'AppController@deleteCalendarItem'); 
+Route::get('/registered', 'UserController@registered');
 
-Route::get('/chat', 'ChatController@index');
+Route::get('/account/{id}/chat', 'ChatController@index');
+Route::post('/account/{id}/chat', 'ChatController@sendMessage');
+
 Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
 Route::get('/calender', 'CalenderController@index');
 Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
 
+
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');
-Route::resource('/bob', 'bobtest');
 Auth::routes();
+
+Route::get('search', 'AutoCompleteController@index');
+Route::get('autocomplete', 'AutoCompleteController@search');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 

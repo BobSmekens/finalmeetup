@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
-use \App\Meetup;
+use \App\User;
 
 class ActivitiesController extends Controller
 {
@@ -18,12 +18,17 @@ class ActivitiesController extends Controller
      */
     public function index()
     {
-        $activities = \App\Activity::all();
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->paginate(4);
 
-        // return view('account.index');
+        // dd($activities[3]->users[0]->name);
+
         return view('activities.index', [
             'activities' => $activities
         ]);
+
+
+
     }
 
     /**
@@ -53,17 +58,15 @@ class ActivitiesController extends Controller
         $activity->category = request('category');
         $activity->description = request('description');
    
-
         $activity->save();
-       $newMeetup = new Meetup;
-       $newMeetup->user_id = Auth::user()->id;
-       $newMeetup->activity_id = $activity->id;
 
-       $newMeetup->save();
-    
-       //$meetup->user_id = $activity->posted_by;
+        $user_id = Auth::user()->id;
+        $activity->users()->attach($user_id);
+        //dd($activity::find(1));
 
-        return redirect('/activities');
+
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity created');
     }
 
     /**
@@ -75,7 +78,11 @@ class ActivitiesController extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
+        $user = Auth::user()->id;
+        
+        $check = Activity::with('users')->get()->unique('user_id');
 
+        //dd($check);
         return view('activities.show', [
             'activity' => $activity
         ]);
@@ -115,7 +122,8 @@ class ActivitiesController extends Controller
 
         $activity->update();
 
-        return redirect('/activities/' . $id);
+        //return redirect('/activities/' . $id);
+        return redirect('/activities/' . $id)->with('success', 'activity updated');
     }
 
     /**
@@ -127,7 +135,9 @@ class ActivitiesController extends Controller
     public function destroy(Activity $activity)
     {
         $activity->delete();
+        
+        //return redirect('/activities');
+        return redirect('/activities')->with('success', 'activity deleted');
 
-        return redirect('/activities');
     }
 }
