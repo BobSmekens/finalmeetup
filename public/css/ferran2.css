@@ -25,8 +25,7 @@ img {
   height: 60vh;
   width: 80vw;
   border-radius: 15px;
-  margin-top: 4%;
-  margin-left: 10%;
+  margin: auto;
   background: #C6FFDD;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -421,20 +420,7 @@ img {
 }
 
 /* NAVBAR ----------------------------------------------------------------------------------------------------------------*/
-#bob-navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+
 
 #bob:hover {
   -webkit-transition: All 1s ease-in-out;
