@@ -36,6 +36,6 @@
     </div>
 
     <img class="iphone2" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
-    <div class="section4">CONTACT<br><br>Do you have any questions? Please do not hesitate to contact us.<br></div>
+    <div class="section4">CONTACT<br><br>Do you have any questions? Please do not hesitate to contact us.<br><br>Haagweg 1, 4814 GA Breda<br>North Brabant<br>meetup@skillup.com</div>
 
 @endsection
