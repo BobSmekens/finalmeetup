@@ -18,6 +18,10 @@ form {
   position: relative;
 }
 
+#bob-navbar {
+  z-index: 10;
+}
+
 .top-image {
   -o-object-fit: cover;
      object-fit: cover;
@@ -102,6 +106,7 @@ form {
 .form-input {
   display: block;
   min-width: 200px;
+  max-width: 240px;
   padding: 5px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -272,6 +277,7 @@ form {
   min-height: 90vh;
   padding-top: 20px;
   width: 100vw;
+  margin-bottom: 50px;
 }
 
 .form-container #edit-profile-pic {
@@ -342,7 +348,6 @@ form {
   height: 30vh;
   width: 100%;
   text-align: center;
-  padding-top: 10vh;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
@@ -351,6 +356,11 @@ form {
 
 .activities-index-top h3 {
   background-color: rgba(0, 0, 0, 0);
+  padding: 60px;
+}
+
+.activity-list-container {
+  z-index: 9;
 }
 
 .activities-table-titles-container {
@@ -359,6 +369,11 @@ form {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.activities-table-titles-container .white-text {
+  color: white;
 }
 
 .activities-table-titles-container .activity-index-col {
@@ -381,6 +396,7 @@ form {
 
 .activity-add-container {
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 .activity-add-container .activity-index-add {

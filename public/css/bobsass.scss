@@ -18,11 +18,9 @@ form {
     position: relative;
 }
 
-// #bob-navbar {
-//     position: fixed;
-//     bottom: 0;
-//     left: 0;
-// }
+#bob-navbar {
+    z-index: 10;
+}
 
 .top-image {
     object-fit: cover;
@@ -99,6 +97,7 @@ form {
 .form-input {
     display: block;
     min-width: 200px;
+    max-width: 240px;
     padding: 5px 20px;
     box-sizing: border-box;
     border: none;
@@ -256,6 +255,7 @@ form {
     min-height: 90vh;
     padding-top: 20px;
     width: 100vw;
+    margin-bottom: 50px;
 
     #edit-profile-pic {
         height: 160px;
@@ -318,20 +318,29 @@ form {
 .activities-index-top {
     height: 30vh;
     width: 100%;
-    text-align: center;
-    padding-top: 10vh;                                                         /* fallback for old browsers */
+    text-align: center;                                                        /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
 
     h3 {
         background-color: rgba(0,0,0,0);
+        padding: 60px;
     }
+}
+
+.activity-list-container {
+    z-index: 9;
 }
 
 .activities-table-titles-container {
     display: flex;
     width: 100%;
     padding: 20px;
+    background-color: rgba(0,0,0,0.0);
+
+    .white-text {
+        color: white;
+    }
 
     .activity-index-col {
         flex: 2;
@@ -348,6 +357,7 @@ form {
 
 .activity-add-container {
     padding: 20px;
+    margin-bottom: 50px;
 
     .activity-index-add {
         border: 1px solid black;
