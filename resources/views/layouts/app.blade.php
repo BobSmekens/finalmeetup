@@ -34,27 +34,23 @@
 
 <body>
  
-    <div id="wrapper">
 
 
- <!-- KOEN -->
-    <div id="hero">  
     @if(Session::has('success'))
     <div class="user-feedback">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+        </button>
+    </div>
     {{Session::get('success')}}
-    </div>
- <!-- KOEN -->
-    @endif
-    <div id="main"> 
 
-    @yield('meetupLogo')
-        <main class="content-container">
-           
-            @yield('content')
-        </main>
-    </div>
-    </div>
+    @endif
+<div id="main"> 
+    <main class="content-container">
+         @yield('content')
+    </main>
+</div>
+
 
 
     

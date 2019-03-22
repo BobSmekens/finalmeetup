@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('meetupLogo')
-<h2>MEETUP</h2>   
+
 @endsection
 
 @section('content')
-
-
+<div class="home-top">
+    <h2>MEETUP</h2>
+</div>
+   
 <img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
 
     <div class="section1"><h4>QUICK INFO</h4>
