@@ -4,11 +4,14 @@
 
     @foreach($user->activity as $activity)
 
-        <form action="/calendar/{{ $activity->id }}" method="POST">
+        <form class="calendar-item" action="/calendar/{{ $activity->id }}" method="POST">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
-            <a href="">{{ $activity->activity}}</a>
-            <button type="submit">Delete</button>
+    
+                <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
+                <button type="submit">X</button>
+
+            
         </form>
     
     @endforeach

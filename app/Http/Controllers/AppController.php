@@ -55,10 +55,7 @@ class AppController extends Controller
 
     public function showCalendar() {
         if(Auth::check()){
-            // $logged_user = DB::table('users')->where('id', '=', Auth::user()->id)->get()[0]->name;
-            // $meetups = DB::table('meetups')
-            //             ->where('user_id', '=', $logged_user)->get();
-            
+
             // $activities = Activity::with('users')
             // ->where('id', '=', Auth::user()->id)
             // ->get();
@@ -77,8 +74,11 @@ class AppController extends Controller
 
     public function deleteCalendarItem($id) {
         // dd($id);
-        $meetup = Meetup::findOrFail($id);
-        $meetup->delete();
+        $user = User::with('activity')
+            ->where('id', '=', Auth::user()->id)
+            ->first();
+
+        $user->activity()->detach($id);
 
         return redirect('/calendar');
     }

@@ -4,9 +4,9 @@
 <div class="activities-index-top">
     <h3>Activities</h3>
     <div class="activities-table-titles-container">
-    <div class="activity-index-col  white-text">Deelnemers</div>
+    <div class="activity-index-col  white-text">Plekken</div>
     <div class="activity-table  white-text">Activiteit</div>
-    <div class="activity-index-col  white-text">Organisator</div>
+    <div class="activity-index-col  white-text">Host</div>
 </div>
 </div>
 
@@ -23,6 +23,7 @@
     <div class="activity-table">
         <a href="/activities/{{ $activity->id }}">{{ $activity->activity }}</a>
     </div>
+
     <div class="activity-index-col">{{$activity->users[0]->name}}</div>
 </div>
 
@@ -33,7 +34,7 @@
 
 {{$activities->links()}}
 <div class="activity-add-container">
-    <a class="activity-index-add" href="/activities/create">Add activity</a>
+    <a class="activity-index-add" href="/activities/create">Nieuwe activiteit</a>
 </div>
 
 @endsection
