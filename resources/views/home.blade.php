@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('meetupLogo')
+<h2>MEETUP</h2>   
+@endsection
+
 @section('content')
 
 

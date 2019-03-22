@@ -40,14 +40,17 @@
  <!-- KOEN -->
     <div id="hero">  
     @if(Session::has('success'))
-    <div class="alert alert-warning alert-dismissible" role="alert">
+    <div class="user-feedback">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
     {{Session::get('success')}}
     </div>
  <!-- KOEN -->
     @endif
-    <div id="main">
-        <main class="content-container"><h2>MEETUP</h2>
+    <div id="main"> 
+
+    @yield('meetupLogo')
+        <main class="content-container">
+           
             @yield('content')
         </main>
     </div>

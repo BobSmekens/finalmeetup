@@ -18,7 +18,7 @@
         <span class="form-label">Name:</span>
 
         <span>
-            <input class="form-input" placeholder="{{ $user->name }}" required type="text" name="name">
+            <input class="form-input" placeholder="{{ $user->name }}" value="{{ $user->name }}" required type="text" name="name">
         </span>
         <br>
 
