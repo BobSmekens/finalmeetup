@@ -2,10 +2,6 @@
   outline: none;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   margin: 0;
 }
@@ -18,9 +14,18 @@ form {
   position: relative;
 }
 
+#bob-navbar {
+  z-index: 10;
+}
+
 .top-image {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /*                        layouts.app               */
@@ -33,19 +38,25 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .navbar-container .nav-link {
-  display: inline-block;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -ms-flex-line-pack: center;
-      align-content: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
   background-color: rgba(0, 0, 0, 0) !important;
+  display: block;
+  margin: auto;
 }
 
 .user-feedback {
@@ -102,14 +113,11 @@ form {
 .form-input {
   display: block;
   min-width: 200px;
+  max-width: 240px;
   padding: 5px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.form-input input {
-  -webkit-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
-  box-shadow: inset 1px 1px 3px 1px #4BC0C8;
+  border: none;
 }
 
 .form-control {
@@ -165,6 +173,30 @@ form {
 }
 
 /*                         home.blade              */
+.home-top {
+  width: 100%;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+  color: white;
+}
+
+.home-top h2 {
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
 .home-container {
   width: 100%;
   height: 100vh;
@@ -193,7 +225,7 @@ form {
 }
 
 .account-container .account-top {
-  min-height: 30vh;
+  height: 30vh;
   text-align: center;
   padding: 10px 20px;
   /* fallback for old browsers */
@@ -267,12 +299,24 @@ form {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.account-container .contact-property {
+  color: black;
+  padding-left: 40px;
 }
 
 /*                    edit account  */
 .form-container {
-  height: 90vh;
+  min-height: 90vh;
   padding-top: 20px;
+  width: 100vw;
+  margin-bottom: 50px;
 }
 
 .form-container #edit-profile-pic {
@@ -285,13 +329,15 @@ form {
 .form-container form {
   text-align: center;
   display: inline-block;
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .form-container form .add-file {
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: block;
   margin: auto;
+  font-size: 16px;
 }
 
 .form-container form .form-label {
@@ -341,7 +387,6 @@ form {
   height: 30vh;
   width: 100%;
   text-align: center;
-  padding-top: 10vh;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
@@ -350,6 +395,12 @@ form {
 
 .activities-index-top h3 {
   background-color: rgba(0, 0, 0, 0);
+  padding: 60px;
+}
+
+.activity-list-container {
+  z-index: 9;
+  width: 100vw;
 }
 
 .activities-table-titles-container {
@@ -358,9 +409,23 @@ form {
   display: flex;
   width: 100%;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.activities-table-titles-container .white-text {
+  color: white;
 }
 
 .activities-table-titles-container .activity-index-col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.activities-table-titles-container .activity-table {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -369,17 +434,9 @@ form {
   text-align: center;
 }
 
-.activities-table-titles-container .activity-table {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-align: center;
-}
-
 .activity-add-container {
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 .activity-add-container .activity-index-add {
@@ -410,5 +467,25 @@ form {
 
 .chat-message {
   display: inline-block;
+}
+
+.calendar-item {
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+
+.calendar-item a {
+  display: inline-block;
+  width: 80%;
+}
+
+.calendar-item button {
+  display: inline-block;
+  width: 20px;
+  color: red;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 /*# sourceMappingURL=bobsass.css.map */

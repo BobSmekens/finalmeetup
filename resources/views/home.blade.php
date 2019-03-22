@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('meetupLogo')
-<h2>MEETUP</h2>   
+
 @endsection
 
 @section('content')
-
-
+<div class="home-top">
+    <h2>MEETUP</h2>
+</div>
+   
 <img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
 
     <div class="section1"><h4>QUICK INFO</h4>
@@ -30,12 +32,16 @@
     <div class="section3">
     <div class="containerbutton">
         <a class="btn btn-1">DOWNLOAD APP</a>
+        <div><img src="https://img.icons8.com/color/48/000000/google-play.png"><input type="radio" id="play" name="drone" value="play"
+         checked><label for="play"></label></div>
+        <div><img src="https://img.icons8.com/color/48/000000/android-os.png"><input type="radio" id="android" name="drone" value="android"
+         checked><label for="andriod"></label></div>
     </div>
 
 
     </div>
 
     <img class="iphone2" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
-    <div class="section4">CONTACT<br><br>Do you have any questions? Please do not hesitate to contact us.<br></div>
+    <div class="section4">CONTACT<br><br>Do you have any questions? Please do not hesitate to contact us.<br><br>Haagweg 1, 4814 GA Breda<br>North Brabant<br>meetup@skillup.com</div>
 
 @endsection

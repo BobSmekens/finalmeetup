@@ -3,7 +3,7 @@
 }
 
 html {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 body {
     margin: 0;
@@ -18,16 +18,18 @@ form {
     position: relative;
 }
 
-// #bob-navbar {
-//     position: fixed;
-//     bottom: 0;
-//     left: 0;
-// }
+#bob-navbar {
+    z-index: 10;
+}
 
 .top-image {
     object-fit: cover;
 }
 
+button {
+    border: none;
+    background-color: rgba(0,0,0,0.0);
+}
 
 
 /*                        layouts.app               */
@@ -36,15 +38,18 @@ form {
     bottom: 0;
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 
     .nav-link {
-        display: inline-block;
         flex: 1;
-        align-content: center;
         box-sizing: border-box;
         border: none;
         background-color: rgba(0,0,0,0) !important;
-        
+        display: block;
+        margin: auto;
     }
 }
 
@@ -99,14 +104,10 @@ form {
 .form-input {
     display: block;
     min-width: 200px;
+    max-width: 240px;
     padding: 5px 20px;
     box-sizing: border-box;
-
-    input {
-        -webkit-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
-        -moz-box-shadow: inset 1px 1px 3px 3px #4BC0C8;
-        box-shadow: inset 1px 1px 3px 1px #4BC0C8;
-    }
+    border: none;
 }
 
 .form-control {
@@ -151,6 +152,22 @@ form {
     padding: 30px;
 }
 /*                         home.blade              */
+.home-top {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+
+    h2 {
+        transform: rotate(-30deg);
+    }
+}
+
 .home-container {
     width: 100%;
     height: 100vh;
@@ -178,7 +195,7 @@ form {
     min-height: 90vh;
 
     .account-top {
-        min-height: 30vh;
+        height: 30vh;
         text-align: center;
         padding: 10px 20px;                                                       /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
@@ -240,20 +257,32 @@ form {
         .account-links-container {
             display: flex;
             padding: 20px;
-    
+
             .account-link-btn {
                 flex: 1;
                 text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0 10px;
+                border-radius: 10px;
+                font-weight: bold;
             }
         }
     }
 }
-
+.account-container {
+    .contact-property {
+        color: black;
+        padding-left: 40px;
+    }
+}
 /*                    edit account  */
 
 .form-container {
-    height: 90vh;
+    min-height: 90vh;
     padding-top: 20px;
+    width: 100vw;
+    margin-bottom: 50px;
 
     #edit-profile-pic {
         height: 160px;
@@ -265,12 +294,14 @@ form {
     form {
         text-align: center;
         display: inline-block;
-        width: 100%;
+        width: 80%;
+        margin-left: 10%;
 
         .add-file {
-            padding: 10px 20px;
+            padding: 5px 10px;
             display: block;
             margin: auto;
+            font-size: 16px;
         }
 
         .form-label {
@@ -314,29 +345,39 @@ form {
 .activities-index-top {
     height: 30vh;
     width: 100%;
-    text-align: center;
-    padding-top: 10vh;                                                         /* fallback for old browsers */
+    text-align: center;                                                        /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
 
     h3 {
         background-color: rgba(0,0,0,0);
+        padding: 60px;
     }
+}
+
+.activity-list-container {
+    z-index: 9;
+    width: 100vw;
 }
 
 .activities-table-titles-container {
     display: flex;
     width: 100%;
     padding: 20px;
+    background-color: rgba(0,0,0,0.0);
+
+    .white-text {
+        color: white;
+    }
 
     .activity-index-col {
-        flex: 2;
+        flex: 1;
         box-sizing: border-box;
         text-align: center;
     }
 
     .activity-table {
-        flex: 10;
+        flex: 2;
         box-sizing: border-box;
         text-align: center;
     }
@@ -344,6 +385,7 @@ form {
 
 .activity-add-container {
     padding: 20px;
+    margin-bottom: 50px;
 
     .activity-index-add {
         border: 1px solid black;
@@ -374,4 +416,25 @@ form {
 
 .chat-message {
     display: inline-block;
+}
+
+.calendar-item {
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+
+
+    a {
+        display: inline-block;
+        width: 80%;
+    }
+
+    button {
+        display: inline-block;
+        width: 20px;
+        color: red;
+        background-color: rgba(0,0,0,0.0);
+        border: none;
+    }
 }
