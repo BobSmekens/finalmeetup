@@ -30,6 +30,10 @@
     <div class="section3">
     <div class="containerbutton">
         <a class="btn btn-1">DOWNLOAD APP</a>
+        <div><img src="https://img.icons8.com/color/48/000000/google-play.png"><input type="radio" id="play" name="drone" value="play"
+         checked><label for="play"></label></div>
+        <div><img src="https://img.icons8.com/color/48/000000/android-os.png"><input type="radio" id="android" name="drone" value="android"
+         checked><label for="andriod"></label></div>
     </div>
 
 
