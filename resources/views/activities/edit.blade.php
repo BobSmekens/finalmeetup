@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card activities-index-top">
+<div class=" activities-index-top">
         <h3>Edit "{{ $activity->activity}}"</h3>
 </div>
-    <div class="card form-container">
+    <div class=" form-container">
         <form action="/activities/{{ $activity->id }}" method="POST">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
