@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="activities-index-top">
-    <h3>Activities</h3>
+    <h2 class="koenh2">Activities</h2>
 </div>
 <div class="activities-table-titles-container">
     <div class="activity-index-col">Deelnemers</div>
