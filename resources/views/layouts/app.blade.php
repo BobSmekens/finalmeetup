@@ -30,6 +30,8 @@
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/koen.css') }}">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/ferran2.css') }}">
     <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/bobsass.css') }}">
+    <link rel="stylesheet" style="text/css" href="{{ URL::asset('css/finalcss.css') }}">
+
 </head>
 
 <body>
@@ -45,13 +47,23 @@
     {{Session::get('success')}}
 
     @endif
-<div id="main"> 
+<!-- <div id="main"> 
     <main class="content-container">
          @yield('content')
     </main>
-</div>
+</div> -->
 
 
+
+ 
+ 
+
+    @yield('content-top')
+    @yield('content-bottom')
+    <div id="fullscreen-div">
+        @yield('fullscreen')
+    </div>
+    @yield('form')
 
     
 
