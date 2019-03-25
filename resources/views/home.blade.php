@@ -1,14 +1,23 @@
 @extends('layouts.app')
 
-@section('meetupLogo')
-
+@section('content-top')
+    <div class="content-top section-flex">
+        <h2>Skills & Chills</h2>
+    </div>
 @endsection
 
-@section('content')
-<div class="home-top">
-    <h2>MEETUP</h2>
-</div>
-   
+@section('content-bottom')
+    <div class="content-bottom  section-flex">
+    <div class="home-text">
+        <p>A platform to engage with others in leisure activities or to learn new skills!</p>
+        <p> "meetup or skillup" the choice is yours!</p>
+    </div>
+
+    </div>
+@endsection
+
+@section('fullscreen')
+
 <img class="iphone" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">
 
     <div class="section1"><h4>QUICK INFO</h4>
