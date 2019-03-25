@@ -34,10 +34,28 @@ body {
   height: 70vh;
 }
 
-.home-text {
-  text-align: center;
-  width: 80%;
-  margin-top: -50px;
+.home-link-button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70%;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid pink;
 }
 
 .form-fixed {
@@ -46,12 +64,16 @@ body {
 
 .signup-link-container {
   margin: 30px auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .signup-link-container a {
   display: inline-block;
   width: 100%;
   margin: auto;
+  font-size: 16px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid black;
@@ -63,6 +85,19 @@ body {
 
 .signup-button {
   margin-top: 30px;
+}
+
+.loginpage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.activities-align-bot {
+  vertical-align: bottom;
 }
 
 @media (max-width: 480px) {

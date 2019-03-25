@@ -113,7 +113,6 @@ button {
 .form-input {
   display: block;
   min-width: 200px;
-  max-width: 240px;
   padding: 5px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

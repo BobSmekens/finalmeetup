@@ -55,11 +55,10 @@
                     {{ __('Login') }}
                 </button>
             </div>
-        </form>
-
-        <div class="signup-link-container">
-            <a href="/signup">Don't have an account? Register here!</a>
-        </div>
+        </form> 
+    </div>
+    <div class="signup-link-container">
+        <a href="/signup">Don't have an account? Register here!</a>
     </div>
 </div>
 

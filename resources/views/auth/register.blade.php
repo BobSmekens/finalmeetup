@@ -9,7 +9,7 @@
 @section('form')
 
 <div class="form-container">
-    <div class="register-title"></div>
+    <div class="login-title">Register here!</div>
     <div class="loginpage">
         <form class="login-form" method="POST" action="{{ route('register') }}">
             @csrf
@@ -40,7 +40,7 @@
                 @endif
             </div>
 
-            <label for="password" class="form-label">Password</label>
+            <label for="password" class="form-label">Password:</label>
 
             <div class="form-input">
                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
@@ -65,6 +65,9 @@
                 </button>
             </div>
         </form>
+    </div>
+    <div class="signup-link-container">
+        <a href="/login">Already have an account? Login here!</a>
     </div>
 </div>
 @endsection
