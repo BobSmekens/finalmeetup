@@ -96,8 +96,40 @@ body {
           align-items: center;
 }
 
+.container-navbar {
+  z-index: 20;
+  width: 100vw;
+}
+
 .activities-align-bot {
-  vertical-align: bottom;
+  position: relative;
+}
+
+.activities-align-bot .activities-table-titles-container {
+  position: absolute;
+  bottom: 0;
+}
+
+.activities-signup-link {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.activities-signup-link a {
+  padding: 10px 30px;
+  border: 1px solid black;
+  margin: 10px 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 @media (max-width: 480px) {

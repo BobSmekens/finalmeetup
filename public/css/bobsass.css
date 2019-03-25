@@ -28,6 +28,13 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.nav-link {
+  width: 100vw;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
 /*                        layouts.app               */
 .navbar-container {
   position: absolute;
@@ -39,6 +46,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  opacity: 1;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -51,10 +59,14 @@ button {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  z-index: 10;
+  opacity: 1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
-  background-color: rgba(0, 0, 0, 0) !important;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
   display: block;
   margin: auto;
 }
@@ -431,11 +443,6 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
-}
-
-.activity-add-container {
-  padding: 20px;
-  margin-bottom: 50px;
 }
 
 .activity-add-container .activity-index-add {

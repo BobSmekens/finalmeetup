@@ -74,8 +74,34 @@ body {
     align-items: center;
 }
 
+.container-navbar {
+    z-index: 20;
+    width: 100vw;
+}
+
 .activities-align-bot {
-    vertical-align: bottom;
+    position: relative;
+
+    .activities-table-titles-container {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+.activities-signup-link {
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    a {
+        padding: 10px 30px;
+        border: 1px solid black;
+        margin: 10px 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+    }
 }
 
 @media (max-width: 480px) {

@@ -19,7 +19,7 @@
     <div class="activity-index-col">
         {{$activity->users->count()}}/{{$activity->max_persons}}
         @if ($activity->users->count()>=$activity->max_persons)
-            <span class="alert">Vol</span>
+            <br><span class="alert">Vol</span>
         @endif
     </div>
     <div class="activity-table">
