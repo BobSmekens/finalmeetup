@@ -1,0 +1,69 @@
+* {
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+.debug {
+  border: 1px solid green;
+}
+
+.content-top {
+  height: 30vh;
+  width: 100%;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
+  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+.section-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-bottom {
+  height: 70vh;
+}
+
+.home-text {
+  text-align: center;
+  width: 80%;
+  margin-top: -50px;
+}
+
+.form-fixed {
+  position: fixed;
+}
+
+.signup-link-container {
+  margin: 30px auto;
+}
+
+.signup-link-container a {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.signup-button {
+  margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+  #fullscreen-div {
+    display: none;
+  }
+}
+/*# sourceMappingURL=finalcss.css.map */
