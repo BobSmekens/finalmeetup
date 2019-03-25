@@ -1,9 +1,22 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content-top')
+    <div class="content-top">
+        <div class="activities-signup-link">
+                @if ($activity->users->count()>=$activity->max_persons)
+                        <span class="">Geen plekken</span>
+                @else
+                        <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/meetup">Inschrijven</a> 
+                @endif
+        </div>
+    </div>
+@endsection
+
+@section('content-bottom')
+<span class="name-activity "><h2>{{ $activity->activity}}</h2></span>
+
 <div class="container m-0 p-0 justify-content-center">
     <div class="my-row row m-0 p-0 align-content-center justify-content-center">
-    <span class="name-activity "><h2>{{ $activity->activity}}</h2></span>
     </div>
     <div class="my-row row m-4 p-4 justify-content-center">
         <div class="col-12">Maximum amount of people: {{ $activity->max_persons}}</div>
@@ -11,13 +24,7 @@
         <div class="col-12">{{ $activity->category}}</div>
 
     </div>
-    @if ($activity->users->count()>=$activity->max_persons)
-            <span class="">activiteit is vol
-            </span>
-            @else
-            <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/meetup">schrijf je in voor activiteit</a>
-
-            @endif</div>
+   
 
             <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 
