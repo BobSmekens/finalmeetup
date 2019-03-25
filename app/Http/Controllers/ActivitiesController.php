@@ -78,10 +78,7 @@ class ActivitiesController extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
-        $user = Auth::user()->id;
         
-        $check = Activity::with('users')->get()->unique('user_id');
-
         //dd($check);
         return view('activities.show', [
             'activity' => $activity
