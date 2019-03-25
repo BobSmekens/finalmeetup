@@ -3,6 +3,7 @@
 @section('content-top')
     <div class="content-top section-flex">
         <h2>Skills & Chills</h2>
+        <img class="chillup" src="{{ URL::asset('img/birdup.png') }}" alt="no picture chosen yet">
     </div>
 @endsection
 

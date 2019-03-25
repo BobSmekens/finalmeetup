@@ -75,6 +75,13 @@ img  { display: block; margin-bottom: 10px;}
     .iphone {
         display: none;
     }
+
+    .chillup {
+        width: 200px;
+        height: 200px;
+
+    }
+    
 }
 
 /* SECTION 1 ----------------------------------------------------------------------------------------------------------------*/
@@ -106,6 +113,8 @@ img  { display: block; margin-bottom: 10px;}
         padding: 5px;
         
     }
+    
+    
 }
 
 .section1 h4 {
@@ -117,8 +126,6 @@ img  { display: block; margin-bottom: 10px;}
     letter-spacing: 5px;
     padding: 50px;
     background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 480px) {
@@ -429,14 +436,7 @@ img  { display: block; margin-bottom: 10px;}
     }
 }
 
- .general-button {
-    
 
-
-
-
-
- }
 
 
 /* ACCOUNT PAGE ----------------------------------------------------------------------------------------------------------------*/

@@ -30,8 +30,7 @@ img {
   background: #C6FFDD;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
-  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+  background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
@@ -93,6 +92,10 @@ img {
   .iphone {
     display: none;
   }
+  .chillup {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* SECTION 1 ----------------------------------------------------------------------------------------------------------------*/
@@ -137,8 +140,6 @@ img {
   letter-spacing: 5px;
   padding: 50px;
   background: -webkit-linear-gradient(left, #f7797d, #FBD786, #C6FFDD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 480px) {
