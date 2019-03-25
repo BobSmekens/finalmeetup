@@ -13,6 +13,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bob.js') }}" defer></script>
+    <script src="{{ asset('js/koen.js') }}" defer></script>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     <!-- Fonts -->
@@ -35,7 +37,44 @@
 </head>
 
 <body>
- 
+  <!--Navbar-->
+  <div class="container position-fixed">
+<nav class="navbar navbar-light navbar-1 white">
+
+<!-- Navbar brand -->
+<a class="navbar-brand" href="#">Skills & Chills</a>
+
+<!-- Collapse button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+  aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent15">
+
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="/activities">Activiteiten <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/account/{{ Auth::user()->id}}/chat">Chat</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/account">Account</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}</a>
+    </li>
+  </ul>
+  <!-- Links -->
+
+</div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+</div>
 
 
     @if(Session::has('success'))
@@ -56,7 +95,7 @@
     </div>
     @yield('form')
 
-    bobs pull
+
 
     <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
 
