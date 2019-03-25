@@ -7,12 +7,15 @@
 @endsection
 
 @section('content-bottom')
-    <div class="content-bottom  section-flex">
-    <div class="home-text">
-        <p>A platform to engage with others in leisure activities or to learn new skills!</p>
-        <p> "meetup or skillup" the choice is yours!</p>
-    </div>
-
+    <div class="content-bottom section-flex">
+        <div class="home-link-button">
+            <p>Just want to hang? </p>
+            <a href="/activities">Chillup!</a>
+        </div>
+        <div class="home-link-button">
+            <p>Want to learn something?</p>
+            <a href="/activities"> Skillup!</a>
+        </div>
     </div>
 @endsection
 

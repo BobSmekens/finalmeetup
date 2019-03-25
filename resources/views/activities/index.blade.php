@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="activities-index-top">
+@section('content-top')
+    <div class="content-top activities-align-bot">
+        <div class="activities-table-titles-container">
+            <div class="activity-index-col">Plekken</div>
+            <div class="activity-table">Activiteit</div>
+            <div class="activity-index-col">Organisator</div>
+        </div>
+    </div>
+@endsection
 
-</div>
-</div>
+@section('content-bottom')
 
 
 <div class="activity-list-container">
@@ -13,7 +19,7 @@
     <div class="activity-index-col">
         {{$activity->users->count()}}/{{$activity->max_persons}}
         @if ($activity->users->count()>=$activity->max_persons)
-            <span class="alert">activiteit is vol</span>
+            <span class="alert">Vol</span>
         @endif
     </div>
     <div class="activity-table">
