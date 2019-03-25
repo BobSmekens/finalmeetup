@@ -38,7 +38,7 @@
 
 <body>
   <!--Navbar-->
-  <div class="container position-fixed">
+  <div class="container position-fixed container-navbar">
 <nav class="navbar navbar-light navbar-1 white">
 
 <!-- Navbar brand -->
@@ -57,7 +57,10 @@
       <a class="nav-link" href="/activities">Activiteiten <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
+    @if (Auth::check())
       <a class="nav-link" href="/account/{{ Auth::user()->id}}/chat">Chat</a>
+        @endif
+
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/account">Account</a>
@@ -97,7 +100,7 @@
 
 
 
-    <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
+    <!-- <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
 
         <div class="nav-link" role="group" aria-label="First group">
             <button type="button" class="btn btn-secondary m-0 p-0"><a href="/"><img src="{{ URL::asset ('img/home.png') }}"
@@ -139,7 +142,7 @@
         @endif
     </div>
 
-    </div>
+    </div> -->
 
 </body>
 
