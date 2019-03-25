@@ -47,16 +47,7 @@
     {{Session::get('success')}}
 
     @endif
-<!-- <div id="main"> 
-    <main class="content-container">
-         @yield('content')
-    </main>
-</div> -->
 
-
-
- 
- 
 
     @yield('content-top')
     @yield('content-bottom')
@@ -65,7 +56,7 @@
     </div>
     @yield('form')
 
-    
+    bobs pull
 
     <div id="bob-navbar" class="navbar-container" role="toolbar" aria-label="Toolbar with button groups">
 
