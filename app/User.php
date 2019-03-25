@@ -41,4 +41,10 @@ class User extends Authenticatable
     {
     return $this->hasOne('App\Account');
     }
+    
+    public function activity()
+    {
+     return $this->belongsToMany('App\Activity');
+    }
+
 }

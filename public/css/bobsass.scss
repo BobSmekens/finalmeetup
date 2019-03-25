@@ -1,0 +1,440 @@
+* {
+    outline: none;
+}
+
+html {
+    // overflow-x: hidden;
+}
+body {
+    margin: 0;
+    // overflow-x: hidden;
+}
+
+.debug {
+    border: 1px solid green;
+}
+
+form {
+    position: relative;
+}
+
+#bob-navbar {
+    z-index: 10;
+}
+
+.top-image {
+    object-fit: cover;
+}
+
+button {
+    border: none;
+    background-color: rgba(0,0,0,0.0);
+}
+
+
+/*                        layouts.app               */
+.navbar-container {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    .nav-link {
+        flex: 1;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgba(0,0,0,0) !important;
+        display: block;
+        margin: auto;
+    }
+}
+
+.user-feedback {
+    font-size: 14px;
+}
+
+.form-container {
+    font-size: 20px;
+}
+
+/*                             login/register          */
+.login-title {
+    font-size: 24px; 
+    text-align: center;
+    padding-top: 30px;
+    margin: 30px;
+    color: white;
+}
+
+.register-title {
+    font-size: 24px; 
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.register-container {
+    min-height: 90vh;
+    // display: flex;
+    align-items: center;
+}
+
+.form-label {
+    display: block;
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+
+.login-form {
+    background-color: rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    z-index: 9;
+    border-radius: 10px;
+}
+
+.form-input {
+    display: block;
+    min-width: 200px;
+    max-width: 240px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.form-control {
+    height: 30px;
+    border-radius: 15px;
+}
+
+.form-check {
+    padding: 20px;
+
+    .form-check-input {
+        margin-left: 20px;
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.login-bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+
+    .general-button {
+        align-content: center;
+        flex: 1;
+        max-width: 150px;
+        border-radius: 15px;
+        height: 30px;
+        border: none;
+        background: linear-gradient(to right, teal, silver);
+    }
+    
+    .pw-reset-link {
+        flex: 3;
+        padding: 0 30px;
+    }
+}
+
+.signup-link-container {
+    text-align: center;
+    padding: 30px;
+}
+/*                         home.blade              */
+.home-top {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+
+    h2 {
+        transform: rotate(-30deg);
+    }
+}
+
+.home-container {
+    width: 100%;
+    height: 100vh;
+
+    .top {
+        width: 100%;
+        height: 35vh;
+        position: relative;
+
+        img {
+           position: absolute;
+           width: 100%; 
+           height: 100%;
+        }
+    }
+}
+
+.user-feedback {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+/*                               account               */
+.account-container {
+    min-height: 90vh;
+
+    .account-top {
+        height: 30vh;
+        text-align: center;
+        padding: 10px 20px;                                                       /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
+
+        .account-name {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .account-image-container {
+            height: 160px;
+            text-align: center;
+
+            .account-image {
+                height: 160px;
+                width: 160px;
+                border-radius: 50%;
+                padding: 10px;
+                display: block;
+                margin: auto;
+                box-sizing: border-box;
+            }
+        }
+
+        
+
+        .account-property {
+            font-size: 18px;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        span {
+            font-size: 12px;
+            display: block;
+            font-weight: bold;
+        }
+    }
+
+    .account-bottom {
+        height: 40vh;
+        box-sizing: border-box;
+        padding: 10px 20px;
+
+        .account-property {
+            font-size: 18px;
+            text-align: left;
+            padding: 0 20px;
+            word-wrap: break-word;
+
+            span {
+                width: 120px;
+                display: inline-block;
+                font-weight: bold;
+            }
+        }
+
+        .account-links-container {
+            display: flex;
+            padding: 20px;
+
+            .account-link-btn {
+                flex: 1;
+                text-align: center;
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0 10px;
+                border-radius: 10px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.account-container {
+    .contact-property {
+        color: black;
+        padding-left: 40px;
+    }
+}
+/*                    edit account  */
+
+.form-container {
+    min-height: 90vh;
+    padding-top: 20px;
+    width: 100vw;
+    margin-bottom: 50px;
+
+    #edit-profile-pic {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        margin: 10px auto 10px auto;
+    }
+
+    form {
+        text-align: center;
+        display: inline-block;
+        width: 80%;
+        margin-left: 10%;
+
+        .add-file {
+            padding: 5px 10px;
+            display: block;
+            margin: auto;
+            font-size: 16px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            text-align: left;
+            min-width: 140px;
+        }
+
+        .form-input {
+            z-index: 5;
+            margin: 5px 0;
+            border-radius: 15px;
+            height: 30px;
+        }
+
+        .account-eddit-button {
+            align-content: center;
+            display: inline-block;
+            width: 130px;
+            margin-top: 30px;
+            border-radius: 15px;
+            height: 30px;
+            border: none;
+            background: linear-gradient(to right, teal, silver);
+        }
+        .account-delete-button {
+            align-content: center;
+            display: inline-block;
+            width: 130px;
+            margin: 10px;
+            align-self: center;
+            border-radius: 15px;
+            height: 30px;
+            border: none;
+            background: linear-gradient(to right, red, silver);
+        }
+    }
+}
+
+/*/////////////////////////////activities///////////////////////*/
+.activities-index-top {
+    height: 30vh;
+    width: 100%;
+    text-align: center;                                                        /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
+
+    h3 {
+        background-color: rgba(0,0,0,0);
+        padding: 60px;
+    }
+}
+
+.activity-list-container {
+    z-index: 9;
+    width: 100vw;
+}
+
+.activities-table-titles-container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.0);
+
+    .white-text {
+        color: white;
+    }
+
+    .activity-index-col {
+        flex: 1;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .activity-table {
+        flex: 2;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+
+.activity-add-container {
+    padding: 20px;
+    margin-bottom: 50px;
+
+    .activity-index-add {
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+}
+
+/*    ///////////////////////chat ////////////////////*/
+.recieved-message {
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.send-message {
+    padding: 30px;
+    border: 1px solid green;
+    text-align: right;
+}
+
+#chat-pic-sender {
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.chat-message {
+    display: inline-block;
+}
+
+.calendar-item {
+    width: 80%;
+    margin: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+
+
+    a {
+        display: inline-block;
+        width: 80%;
+    }
+
+    button {
+        display: inline-block;
+        width: 20px;
+        color: red;
+        background-color: rgba(0,0,0,0.0);
+        border: none;
+    }
+}

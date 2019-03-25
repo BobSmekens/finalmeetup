@@ -1,0 +1,65 @@
+* {
+    outline: none;
+}
+
+body {
+    margin: 0;
+}
+
+.debug {
+    border: 1px solid green;
+}
+
+.content-top {
+    height: 30vh;
+    width: 100%;
+    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  
+}
+
+.section-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-bottom {
+    height: 70vh;
+}
+
+.home-text {
+    text-align: center;
+    width: 80%;
+    margin-top: -50px;
+}
+
+.form-fixed {
+    position: fixed;
+}
+
+.signup-link-container {
+    margin: 30px auto;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+}
+
+.form-label {
+    margin-top: 10px;
+}
+
+.signup-button {
+    margin-top: 30px;
+}
+
+@media (max-width: 480px) {
+    #fullscreen-div {
+        display: none;
+    }
+}

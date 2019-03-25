@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use \App\User;
 use \App\Account;
+use \App\Input;
 
 class UserController extends Controller
 {
@@ -16,32 +19,11 @@ class UserController extends Controller
     public function index()
     {
         $users = \App\User::all();
-
-        // return view('account.index');
-        return view('account.index', [
-            'users' => $users
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        
+        return redirect('/account/' . Auth::user()->id)->with('success', 'You are successfully logged in');
+        // return view('account.index', [
+        //     'users' => $users
+        // ]);
     }
 
     /**
@@ -67,12 +49,15 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        if (Auth::user()->id==$id) {
+            $user = User::findOrFail($id);
 
-        return view('account.edit', [
-            'user' => $user
-        ]);
-
+            return view('account.edit', [
+                'user' => $user
+            ]);
+        } else {
+            return redirect('/');
+        }
     }
 
     /**
@@ -82,20 +67,32 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(User $user, $id)
+    public function update(user $user, Request $request, $id)
     {
-        $user = User::findOrFail($id);
-        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+        if (Auth::user()->id==$id) {
+            if($request->hasFile('photo')){
+                // dd($request->photo);
+                $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+            }
 
-        $user->name = request('name');
-        $user->email = request('email');
-        $user->phone = request('phone');
-        $user->photo = request('photo');
-        $user->skills = request('skills');
+            $user = User::findOrFail($id);
+            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
+            
+            //return redirect('/account/' . $id);
+            return redirect('/account/' . $id)->with('success', 'Account info updated');
 
-        $user->update();
+            // $user->name = request('name');
+            // $user->email = request('email');
+            // $user->phone = request('phone');
+            // $user->skills = request('skills');
+            // $user->about_me = request('about_me');
+            
+            // $user->update();
 
-        return redirect('/account');
+        } else {
+            return redirect('/');
+        }
+        
     }
 
     /**
@@ -106,6 +103,20 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if (Auth::user()->id==$id) {
+        $user = User::findOrFail($id);
+
+        $user->delete();
+        }
+        return redirect('/signup')->with('success', 'Account deleted');
     }
+
+    public function registered()
+    {
+        return redirect('/account/' . Auth::user()->id)->with('success', 'Thank you for registering');
+        // return view('account.index', [
+        //     'users' => $users
+        // ]);
+    }
+
 }

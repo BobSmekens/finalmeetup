@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Account;
+use Illuminate\Support\Facades\DB;
 
-class AccountController extends Controller
+class bobtest extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
+        $bob = DB::table('users')->where('email', '=', 'bobsmekens90@gmail.com')->get();
 
-        $accounts = \App\Account::all();
-
-        return view('account.index', [
-            'accounts' => $accounts
-        ]);
+        dd($bob);
     }
 
     /**
@@ -46,9 +48,7 @@ class AccountController extends Controller
      */
     public function show($id)
     {
-        // $account = Account::findOrFail($id);
-
-        return view('account.show');
+        //
     }
 
     /**
