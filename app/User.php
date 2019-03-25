@@ -47,4 +47,15 @@ class User extends Authenticatable
      return $this->belongsToMany('App\Activity');
     }
 
+    public function chat() 
+    {
+      return $this->belongsToMany('App\Chat');
+    }
+
+
+
+
+    
 }
+
+    
