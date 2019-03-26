@@ -23,16 +23,15 @@ form {
     object-fit: cover;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
 button {
     border: none;
     background-color: rgba(0,0,0,0.0);
 }
 
-.nav-link {
-    width: 100vw;
-    background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);
-}
 /*                        layouts.app               */
 .navbar-container {
     position: absolute;
@@ -63,7 +62,7 @@ button {
 }
 
 .form-container {
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /*                             login/register          */
@@ -85,7 +84,7 @@ button {
 }
 
 .register-container {
-    min-height: 90vh;
+
     // display: flex;
     align-items: center;
 }
@@ -196,7 +195,7 @@ button {
 
 /*                               account               */
 .account-container {
-    min-height: 90vh;
+
 
     .account-top {
         height: 30vh;
@@ -283,7 +282,7 @@ button {
 /*                    edit account  */
 
 .form-container {
-    min-height: 90vh;
+
     padding-top: 20px;
     width: 100vw;
     margin-bottom: 50px;
@@ -311,21 +310,21 @@ button {
         .form-label {
             font-weight: bold;
             text-align: left;
-            min-width: 140px;
         }
 
         .form-input {
             z-index: 5;
-            margin: 5px 0;
+            margin: 5px auto;
             border-radius: 15px;
             height: 30px;
+            width: 90%;
         }
 
         .account-eddit-button {
             align-content: center;
             display: inline-block;
             width: 130px;
-            margin-top: 30px;
+            margin: 15px;
             border-radius: 15px;
             height: 30px;
             border: none;
@@ -417,6 +416,12 @@ button {
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid black;
+    text-align: center;
+}
+
+.image-centered {
+    display: block;
+    margin: auto;
 }
 
 /*    ///////////////////////chat ////////////////////*/

@@ -16,12 +16,13 @@
 <span class="name-activity"><h2>{{ $activity->activity}}</h2></span>
 
     <div class="">
-        <div class="activity-property">{{ $activity->category}} spots: <br>{{ $activity->max_persons}}</div>
-        <div class="activity-property">Wat gaat er gebeuren? <br>{{ $activity->description}}</div>
-        <div class="activity-property">Organisator: {{$activity->users[0]->name}}</div>
+        <div class="activity-property"><span class="bold-text">{{ $activity->category}} spots:</span> <br>{{$activity->users->count()}} / {{ $activity->max_persons}}</div>
+        <div class="activity-property"><span class="bold-text">Wat gaat er gebeuren? </span><br>{{ $activity->description}}</div>
+        <div class="activity-property"><span class="bold-text">Organisator:</span> <br> {{$activity->users[0]->name}}</div>
     </div>
    
 <div class="activity-button-container">
+@if(Auth::user()->id == $activity->posted_by)
     <a class="activity-button-link" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 
 
@@ -31,6 +32,10 @@
 
         <button class="account-delete-button" type="submit">Delete activity</button>
     </form>
+    @else
+    <img class="chillup image-centered" src="{{ URL::asset('img/birdup.png') }}" alt="no picture chosen yet">
+
+@endif    
 </div>
 
 

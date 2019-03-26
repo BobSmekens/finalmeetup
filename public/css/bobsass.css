@@ -23,16 +23,13 @@ form {
      object-fit: cover;
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
 button {
   border: none;
   background-color: rgba(0, 0, 0, 0);
-}
-
-.nav-link {
-  width: 100vw;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
-  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
 }
 
 /*                        layouts.app               */
@@ -76,7 +73,7 @@ button {
 }
 
 .form-container {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /*                             login/register          */
@@ -98,7 +95,6 @@ button {
 }
 
 .register-container {
-  min-height: 90vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -231,10 +227,6 @@ button {
 }
 
 /*                               account               */
-.account-container {
-  min-height: 90vh;
-}
-
 .account-container .account-top {
   height: 30vh;
   text-align: center;
@@ -324,7 +316,6 @@ button {
 
 /*                    edit account  */
 .form-container {
-  min-height: 90vh;
   padding-top: 20px;
   width: 100vw;
   margin-bottom: 50px;
@@ -354,14 +345,14 @@ button {
 .form-container form .form-label {
   font-weight: bold;
   text-align: left;
-  min-width: 140px;
 }
 
 .form-container form .form-input {
   z-index: 5;
-  margin: 5px 0;
+  margin: 5px auto;
   border-radius: 15px;
   height: 30px;
+  width: 90%;
 }
 
 .form-container form .account-eddit-button {
@@ -369,7 +360,7 @@ button {
       align-content: center;
   display: inline-block;
   width: 130px;
-  margin-top: 30px;
+  margin: 15px;
   border-radius: 15px;
   height: 30px;
   border: none;
@@ -478,6 +469,12 @@ button {
           box-sizing: border-box;
   border-radius: 10px;
   border: 1px solid black;
+  text-align: center;
+}
+
+.image-centered {
+  display: block;
+  margin: auto;
 }
 
 /*    ///////////////////////chat ////////////////////*/
