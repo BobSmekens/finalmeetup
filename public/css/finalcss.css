@@ -14,12 +14,22 @@ body {
   border: 1px solid green;
 }
 
+.branding-logo {
+  height: 40px;
+  width: 40px;
+}
+
 .content-top {
   height: 30vh;
   width: 100%;
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
   background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
+}
+
+.content-top h2 {
+  font-weight: bold;
+  color: white;
 }
 
 .section-flex {
@@ -56,10 +66,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70%;
+  height: 65%;
   margin: 10px;
   border-radius: 10px;
   border: 1px solid pink;
+  text-align: center;
+}
+
+.home-link-button h2 {
+  margin: 20px;
+}
+
+.home-link-image {
+  width: 150px;
+  height: 180px;
+  display: block;
 }
 
 .form-fixed {

@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content-top')
+    <div class="content-top section-flex">
+        <h2 class="toggle-content">My chatroom</h2>
+    </div>
+@endsection
+
+@section('content-bottom')
     @foreach($messages as $message)
         @if($message->from_user != Auth::user()->id)
         <div class="recieved-message">

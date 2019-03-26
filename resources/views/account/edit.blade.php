@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content-top')
-<div class="content-top section-flex">
+    <div class="content-top section-flex">
 
-        <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
+       <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
     </div>
 @endsection
 

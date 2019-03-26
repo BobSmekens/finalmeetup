@@ -2,7 +2,7 @@
 
 @section('content-top')
     <div class="content-top section-flex">
-        <h2 class="toggle-content">Skills & Chills</h2>
+        <h2 class="toggle-content">Tjillup</h2>
         <img class="chillup toggle-content" src="{{ URL::asset('img/birdup.png') }}" alt="no picture chosen yet">
     </div>
 @endsection
@@ -11,11 +11,18 @@
     <div class="content-bottom section-flex">
         <div class="home-link-button">
             <p>Just want to hang? </p>
-            <a href="/activities">Chillup!</a>
+            <a href="/activities">
+                <img class="home-link-image" src="{{ URL::asset('img/chillbird.png') }}" alt="">
+                <h2> Chillup!</h2>  
+            </a>
         </div>
         <div class="home-link-button">
             <p>Want to learn something?</p>
-            <a href="/activities"> Skillup!</a>
+            <a href="/activities">
+                <img class="home-link-image" src="{{ URL::asset('img/skillbird.png') }}" alt="">
+                <h2> Skillup!</h2>  
+            </a>
+        </div>
         </div>
     </div>
 @endsection
