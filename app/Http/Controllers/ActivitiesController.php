@@ -30,6 +30,34 @@ class ActivitiesController extends Controller
 
 
     }
+    public function indexMeetup()
+    {
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->paginate(4);
+
+        // dd($activities[3]->users[0]->name);
+
+        return view('activities.indexMeetup', [
+            'activities' => $activities
+        ]);
+
+
+
+    }
+    public function indexSkillup()
+    {
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->paginate(4);
+
+        // dd($activities[3]->users[0]->name);
+
+        return view('activities.indexSkillup', [
+            'activities' => $activities
+        ]);
+
+
+
+    }
 
     /**
      * Show the form for creating a new resource.
