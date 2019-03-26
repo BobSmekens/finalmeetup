@@ -17,6 +17,8 @@ class AppController extends Controller
             $user = DB::table('users')->where('id', '=', Auth::user()->id)->get();
             
             // dd($user);
+        
+
             return view('home', [
                 'user' => $user
             ]);
@@ -81,5 +83,9 @@ class AppController extends Controller
         $user->activity()->detach($id);
 
         return redirect('/calendar');
+    }
+
+    public function loggedInSucces (){
+        return redirect('/')->with('success', 'You are succesfully logged in');
     }
 }

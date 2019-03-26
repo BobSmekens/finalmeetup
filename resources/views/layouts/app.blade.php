@@ -11,9 +11,11 @@
     <title>MEETUP APP</title>
 
     <!-- Scripts -->
+    <script src="jquery-3.3.1.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bob.js') }}" defer></script>
     <script src="{{ asset('js/navbar-koen.js') }}" defer></script>
+
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
@@ -38,6 +40,16 @@
 
 <body>
   <!--Navbar-->
+  @if(Session::has('success'))
+  <div  class="user-feedback">
+      {{Session::get('success')}}
+      <button  type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">×</span>
+      </button>
+  </div>
+
+    <script src="{{ asset('js/userfeedback-koen.js') }}" defer></script>
+  @endif
   <div class="container position-fixed container-navbar">
 <nav class="navbar navbar-light navbar-1 white">
 
@@ -60,9 +72,7 @@
     @if (Auth::check())
       <a class="nav-link" href="/account/{{ Auth::user()->id}}/chat">Chat</a>
         @endif
-
     </li>
-
     <li class="nav-item">
         @if (Auth::check())
         <li class="nav-item">
@@ -90,15 +100,7 @@
 </div>
 
 
-    @if(Session::has('success'))
-    <div class="user-feedback">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div>
-    {{Session::get('success')}}
 
-    @endif
 
 
     @yield('content-top')
