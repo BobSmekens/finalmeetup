@@ -180,6 +180,7 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   text-align: center;
+  opacity: .5;
 }
 
 .account-delete-button {
