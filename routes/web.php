@@ -32,6 +32,7 @@ Auth::routes();
 
 Route::get('search', 'AutoCompleteController@index');
 Route::get('autocomplete', 'AutoCompleteController@search');
+Route::get('/loggedinsucces', 'AppController@loggedInSucces');
 
 // Route::get('/home', 'HomeController@index')->name('home');
 

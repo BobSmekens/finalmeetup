@@ -5,3 +5,9 @@
 .koenh2{
    margin-top:-100px!important ;
 }
+
+.user-feedback-animation{
+    background-color:red;
+    transition-duration: 2s;
+    height:0px;
+}

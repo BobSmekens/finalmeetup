@@ -24,8 +24,14 @@ class LoginController extends Controller
      * Where to redirect users after login.
      *
      * @var string
+     *         
      */
-    protected $redirectTo = '/';
+    // public function redirect(){
+
+    //     $this->with('success', 'You are succesfully logged in');
+    // }
+    protected $redirectTo = '/loggedinsucces';
+    //return redirect('/')->with('success', 'You are succesfully logged in');
 
     /**
      * Create a new controller instance.
@@ -35,5 +41,6 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+
     }
 }
