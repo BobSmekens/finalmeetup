@@ -390,7 +390,11 @@ button {
         border: 1px solid black;
         padding: 10px;
         border-radius: 10px;
+        display: block;
+        width: 50%;
+        margin: auto;
         font-weight: bold;
+        text-align: center;
     }
 }
 

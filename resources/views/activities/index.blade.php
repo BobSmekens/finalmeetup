@@ -44,7 +44,7 @@
 {{$activities->links()}}
 @if (Auth::check())
     <div class="activity-add-container">
-        <a class="activity-index-add" href="/activities/create">Nieuwe activiteit</a>
+        <a class="activity-index-add" href="/activities/create">Organiseer activiteit</a>
     </div>
 @endif
 @endsection

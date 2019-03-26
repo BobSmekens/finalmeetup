@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
-@section('content')
-<div class="container m-0 p-0 justify-content-center">
-    <div class="my-row row m-0 p-0 bg-danger align-content-center justify-content-center">
-    <h3>Create activity</h3>
-</div>
+@section('content-top')
+    <div class="content-top section-flex">
+        <h2 class="toggle-content">Organiseer activiteit</h2>
+    </div>
+@endsection
+
+@section('content-bottom')
+
     <div class="my-row row m-4 p-4 ">
     <form action="/activities" method="POST">
     {{ csrf_field() }}

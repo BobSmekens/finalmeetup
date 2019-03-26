@@ -54,7 +54,9 @@
 <nav class="navbar navbar-light navbar-1 white">
 
 <!-- Navbar brand -->
-<a class="navbar-brand" href="/">Skills & Chills</a>
+<a class="navbar-brand" href="/">
+  <img class="branding-logo" src="{{ URL::asset('img/owllogo.png') }}" alt="">
+</a>
 
 <!-- Collapse button -->
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"

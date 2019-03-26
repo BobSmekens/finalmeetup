@@ -2,7 +2,7 @@
 
 @section('content-bottom')
 <div class="account-container">
-    <div class="account-top debug">
+    <div class="account-top">
         <div class="account-name">{{ $user->name}}</div>
         <div class="account-image-container">
             <img class="account-image" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="no picture chosen yet">
@@ -47,6 +47,8 @@
     </div>
    
 </div>
+
+
 @endsection
 
 

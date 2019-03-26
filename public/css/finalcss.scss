@@ -14,11 +14,21 @@ body {
     border: 1px solid green;
 }
 
+.branding-logo {
+    height: 40px;
+    width: 40px;
+}
+
 .content-top {
     height: 30vh;
     width: 100%;
     background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  
+
+    h2 {
+        font-weight: bold;
+        color: white;
+    }
 }
 
 .section-flex {
@@ -38,11 +48,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70%;
+    height: 65%;
     margin: 10px;
     border-radius: 10px;
     border: 1px solid pink;
+    text-align: center;
+
+    h2 {
+        margin: 20px;
+    }
 }
+
+.home-link-image {
+    width: 150px;
+    height: 180px;
+    display: block;
+}
+
+
 
 .form-fixed {
     position: fixed;
