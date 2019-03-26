@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content-bottom')
 <div class="account-container">
     <div class="account-top debug">
         <div class="account-name">{{ $user->name}}</div>
@@ -10,19 +10,40 @@
     </div>
 
     <div class="contact-property">
-        <div class="account-property">{{ $user->email}}</div>
-        <div class="account-property">{{ $user->phone}}</div>
+        <div class="account-property"><span class="property">e-mail: </span>{{ $user->email}}</div>
+        <div class="account-property"><span class="property">telefoon: </span>{{ $user->phone}}</div>
     </div>
     <div class="account-bottom">
 
-        <div class="account-property"><span>Skills: </span>{{ $user->skills}}</div>
-        <div class="account-property"><span>About: </span>{{$user->about_me}}</div>
-        <div class="account-property"><span>Achievements: </span> {{$user->achievement}}</div>
-        <div class="account-property"><span>Reviews: </span> {{$user->review}}</div>
+        <div class="account-property"><span>Skills: </span><br>{{ $user->skills}}</div>
+        <div class="account-property"><span>About: </span><br>{{$user->about_me}}</div>
+        <div class="account-property"><span>Achievements: </span><br> {{$user->achievement}}</div>
+        {{-- <div class="account-property"><span>Reviews: </span> <br>{{$user->review}}</div> --}}
         <div class="account-links-container">
-            <a class="account-link-btn" href="/account/{{ $user->id }}/edit">Edit account</a>
-            <a class="account-link-btn" href="/calendar">Calendar</a>
-        </div>
+        @if(Auth::check())
+            @if(Auth::user()->id == $user->id)
+            <a class="account-link-btn" href="/account/{{ $user->id }}/edit">
+                <img class="edit-logo" src="{{ URL::asset('img/editlogo.png') }}" alt="">
+                <div class="logo-subscribt">edit</div>
+            </a>
+   
+            <a class="account-link-btn" href="/calendar">
+                <img class="edit-logo" src="{{ URL::asset('img/calendarlogo.png') }}" alt="">
+                <div class="logo-subscribt">agenda</div>
+            </a>
+      
+            <form class="account-link-btn" action="/account/{{ $user->id }}" method="POST">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+        
+                <button  type="submit">
+                    <img class="edit-logo" src="{{ URL::asset('img/deletelogo.png') }}" alt="">
+                </button>
+                <div class="logo-subscribt">delete</div>
+            </form>
+            @endif
+        @endif
+    </div>
     </div>
    
 </div>

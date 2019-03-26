@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
 @section('content-top')
+
     <div class="content-top activities-align-bot">
-        <div class="activities-table-titles-container">
+        <div class="activities-sort-container section-flex">
+            <div class="activities-sort-link toggle-content">Skill-up</div>
+            <div class="activities-sort-link toggle-content">meet-up</div>
+            <div class="activities-sort-link toggle-content">all-up</div>
+        </div> 
+       
+        <div class="activities-table-titles-container toggle-content">
             <div class="activity-index-col">Plekken</div>
             <div class="activity-table">Activiteit</div>
             <div class="activity-index-col">Organisator</div>

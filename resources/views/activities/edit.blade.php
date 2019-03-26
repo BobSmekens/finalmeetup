@@ -13,27 +13,27 @@
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
 
-            <div class="form-label">Activity name:</div>
+            <div class="form-label">Activiteit:</div>
 
 
                 <input class="form-input" required type="text" name="activity" value="{{ $activity->activity}}">
 
             <br>
-            <span class="form-label">Description:</span>
+            <span class="form-label">Omschrijving:</span>
 
             <span>
                 <input class="form-input" required type="text" name="description" value="{{ $activity->description}}">
             </span>
             <br>
 
-            <span class="form-label">Max-persons:</span>
+            <span class="form-label">Aantal plekken:</span>
 
             <span>
                 <input class="form-input" required type="number" name="persons" value="{{ $activity->max_persons}}">
             </span>
             <br>
 
-            <span class="form-label">Category:</span>
+            <span class="form-label">Categorie:</span>
 
             <span>
                 <select name="category" class="form-input">
@@ -43,7 +43,7 @@
             </span>
             <br>
 
-            <button class="account-eddit-button" type="submit">Edit activity</button>
+            <button class="account-eddit-button" type="submit">Pas aan</button>
         </form>
 
         {{-- <form action="/activities/{{ $activity->id }}" method="POST">

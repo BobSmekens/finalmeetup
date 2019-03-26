@@ -23,14 +23,14 @@
    
 <div class="activity-button-container">
 @if(Auth::user()->id == $activity->posted_by)
-    <a class="activity-button-link" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
+    <a class="activity-button-link" href="/activities/{{ $activity->id }}/edit">Aanpassen</a>
 
 
-    <form class="activity-button-link" action="/activities/{{ $activity->id }}" method="POST">
+    <form class="activity-button-link account-delete-button" action="/activities/{{ $activity->id }}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
 
-        <button class="account-delete-button" type="submit">Delete activity</button>
+        <button class="account-delete-button" type="submit">Delete</button>
     </form>
     @else
     <img class="chillup image-centered" src="{{ URL::asset('img/birdup.png') }}" alt="no picture chosen yet">
