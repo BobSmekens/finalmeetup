@@ -15,12 +15,13 @@ class AppController extends Controller
     public function indexMeetup()
     {
         // $activities = \App\Activity::all();        
-        $activities = Activity::with('users')->paginate(4);
-
+        $activities = Activity::with('users')->where('category' , '=', 'Meetup') ->paginate(4);
+        $category = "Meetup";
         // dd($activities[3]->users[0]->name);
 
         return view('activities.index', [
-            'activities' => $activities
+            'activities' => $activities,
+            'category'=> $category
         ]);
 
 
@@ -29,14 +30,15 @@ class AppController extends Controller
     public function indexSkillup()
     {
         // $activities = \App\Activity::all();        
-        $activities = Activity::with('users')->where('category' , '=', ' Skill-up') ->paginate(4);
+        $activities = Activity::with('users')->where('category' , '=', 'Skillup') ->paginate(4);
+        $category = "Skillup";
 
-
-dd($activities);
         // dd($activities[3]->users[0]->name);
 
         return view('activities.index', [
-            'activities' => $activities
+            'activities' => $activities,
+            'category'=> $category
+            
         ]);
 
 
