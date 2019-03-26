@@ -12,6 +12,36 @@ use \App\User;
 
 class AppController extends Controller
 {
+    public function indexMeetup()
+    {
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->paginate(4);
+
+        // dd($activities[3]->users[0]->name);
+
+        return view('activities.index', [
+            'activities' => $activities
+        ]);
+
+
+
+    }
+    public function indexSkillup()
+    {
+        // $activities = \App\Activity::all();        
+        $activities = Activity::with('users')->where('category' , '=', ' Skill-up') ->paginate(4);
+
+
+dd($activities);
+        // dd($activities[3]->users[0]->name);
+
+        return view('activities.index', [
+            'activities' => $activities
+        ]);
+
+
+
+    }
     public function showWelcome() {
         if(Auth::check()){
             $user = DB::table('users')->where('id', '=', Auth::user()->id)->get();
