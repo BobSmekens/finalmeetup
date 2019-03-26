@@ -388,14 +388,35 @@ button {
 }
 
 .activity-add-container {
-
-
     .activity-index-add {
         border: 1px solid black;
         padding: 10px;
         border-radius: 10px;
         font-weight: bold;
     }
+}
+
+.name-activity {
+    text-align: center;
+    margin: 30px;
+}
+
+.activity-property {
+    padding: 10px 20px;
+}
+
+.activity-button-container {
+    display: flex;
+}
+
+.activity-button-link {
+    display: inline-block;
+    flex: 1;
+    margin: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 /*    ///////////////////////chat ////////////////////*/

@@ -13,29 +13,25 @@
 @endsection
 
 @section('content-bottom')
-<span class="name-activity "><h2>{{ $activity->activity}}</h2></span>
+<span class="name-activity"><h2>{{ $activity->activity}}</h2></span>
 
-<div class="container m-0 p-0 justify-content-center">
-    <div class="my-row row m-0 p-0 align-content-center justify-content-center">
-    </div>
-    <div class="my-row row m-4 p-4 justify-content-center">
-        <div class="col-12">Maximum amount of people: {{ $activity->max_persons}}</div>
-        <div class="col-12">{{ $activity->description}}</div>
-        <div class="col-12">{{ $activity->category}}</div>
-
+    <div class="">
+        <div class="activity-property">{{ $activity->category}} spots: <br>{{ $activity->max_persons}}</div>
+        <div class="activity-property">Wat gaat er gebeuren? <br>{{ $activity->description}}</div>
+        <div class="activity-property">Organisator: {{$activity->users[0]->name}}</div>
     </div>
    
+<div class="activity-button-container">
+    <a class="activity-button-link" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 
-            <a class="bob-btn-visable" href="/activities/{{ $activity->id }}/edit">pas activiteit aan</a>
 
-
-    <form action="/activities/{{ $activity->id }}" method="POST">
+    <form class="activity-button-link" action="/activities/{{ $activity->id }}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
 
-                <button class="account-delete-button" type="submit">Delete activity</button>
-        </form>
-
+        <button class="account-delete-button" type="submit">Delete activity</button>
+    </form>
+</div>
 
 
 </div>
