@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
-@section('content')
-<div class=" activities-index-top">
+@section('content-top')
+    <div class="content-top section-flex">
         <h3>Edit "{{ $activity->activity}}"</h3>
-</div>
-    <div class=" form-container">
-        <form action="/activities/{{ $activity->id }}" method="POST">
+    </div>
+@endsection
+
+@section('content-bottom')
+
+    <div class="form-container">
+        <form class="login-form" action="/activities/{{ $activity->id }}" method="POST">
             {{ csrf_field() }}
             {{ method_field('PATCH') }}
 
@@ -42,12 +46,12 @@
             <button class="account-eddit-button" type="submit">Edit activity</button>
         </form>
 
-        <form action="/activities/{{ $activity->id }}" method="POST">
+        {{-- <form action="/activities/{{ $activity->id }}" method="POST">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
 
             <button class="account-delete-button" type="submit">Delete activity</button>
-        </form>
+        </form> --}}
     </div>
 </div>
 @endsection
