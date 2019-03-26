@@ -42,7 +42,7 @@
 <nav class="navbar navbar-light navbar-1 white">
 
 <!-- Navbar brand -->
-<a class="navbar-brand" href="#">Skills & Chills</a>
+<a class="navbar-brand" href="/">Skills & Chills</a>
 
 <!-- Collapse button -->
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -62,12 +62,22 @@
         @endif
 
     </li>
+
     <li class="nav-item">
-      <a class="nav-link" href="/account">Account</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}</a>
+        @if (Auth::check())
+        <li class="nav-item">
+            <a class="nav-link" href="/account">Account</a>
+          </li>
+            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+          </li>
+        @else
+            <li> <a class="nav-link" href="/login">Login</a></li>
+        @endif
     </li>
   </ul>
   <!-- Links -->
