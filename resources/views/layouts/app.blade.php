@@ -13,7 +13,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bob.js') }}" defer></script>
-    <script src="{{ asset('js/koen.js') }}" defer></script>
+    <script src="{{ asset('js/navbar-koen.js') }}" defer></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
@@ -42,7 +42,7 @@
 <nav class="navbar navbar-light navbar-1 white">
 
 <!-- Navbar brand -->
-<a class="navbar-brand" href="#">Skills & Chills</a>
+<a class="navbar-brand" href="/">Skills & Chills</a>
 
 <!-- Collapse button -->
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -62,12 +62,22 @@
         @endif
 
     </li>
+
     <li class="nav-item">
-      <a class="nav-link" href="/account">Account</a>
-    </li>
-    <li class="nav-item">
-    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}</a>
+        @if (Auth::check())
+        <li class="nav-item">
+            <a class="nav-link" href="/account">Account</a>
+          </li>
+            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+          </li>
+        @else
+            <li> <a class="nav-link" href="/login">Login</a></li>
+        @endif
     </li>
   </ul>
   <!-- Links -->
