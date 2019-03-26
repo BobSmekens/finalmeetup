@@ -1,13 +1,17 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content-top')
+<div class="content-top section-flex">
 
-<h3>Edit Account</h3>
-
-<div class="form-container">
-    <div class="account-top">
         <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
     </div>
+@endsection
+
+    
+@section('content-bottom')
+
+<div class="form-container">
+   
     <form class="login-form" id="edit-profile-form" action="/account/{{ $user->id }}" method="POST" enctype="multipart/form-data">
         {{ method_field('PATCH') }}
         {{ csrf_field() }}
@@ -50,12 +54,7 @@
 
 
     </form>
-    <form action="/account/{{ $user->id }}" method="POST">
-        {{ method_field('DELETE') }}
-        {{ csrf_field() }}
 
-        <button class="account-delete-button" type="submit">Delete</button>
-    </form>
 </div>
 </div>
 

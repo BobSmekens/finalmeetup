@@ -262,6 +262,7 @@ button {
   font-size: 18px;
   text-align: left;
   padding: 0 20px;
+  margin: 10px;
 }
 
 .account-container .account-top span {
@@ -281,6 +282,7 @@ button {
   font-size: 18px;
   text-align: left;
   padding: 0 20px;
+  margin: 10px 0;
   word-wrap: break-word;
 }
 
@@ -294,7 +296,12 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 20px;
+  margin: 20px;
+  padding-top: 20px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-top: 1px solid black;
 }
 
 .account-container .account-bottom .account-links-container .account-link-btn {
@@ -302,7 +309,6 @@ button {
       -ms-flex: 1;
           flex: 1;
   text-align: center;
-  border: 1px solid black;
   padding: 10px;
   margin: 0 10px;
   border-radius: 10px;
@@ -311,7 +317,7 @@ button {
 
 .account-container .contact-property {
   color: black;
-  padding-left: 40px;
+  padding: 20px 40px;
 }
 
 /*                    edit account  */
@@ -319,13 +325,6 @@ button {
   padding-top: 20px;
   width: 100vw;
   margin-bottom: 50px;
-}
-
-.form-container #edit-profile-pic {
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-  margin: 10px auto 10px auto;
 }
 
 .form-container form {
@@ -380,8 +379,8 @@ button {
   border-radius: 15px;
   height: 30px;
   border: none;
-  background: -webkit-gradient(linear, left top, right top, from(red), to(silver));
-  background: linear-gradient(to right, red, silver);
+  color: red;
+  border-color: red;
 }
 
 /*/////////////////////////////activities///////////////////////*/
