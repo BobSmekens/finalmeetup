@@ -4,9 +4,19 @@
 
     <div class="content-top activities-align-bot">
         <div class="activities-sort-container section-flex">
-            <div class="activities-sort-link toggle-content">Skill-up</div>
-            <div class="activities-sort-link toggle-content">meet-up</div>
-            <div class="activities-sort-link toggle-content">all-up</div>
+            @if($category == 'Skillup')
+                <div class="activities-sort-link toggle-content active"><a href="/skillup">Skillup</a></div>
+                <div class="activities-sort-link toggle-content"><a href="/chillup">Chillup</a></div>
+                <div class="activities-sort-link toggle-content"><a href="/activities">Allup</a></div>
+            @elseif($category == 'Chillup')
+                <div class="activities-sort-link toggle-content"><a href="/skillup">Skillup</a></div>
+                <div class="activities-sort-link toggle-content active"><a href="/chillup">Chillup</a></div>
+                <div class="activities-sort-link toggle-content"><a href="/activities">Allup</a></div>
+            @else
+                <div class="activities-sort-link toggle-content"><a href="/skillup">Skillup</a></div>
+                <div class="activities-sort-link toggle-content"><a href="/chillup">Chillup</a></div>
+                <div class="activities-sort-link toggle-content active"><a href="/activities">Allup</a></div>
+                @endif
         </div> 
        
         <div class="activities-table-titles-container toggle-content">

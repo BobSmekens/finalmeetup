@@ -21,10 +21,12 @@ class ActivitiesController extends Controller
         // $activities = \App\Activity::all();        
         // $activities = Activity::with('users')->paginate(4);
         $activities = Activity::with('users')->paginate(4);
+        $category = "All";
         // dd($activities[3]->users[0]->name);
 
         return view('activities.index', [
-            'activities' => $activities
+            'activities' => $activities,
+            'category'=> $category
         ]);
 
 

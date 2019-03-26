@@ -30,8 +30,8 @@
 
     <span>
         <select name="category" id="">
-            <option value="Skill-up">Skill-up</option>
-            <option value="Meetup">Meetup</option>
+            <option value="Skillup">Skillup</option>
+            <option value="Chillup">Chillup</option>
         </select>
     </span>
     <br>
