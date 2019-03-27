@@ -89,22 +89,39 @@ class AppController extends Controller
 
     public function showCalendar() {
         if(Auth::check()){
-
-            // $activities = Activity::with('users')
-            // ->where('id', '=', Auth::user()->id)
-            // ->get();
-            $user = User::with('activity')
-            ->where('id', '=', Auth::user()->id)
-            ->first();
-            //dd($user);
-
-            //dd($user[0]->activity);
-
+            $ownActivities= Activity::with('users')->where('posted_by' , '=', Auth::user()->id)->get();
+            $notOwnActivities = Activity::with('users')->where('posted_by' , 'NOT IN' , Auth::user()->id)->get();
+dd($notownActivities);
             return view('calender.index', [
-                'user' => $user
+                'ownActivities' => $ownActivities,
+                'notOwnActivities' => $notOwnActivities
+
+                
             ]);
         };
     }
+
+    // public function showCalendar() {
+    //     if(Auth::check()){
+
+    //         // $activities = Activity::with('users')
+    //         // ->where('id', '=', Auth::user()->id)
+    //         // ->get();
+    //         $user = User::with('activity')
+    //         ->where('id', '=', Auth::user()->id)
+    //         ->where('posted_by', '=', Auth::user()->id)
+    //         ->first();
+    //         dd($user);
+
+    //         //dd($user[0]->activity);
+
+    //         return view('calender.index', [
+    //             'user' => $user
+    //         ]);
+    //     };
+    // }
+
+
 
     public function deleteCalendarItem($id) {
         // dd($id);
@@ -114,7 +131,7 @@ class AppController extends Controller
 
         $user->activity()->detach($id);
 
-        return redirect('/calendar');
+        return redirect('/calendar')->with('success', 'You  succesfully deleted an activity');;
     }
 
     public function loggedInSucces (){
