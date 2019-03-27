@@ -9,18 +9,32 @@
 
 @section('content-bottom')
 
-    @foreach($user->activity as $activity)
+    @foreach($ownActivities as $ownActivity)
 
-        <form class="calendar-item" action="/calendar/{{ $activity->id }}" method="POST">
+        <form class="calendar-item" action="/calendar/{{ $ownActivity->id}}" method="POST">
             {{ method_field('DELETE') }}
             {{ csrf_field() }}
     
-                <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
-                <button type="submit">X</button>
+                <a href="/activities/{{ $ownActivity->id }}">{{ $ownActivity->activity}}</a>
+                {{-- <button type="submit">X</button> --}}
 
             
         </form>
     
     @endforeach
+
+    @foreach($notOwnActivities as $activity)
+
+    <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
+        {{ method_field('DELETE') }}
+        {{ csrf_field() }}
+
+            <a href="/activities/{{ $notOwnActivity->id }}">{{ $notOwnActivity->activity}}</a>
+            {{-- <button type="submit">X</button> --}}
+
+        
+    </form>
+
+@endforeach
    
 @endsection
