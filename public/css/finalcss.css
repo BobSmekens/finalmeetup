@@ -183,6 +183,10 @@ body {
   opacity: .5;
 }
 
+.activities-sort-container .active {
+  opacity: 1;
+}
+
 .account-delete-button {
   color: red;
   border-color: red;

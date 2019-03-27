@@ -29,7 +29,7 @@ Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
 Route::resource('/account', 'UserController');
 Route::resource('/activities', 'ActivitiesController');
 Route::get('/skillup', 'AppController@indexSkillup');
-Route::get('/chillup', 'AppController@indexMeetup');
+Route::get('/chillup', 'AppController@indexChillup');
 Auth::routes();
 
 Route::get('search', 'AutoCompleteController@index');
