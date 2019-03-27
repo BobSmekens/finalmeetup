@@ -90,8 +90,8 @@ class AppController extends Controller
     public function showCalendar() {
         if(Auth::check()){
             $ownActivities= Activity::with('users')->where('posted_by' , '=', Auth::user()->id)->get();
-            $notOwnActivities = Activity::with('users')->where('posted_by' , 'NOT IN' , Auth::user()->id)->get();
-dd($notownActivities);
+            $notOwnActivities = Activity::with('users')->where('posted_by' , '!=' , Auth::user()->id)->get();
+//dd($notOwnActivities);
             return view('calender.index', [
                 'ownActivities' => $ownActivities,
                 'notOwnActivities' => $notOwnActivities
