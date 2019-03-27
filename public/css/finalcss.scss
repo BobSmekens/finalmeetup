@@ -156,6 +156,10 @@ body {
         text-align: center;
         opacity: .5;
     }
+
+    .active {
+        opacity: 1;
+    }
 }
 
 .account-delete-button {

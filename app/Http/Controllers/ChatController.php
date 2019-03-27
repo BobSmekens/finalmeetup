@@ -22,7 +22,13 @@ class ChatController extends Controller
             ->where('to_user', '=', Auth::user()->id)
             ->orWhere('from_user', '=', Auth::user()->id)
             ->get();
+            // DB::table('users')->where('id', '=', Auth::user()->id)->get();
+            $recievedMessages = DB::table('chats')
+            ->where('to_user', '=', Auth::user()->id)
+            ->get();
 
+            // dd($recievedMessages);
+            // dd($messages);
             return view('chat.index', [
                 'messages' => $messages,
                 'recepient' => $recepient
@@ -43,8 +49,8 @@ class ChatController extends Controller
     public function sendMessage ($id) {
 
         $chat = new Chat;
-        $chat->from_user = Auth::user()->id;
-        $chat->to_user = $id;
+        $chat->user = Auth::user()->id;
+        $chat->chatroom_id = 3;
         $chat->message = request('message');
 
         $chat->save();

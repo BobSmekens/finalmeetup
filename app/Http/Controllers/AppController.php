@@ -12,11 +12,11 @@ use \App\User;
 
 class AppController extends Controller
 {
-    public function indexMeetup()
+    public function indexChillup()
     {
         // $activities = \App\Activity::all();        
-        $activities = Activity::with('users')->where('category' , '=', 'Meetup') ->paginate(4);
-        $category = "Meetup";
+        $activities = Activity::with('users')->where('category' , '=', 'Chillup') ->paginate(4);
+        $category = "Chillup";
         // dd($activities[3]->users[0]->name);
 
         return view('activities.index', [

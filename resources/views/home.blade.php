@@ -11,14 +11,14 @@
     <div class="content-bottom section-flex">
         <div class="home-link-button">
             <p>Just want to hang? </p>
-            <a href="/activities">
+            <a href="/chillup">
                 <img class="home-link-image" src="{{ URL::asset('img/chillbird.png') }}" alt="">
                 <h2> Chillup!</h2>  
             </a>
         </div>
         <div class="home-link-button">
             <p>Want to learn something?</p>
-            <a href="/activities">
+            <a href="/skillup">
                 <img class="home-link-image" src="{{ URL::asset('img/skillbird.png') }}" alt="">
                 <h2> Skillup!</h2>  
             </a>
