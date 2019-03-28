@@ -22,7 +22,7 @@ Route::post('/account/{id}/chat', 'ChatController@sendMessage');
 
 Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
-Route::get('/calender', 'CalenderController@index');
+Route::delete('/calendar/{activity}/unsub', 'AppController@unsubActivity');
 Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
 Route::delete('/activities/{id}/', 'AppController@unsubActivity');
 

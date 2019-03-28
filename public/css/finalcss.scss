@@ -31,6 +31,16 @@ body {
     }
 }
 
+.activity-subscribe-btn {
+    padding: 10px 20px;
+    border: 1px solid white;
+    margin: 20px;
+}
+.subscribe-activities-button-container {
+    button {
+
+    }
+}
 .section-flex {
     display: flex;
     justify-content: center;
@@ -117,7 +127,7 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
 
-    a {
+    a, .activity-subscribe-btn {
         padding: 10px 30px;
         border: 1px solid black;
         margin: 10px 30px;
