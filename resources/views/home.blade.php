@@ -10,19 +10,18 @@
 @section('content-bottom')
     <div class="content-bottom section-flex">
         <div class="home-link-button">
-            <p>Just want to hang? </p>
-            <a href="/chillup">
-                <img class="home-link-image chillbird" src="{{ URL::asset('img/birdup.png') }}" alt="">
-                <h2> Chillup!</h2>  
-            </a>
-        </div>
-        <div class="home-link-button">
             <p>Want to learn something?</p>
             <a href="/skillup">
                 <img class="home-link-image skillbird" src="{{ URL::asset('img/birdup.png') }}" alt="">
                 <h2> Skillup!</h2>  
             </a>
         </div>
+        <div class="home-link-button">
+            <p>Just want to hang? </p>
+            <a href="/chillup">
+                <img class="home-link-image chillbird" src="{{ URL::asset('img/birdup.png') }}" alt="">
+                <h2> Chillup!</h2>  
+            </a>
         </div>
     </div>
 @endsection
@@ -50,15 +49,13 @@
     </div>
 
     <div class="section3">
-    <div class="containerbutton">
-        <a class="btn btn-1">DOWNLOAD APP</a>
-        <div><img src="https://img.icons8.com/color/48/000000/google-play.png"><input type="radio" id="play" name="drone" value="play"
-         checked><label for="play"></label></div>
-        <div><img src="https://img.icons8.com/color/48/000000/android-os.png"><input type="radio" id="android" name="drone" value="android"
-         checked><label for="andriod"></label></div>
-    </div>
-
-
+        <div class="containerbutton">
+            <a class="btn btn-1">DOWNLOAD APP</a>
+            <div><img src="https://img.icons8.com/color/48/000000/google-play.png"><input type="radio" id="play" name="drone" value="play"
+            checked><label for="play"></label></div>
+            <div><img src="https://img.icons8.com/color/48/000000/android-os.png"><input type="radio" id="android" name="drone" value="android"
+            checked><label for="andriod"></label></div>
+        </div>
     </div>
 
     <img class="iphone2" src="{{ URL::asset('img/iphone.png') }}" alt="no picture chosen yet">

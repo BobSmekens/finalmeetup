@@ -18,6 +18,51 @@ a {
           filter: hue-rotate(280deg);
 }
 
+.chat-own-message {
+  text-align: right;
+  background-color: #ffd9b3;
+  width: 80%;
+  float: right;
+  margin: 10px 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.chat-others-message {
+  text-align: left;
+  background-color: #b3f0ff;
+  width: 80%;
+  float: left;
+  margin: 10px 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.time-for-humans {
+  font-size: 12px;
+  color: grey;
+  opacity: .9;
+}
+
+.chat-message {
+  width: 90%;
+  margin: 10px auto;
+  display: block;
+  text-align: right;
+}
+
+.chat-message input {
+  padding: 20px;
+  background-color: #ebebe0;
+  border-radius: 10px;
+  width: 100%;
+  text-align: right;
+}
+
+.chat-message button {
+  margin-right: 50px;
+}
+
 h3 {
   text-align: right;
   width: 100%;
