@@ -19,15 +19,28 @@
                 <a href="/activities/{{ $ownActivity->id }}">{{ $ownActivity->activity}}</a>
                 {{-- <button type="submit">X</button> --}}
         </form>
-    
-    @endforeach
+        
+        @endforeach
 </div>
 <div class="activities-index-other-activities">
         <div class="activities-title">Gaat deelnemen aan:</div>
 
-    @foreach($notOwnActivities as $notOwnActivity)
-    
-    <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
+    @foreach($notOwnActivities as $activity)
+  
+    @foreach($activity->users as $activity)
+    {{$activity->id}}
+        @if($activity->id == Auth::user()->id)
+            <form class="calendar-item" action="/calendar/{{ $activity->id}}" method="POST">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+                
+                <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
+                <button type="submit">X</button>
+            </form>
+        @endif
+        @endforeach
+    @endforeach
+    {{-- <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
         
@@ -35,10 +48,10 @@
         <button type="submit">X</button>
         
         
-    </form>
+    </form> --}}
     
     
-    @endforeach
+
     
 </div>
 @endsection

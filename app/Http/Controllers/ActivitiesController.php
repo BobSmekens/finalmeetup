@@ -81,10 +81,23 @@ class ActivitiesController extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
+        $allActivityUsers = $activity->users()->get();
+        $signedInUser = false;
+        foreach ($allActivityUsers as $user){
+            if($user->id == Auth::user()->id) {
+                $signedInUser = true;
+            }
+        }
+        //$signedInUser = Activity::findOrFail($allActivityUsers);
+
         
-        //dd($check);
+        //dd($signedInUser);
+        
+
+
         return view('activities.show', [
-            'activity' => $activity
+            'activity' => $activity,
+            'signedInUser' =>$signedInUser
         ]);
     }
 
