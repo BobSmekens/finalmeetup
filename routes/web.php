@@ -14,7 +14,7 @@ Route::get('/', 'AppController@showWelcome');
 Route::get('/login', 'AppController@showLogin');  
 Route::get('/signup', 'AppController@showSignup'); 
 Route::get('/calendar', 'AppController@showCalendar'); 
-Route::delete('/calendar/{id}', 'AppController@deleteCalendarItem'); 
+Route::delete('/calendar/{activity}', 'AppController@deleteCalendarItem'); 
 Route::get('/registered', 'UserController@registered');
 
 Route::get('/account/{id}/chat', 'ChatController@index');
@@ -24,6 +24,7 @@ Route::post('/uploadphoto', 'UserController@uploadPhoto');
 
 Route::get('/calender', 'CalenderController@index');
 Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
+Route::delete('/activities/{id}/', 'AppController@unsubActivity');
 
 
 Route::resource('/account', 'UserController');

@@ -8,7 +8,8 @@
 @endsection
 
 @section('content-bottom')
-
+<div class="activities-index-leader-acivities">
+    <div class="activities-title">Zelf georganiseerd</div>
     @foreach($ownActivities as $ownActivity)
 
         <form class="calendar-item" action="/calendar/{{ $ownActivity->id}}" method="POST">
@@ -17,24 +18,40 @@
     
                 <a href="/activities/{{ $ownActivity->id }}">{{ $ownActivity->activity}}</a>
                 {{-- <button type="submit">X</button> --}}
-
-            
         </form>
-    
-    @endforeach
+        
+        @endforeach
+</div>
+<div class="activities-index-other-activities">
+        <div class="activities-title">Gaat deelnemen aan:</div>
 
     @foreach($notOwnActivities as $activity)
-
-    <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
+  
+    @foreach($activity->users as $activity)
+    {{$activity->id}}
+        @if($activity->id == Auth::user()->id)
+            <form class="calendar-item" action="/calendar/{{ $activity->id}}" method="POST">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+                
+                <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
+                <button type="submit">X</button>
+            </form>
+        @endif
+        @endforeach
+    @endforeach
+    {{-- <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
-
-            <a href="/activities/{{ $notOwnActivity->id }}">{{ $notOwnActivity->activity}}</a>
-            {{-- <button type="submit">X</button> --}}
-
         
-    </form>
+        <a href="/activities/{{ $notOwnActivity->id }}">{{ $notOwnActivity->activity}}</a>
+        <button type="submit">X</button>
+        
+        
+    </form> --}}
+    
+    
 
-@endforeach
-   
+    
+</div>
 @endsection

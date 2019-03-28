@@ -82,16 +82,25 @@ class AppController extends Controller
             $activity = Activity::find($id);
             $user = User::find(Auth::user()->id);
             $activity->users()->save($user);
-
+            //$checkSignUp = Activity::with('users')->where('user_id' , '=' , Auth::user()->id)->get();
+            //dd($checkSignUp);
         }
-        return redirect('/activities');
+      //  return redirect('/activities');
+
+              return redirect('/activities/' . $activity->id);
     }
 
-    public function showCalendar() {
+    public function showCalendar(Activity $activity) {
         if(Auth::check()){
             $ownActivities= Activity::with('users')->where('posted_by' , '=', Auth::user()->id)->get();
-            $notOwnActivities = Activity::with('users')->where('posted_by' , 'NOT IN' , Auth::user()->id)->get();
-dd($notownActivities);
+            $notOwnActivities = Activity::with('users')
+            ->where('posted_by' , '!=', Auth::user()->id)
+            ->get();
+            // ->users();
+            // dd($notOwnActivities);
+            //$userArray = $notOwnActivities[0]->users();
+
+//dd($notOwnActivities);
             return view('calender.index', [
                 'ownActivities' => $ownActivities,
                 'notOwnActivities' => $notOwnActivities
@@ -123,15 +132,37 @@ dd($notownActivities);
 
 
 
-    public function deleteCalendarItem($id) {
+    public function deleteCalendarItem(Activity $activity) {
+
+        //dd($activity);
+
+        $user_id = \Auth::user()->id;
+
+        dd($user_id);
+
+        $activity->users()->detach([$user_id]);
+
+        // $user = User::with('activity')
+        //     ->where('id', '=', Auth::user()->id)
+        //     ->first();
+
+        // $user->activity()->detach($user);
+        // dd($user);
+        // ;
+
+        return redirect('/calendar')->with('success', 'You  unsubscribed from the activity');;
+        
+    }
+    public function unsubActivity($id) {
         // dd($id);
         $user = User::with('activity')
             ->where('id', '=', Auth::user()->id)
             ->first();
 
-        $user->activity()->detach($id);
+        $user->activity()->detach($user);
 
-        return redirect('/calendar')->with('success', 'You  succesfully deleted an activity');;
+        return redirect('/activities')->with('success', 'You  unsubscribed from the activity');;
+        
     }
 
     public function loggedInSucces (){
