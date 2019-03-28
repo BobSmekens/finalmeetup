@@ -6,6 +6,22 @@ a   {
     color: black;
 }
 
+.chillbird {
+    filter: hue-rotate(140deg);
+    transform: rotate(180deg);
+}
+
+.skillbird {
+    filter: hue-rotate(280deg);
+}
+
+h3 {
+    text-align: right;
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
 body {
     margin: 0;
 }
