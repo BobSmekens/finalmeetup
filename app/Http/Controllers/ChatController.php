@@ -17,17 +17,13 @@ class ChatController extends Controller
         $recepient = User::findOrFail($id);
 
         if(Auth::check()){
-            // $messages = Chat::with('users');
-            $messages = DB::table('chats')
-            ->where('to_user', '=', Auth::user()->id)
-            ->orWhere('from_user', '=', Auth::user()->id)
-            ->get();
-            // DB::table('users')->where('id', '=', Auth::user()->id)->get();
-            $recievedMessages = DB::table('chats')
-            ->where('to_user', '=', Auth::user()->id)
-            ->get();
 
-            // dd($recievedMessages);
+            $messages = Chat::with('users')
+            // ->where('chatroom_id', '=', '2')
+            ->get();
+            // ->where('id' , '=', Auth::user()->id)->get();
+            // dd(Auth::user()->id);
+            // dd($messages[0]->users[0]);
             // dd($messages);
             return view('chat.index', [
                 'messages' => $messages,
