@@ -18,6 +18,7 @@ class CreateChatsTable extends Migration
             $table->bigInteger('user')->nullable(true);
             $table->string('message')->nullable(true);
             $table->bigInteger('chatroom_id')->nullable(true);
+            $table->bigInteger('activity_id')->nullable(true);
             $table->rememberToken();
             $table->timestamps();
 

@@ -25,6 +25,9 @@ Route::post('/uploadphoto', 'UserController@uploadPhoto');
 Route::delete('/calendar/{activity}/unsub', 'AppController@unsubActivity');
 Route::get('/activities/{id}/meetup', 'AppController@addToMeetup');
 Route::delete('/activities/{id}/', 'AppController@unsubActivity');
+Route::post('/activities/{id}', 'AppController@show');
+route::post('/activities/{activity}/chat' , 'ActivitiesController@addMessage');
+route::get('/activities/{activity}/chat' , 'ActivitiesController@showChat');
 
 
 Route::resource('/account', 'UserController');
