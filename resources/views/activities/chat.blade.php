@@ -9,13 +9,25 @@
 @section('content-bottom')
 
 {{-- {{dd($messages)}} --}}
-    <form class="chat-message" action="/activities/{{$activity->id}}/chat" method="POST">
-        {{ csrf_field() }}
-        <input class="form-input" placeholder="Message" type="text" name="message">
-        <button type="submit">Send</button>
-    </form>
+
 @foreach($messages as $message)
-<div>{{$message->message}}</div>
+
+    @if($message->user == Auth::user()->id)
+        <div class="chat-own-message">rechts: 
+            {{$message->message}}
+            <div class="time-for-humans">{{$message->created_at->diffForHumans()}}</div>
+        </div>
+    @else 
+        <div class="chat-others-message">rechts: 
+            {{$message->message}}
+            <div class="time-for-humans">{{$message->created_at->diffForHumans()}}</div>
+        </div>
+    @endif
 @endforeach
 
+<form class="chat-message" action="/activities/{{$activity->id}}/chat" method="POST">
+    {{ csrf_field() }}
+    <input class="form-input" placeholder="Message" type="text" autofocus name="message">
+    <button type="submit">Send</button>
+</form>
 @endsection
