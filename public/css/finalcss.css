@@ -32,6 +32,12 @@ body {
   color: white;
 }
 
+.activity-subscribe-btn {
+  padding: 10px 20px;
+  border: 1px solid white;
+  margin: 20px;
+}
+
 .section-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +150,7 @@ body {
           justify-content: flex-end;
 }
 
-.activities-signup-link a {
+.activities-signup-link a, .activities-signup-link .activity-subscribe-btn {
   padding: 10px 30px;
   border: 1px solid black;
   margin: 10px 30px;

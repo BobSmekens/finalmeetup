@@ -10,48 +10,40 @@
 @section('content-bottom')
 <div class="activities-index-leader-acivities">
     <div class="activities-title">Zelf georganiseerd</div>
-    @foreach($ownActivities as $ownActivity)
+        @foreach($ownActivities as $ownActivity)
 
-        <form class="calendar-item" action="/calendar/{{ $ownActivity->id}}" method="POST">
-            {{ method_field('DELETE') }}
-            {{ csrf_field() }}
-    
-                <a href="/activities/{{ $ownActivity->id }}">{{ $ownActivity->activity}}</a>
-                {{-- <button type="submit">X</button> --}}
-        </form>
+            <form class="calendar-item" action="/calendar/{{ $ownActivity->id}}" method="POST">
+                {{ method_field('DELETE') }}
+                {{ csrf_field() }}
+        
+                    <a href="/activities/{{ $ownActivity->id }}">{{ $ownActivity->activity}}</a>
+                    {{-- <button type="submit">X</button> --}}
+            </form>
         
         @endforeach
 </div>
 <div class="activities-index-other-activities">
-        <div class="activities-title">Gaat deelnemen aan:</div>
+    <div class="activities-title">Gaat deelnemen aan:</div>
 
-    @foreach($notOwnActivities as $activity)
-  
-    @foreach($activity->users as $activity)
-    {{$activity->id}}
-        @if($activity->id == Auth::user()->id)
+@foreach($notOwnActivities as $activity)
+    @for($x = 1; $x < count($activity->users); $x++)
+        @if($activity->users[$x]->id = '{{Auth::user()->id}}' && $activity->posted_by != '{{Auth::user()->id}}') 
             <form class="calendar-item" action="/calendar/{{ $activity->id}}" method="POST">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
-                
+            
                 <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
                 <button type="submit">X</button>
             </form>
         @endif
-        @endforeach
-    @endforeach
-    {{-- <form class="calendar-item" action="/calendar/{{ $notOwnActivity->id}}" method="POST">
+    @endfor
+@endforeach
+    {{-- <form class="calendar-item" action="/calendar/{{ $activity->id}}" method="POST">
         {{ method_field('DELETE') }}
         {{ csrf_field() }}
         
-        <a href="/activities/{{ $notOwnActivity->id }}">{{ $notOwnActivity->activity}}</a>
+        <a href="/activities/{{ $activity->id }}">{{ $activity->activity}}</a>
         <button type="submit">X</button>
-        
-        
     </form> --}}
-    
-    
-
-    
 </div>
 @endsection
