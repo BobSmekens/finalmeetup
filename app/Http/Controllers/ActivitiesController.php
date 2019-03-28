@@ -51,32 +51,30 @@ class ActivitiesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store() //aanmaken van activiteit en koppellen aan chat
     {
-        // $activity = new Activity;
-        // $chat = new Chat;
-        // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
-        // $poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
+         $activity =  new Activity;
+         $chat = new chat;
+         //$user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
+         //$poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
+         $activity->activity = request('activity');
+         $activity->posted_by = Auth::user()->id;
+         $activity->max_persons = request('persons');
+         $activity->category = request('category');
+         $activity->description = request('description');   
+         
 
-        dd($activity);
-        $activity = $activity->with('users')->find($activity->id);
-        dd($activity);
-        $activity->activity = request('activity');
-        $activity->posted_by = Auth::user()->id;
-        $activity->max_persons = request('persons');
-        $activity->category = request('category');
-        $activity->description = request('description');
-        
-        $activity->save();
-        
+         $activity->save();
         $user_id = Auth::user()->id;
-        $activity->users()->attach($user_id);
-        $chat_id = $activity->id;
-        dd($activity);
-        //dd($chat_id);
-        $chat->activities()->attach($chat_id);
-        $chat->activities()->attach($user_id);
 
+        $activity->users()->attach($user_id);
+
+         
+         
+
+        //  $chat[0]->save();
+         
+        //  dd($activity);
 
 
         //return redirect('/activities');
@@ -163,5 +161,34 @@ class ActivitiesController extends Controller
         //return redirect('/activities');
         return redirect('/activities')->with('success', 'activity deleted');
 
+    }
+
+    public function addMessage(Request $request, Activity $activity){ //ROUTE NAAR DEZE METHOD MOET HEBBEN " /{activity} " 
+        $chat = new Chat;    
+    
+        $chat->user = Auth::user()->id;
+        $chat->activity_id = $activity->id;
+        $chat->message = request('message');
+
+        $chat->save();
+        //dd($chat);
+    //user              \Auth::
+        //activyt           \$activity -> id
+        //message           \request('message');
+
+        //Chat::save(arraymetinfo);
+        return redirect('/activities/'.$activity->id.'/chat');//->with('success', 'activity deleted');
+        
+
+    }
+    public function showChat(Activity $activity){
+    
+        $messages = Chat::all()
+        ->where('activity_id', '=', $activity->id);
+        // dd($messages[0]);
+        return view('activities.chat', [
+            'activity' => $activity,
+            'messages' => $messages
+        ]);
     }
 }
