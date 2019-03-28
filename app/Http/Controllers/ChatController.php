@@ -46,7 +46,7 @@ class ChatController extends Controller
 
         $chat = new Chat;
         $chat->user = Auth::user()->id;
-        $chat->chatroom_id = 3;
+        $chat->chatroom_id = $id;
         $chat->message = request('message');
 
         $chat->save();
@@ -55,4 +55,6 @@ class ChatController extends Controller
 
         
     }
+
+    
 }

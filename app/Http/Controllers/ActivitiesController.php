@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 use \App\Activity;
 use \App\User;
+use \App\Chat;
 
 class ActivitiesController extends Controller
 {
@@ -50,22 +51,32 @@ class ActivitiesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $activity = new Activity;
+        // $activity = new Activity;
+        // $chat = new Chat;
         // $user->update(request(['name', 'email', 'phone', 'photo', 'skills']));
         // $poster = DB::table('users')->where('id', '=', Auth::user()->id)->get();
+
+        dd($activity);
+        $activity = $activity->with('users')->find($activity->id);
+        dd($activity);
         $activity->activity = request('activity');
         $activity->posted_by = Auth::user()->id;
         $activity->max_persons = request('persons');
         $activity->category = request('category');
         $activity->description = request('description');
-   
+        
         $activity->save();
-
+        
         $user_id = Auth::user()->id;
         $activity->users()->attach($user_id);
-        //dd($activity::find(1));
+        $chat_id = $activity->id;
+        dd($activity);
+        //dd($chat_id);
+        $chat->activities()->attach($chat_id);
+        $chat->activities()->attach($user_id);
+
 
 
         //return redirect('/activities');
