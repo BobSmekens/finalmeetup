@@ -23,3 +23,23 @@
     border-radius: 15px;
 }
 
+
+
+/* PAGINATE */
+.pagination{
+    padding-left:20px;
+    opacity: 0.7;
+}
+.page-link{
+    opacity: 0.7;
+}
+.page-link{
+    opacity: 0.7;
+}
+
+.page-item.active .page-link{
+    background-color: teal;
+    opacity: 0.7;
+    border-color: teal;
+}
+/* EINDE PAGINATE */
