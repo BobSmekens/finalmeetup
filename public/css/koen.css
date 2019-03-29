@@ -23,8 +23,6 @@
     border-radius: 15px;
 }
 
-
-
 /* PAGINATE */
 .pagination{
     padding-left:20px;
@@ -43,3 +41,35 @@
     border-color: teal;
 }
 /* EINDE PAGINATE */
+
+.activities-title{
+    font-family: Nunito,sans-serif;
+    font-weight: bold;
+}
+.margin-content{
+    margin:20px;
+}
+
+/* calender-items */
+.calendar-item{
+    border:6px solid #f8fafc;
+    border-bottom: none!important;
+}
+.calendar-item a{
+    color:teal;
+}
+
+
+.calendar-item:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.034);
+    padding-left:10px;
+}
+
+.calendar-item:nth-child(odd){
+background-color: rgba(128, 128, 128, 0.226);
+padding-left:10px;
+}
+
+.calendar-item:nth-last-child(){
+    border-bottom: none;
+}

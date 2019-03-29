@@ -2,14 +2,14 @@
 
 @section('content-top')
     <div class="content-top section-flex">
-        <h3>Mijn agenda</h3>
+        <h2>Mijn agenda</h2>
     </div>
 
 @endsection
 
 @section('content-bottom')
 <div class="activities-index-leader-acivities">
-    <div class="activities-title">Zelf georganiseerd</div>
+    <div class="margin-content property activities-title">Zelf georganiseerd</div>
         @foreach($ownActivities as $ownActivity)
 
             <form class="calendar-item" action="/calendar/{{ $ownActivity->id}}" method="POST">
@@ -22,8 +22,8 @@
         
         @endforeach
 </div>
-<div class="activities-index-other-activities">
-    <div class="activities-title">Gaat deelnemen aan:</div>
+<div class="margin-content activities-index-other-activities">
+    <div class="property activities-title">Gaat deelnemen aan:</div>
 
 @foreach($notOwnActivities as $activity)
     @for($x = 1; $x < count($activity->users); $x++)
