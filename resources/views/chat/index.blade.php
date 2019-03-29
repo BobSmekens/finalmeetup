@@ -10,9 +10,10 @@
     @foreach($messages as $message)
         @if($message->from_user != Auth::user()->id)
         <div class="recieved-message">
+            {{dd($message)}}
             <img id="chat-pic-sender" src="{{ URL::asset('storage/profilepics/profilepic' . $recepient->id . '.jpg') }}" alt="">
             <span>{{ $message->message }}</span>
-            <div> {{ $message->from_user}}</div>
+            <div> {{ $message->users[0]->name}}</div>
         </div>
         @else
         <div class="send-message">

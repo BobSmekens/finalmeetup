@@ -167,17 +167,13 @@ class ActivitiesController extends Controller
     public function addMessage(Request $request, Activity $activity){ //ROUTE NAAR DEZE METHOD MOET HEBBEN " /{activity} " 
         $chat = new Chat;    
     
-        $chat->user = Auth::user()->id;
+        $chat->user = Auth::user()->name;
+        // dd($chat->user);
         $chat->activity_id = $activity->id;
         $chat->message = request('message');
 
         $chat->save();
-        //dd($chat);
-    //user              \Auth::
-        //activyt           \$activity -> id
-        //message           \request('message');
 
-        //Chat::save(arraymetinfo);
         return redirect('/activities/'.$activity->id.'/chat');//->with('success', 'activity deleted');
         
 
@@ -191,5 +187,12 @@ class ActivitiesController extends Controller
             'activity' => $activity,
             'messages' => $messages
         ]);
+    }
+    
+    public function unsubActivity(Activity $activity) {
+        $user_id = \Auth::user()->id;
+        $activity->users()->detach([$user_id]);
+
+        return redirect('/activities/'.$activity->id)->with('success', 'You  unsubscribed from the activity');;
     }
 }

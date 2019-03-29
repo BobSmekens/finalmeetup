@@ -21,20 +21,20 @@ a {
 .chat-own-message {
   text-align: right;
   background-color: #ffd9b3;
-  width: 80%;
+  width: 70%;
   float: right;
   margin: 10px 30px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 
 .chat-others-message {
   text-align: left;
   background-color: #b3f0ff;
-  width: 80%;
+  width: 70%;
   float: left;
   margin: 10px 30px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -112,6 +112,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.section-flex h3 {
+  text-align: center;
 }
 
 .content-bottom {
