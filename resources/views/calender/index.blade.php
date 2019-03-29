@@ -2,7 +2,7 @@
 
 @section('content-top')
     <div class="content-top section-flex">
-        <h2>Mijn agenda</h2>
+        <h2 class="toggle-content">Mijn agenda</h2>
     </div>
 
 @endsection

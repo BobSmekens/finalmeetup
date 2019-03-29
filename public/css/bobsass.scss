@@ -338,6 +338,7 @@ button {
             height: 30px;
             border: none;
             color: red;
+            background: #FEAC5E!important;
             border-color: red;
         }
     }
@@ -418,8 +419,10 @@ button {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 10px;
-    border: 1px solid black;
+    border: 1px solid teal;
     text-align: center;
+    color:teal;
+    background:#b3f0ff;
 }
 
 .image-centered {

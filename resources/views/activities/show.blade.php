@@ -15,7 +15,7 @@
                     <button class="activity-subscribe-btn" type="submit">Uitschrijven</button>
                 </form>
             @else
-                    <h2>Je bent de organisator</h2>
+                    <h2 class="toggle-content koenh2">Je bent de organisator</h2>
 
             @endif
         @elseif ($activity->users->count()>=$activity->max_persons && $signedInUser == false)
@@ -28,7 +28,7 @@
                     <button class="activity-subscribe-btn" type="submit">Uitschrijven</button>
                 </form>
             @else
-                <h3>Je bent de organisator</h3>
+                <h2 class="toggle-content koenh2">Je bent de organisator</h2>
             @endif
         @else
             @if(Auth::user()->id != $activity->posted_by)
@@ -41,7 +41,7 @@
 
 @section('content-bottom')
     <span class="name-activity">
-        <h2>{{ $activity->activity}}</h2>
+        <h2 class="">{{ $activity->activity}}</h2>
     </span>
     <div class="">
         <div class="activity-property">

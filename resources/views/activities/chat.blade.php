@@ -2,7 +2,7 @@
 
 @section('content-top')
 <div class="content-top section-flex">
-<h2>Chatroom <br><br> {{$activity->activity}}</h2>
+<h2 class="toggle-content">Chatroom <br><br> {{$activity->activity}}</h2>
 </div>
 @endsection
 
