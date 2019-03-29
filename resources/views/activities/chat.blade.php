@@ -1,25 +1,27 @@
 @extends('layouts.app')
 
 @section('content-top')
-<div class="content-top">
-    
+<div class="content-top section-flex">
+    <h3>Chat</h3>
 </div>
 @endsection
 
 @section('content-bottom')
 
 {{-- {{dd($messages)}} --}}
-
 @foreach($messages as $message)
 
-    @if($message->user == Auth::user()->id)
-        <div class="chat-own-message">rechts: 
+    @if($message->user == Auth::user()->name)
+        <div class="chat-own-message">
+            {{-- {{dd($message)}} --}}
             {{$message->message}}
+            <div class="time-for-humans">{{$message->user}}</div>
             <div class="time-for-humans">{{$message->created_at->diffForHumans()}}</div>
         </div>
     @else 
-        <div class="chat-others-message">rechts: 
+        <div class="chat-others-message">
             {{$message->message}}
+            <div class="time-for-humans">{{$message->user}}</div>
             <div class="time-for-humans">{{$message->created_at->diffForHumans()}}</div>
         </div>
     @endif
