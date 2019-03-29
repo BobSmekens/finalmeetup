@@ -6,7 +6,7 @@
         @if ($activity->users->count()>=$activity->max_persons && $signedInUser == true)
             <span class="">Je doet mee en de activiteit zit vol</span>
             @if(Auth::user()->id != $activity->posted_by)
-                <form class="subscribe-activities-button-container" action="/calendar/{{ $activity->id}}/unsub" method="POST">
+                <form class="subscribe-activities-button-container" action="/activities/{{ $activity->id}}/unsub" method="POST">
                     {{ method_field('DELETE') }}
                     {{ csrf_field() }}
                 

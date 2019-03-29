@@ -72,7 +72,7 @@
     </li>
     <li class="nav-item">
     @if (Auth::check())
-      <a class="nav-link" href="/account/{{ Auth::user()->id}}/chat">Chat</a>
+      <a class="nav-link" href="/calendar">Agenda</a>
         @endif
     </li>
     <li class="nav-item">
