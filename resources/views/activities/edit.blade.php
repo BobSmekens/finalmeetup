@@ -2,7 +2,7 @@
 
 @section('content-top')
     <div class="content-top section-flex">
-        <h3>Edit "{{ $activity->activity}}"</h3>
+        <h2 class="toggle-content">Edit "{{ $activity->activity}}"</h2>
     </div>
 @endsection
 
