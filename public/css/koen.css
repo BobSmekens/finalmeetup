@@ -11,3 +11,35 @@
     transition-duration: 2s;
     height:0px;
 }
+
+
+.category-selector{
+    font-family: Nunito,sans-serif;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 30px;
+    border-radius: 15px;
+}
+
+
+
+/* PAGINATE */
+.pagination{
+    padding-left:20px;
+    opacity: 0.7;
+}
+.page-link{
+    opacity: 0.7;
+}
+.page-link{
+    opacity: 0.7;
+}
+
+.page-item.active .page-link{
+    background-color: teal;
+    opacity: 0.7;
+    border-color: teal;
+}
+/* EINDE PAGINATE */
