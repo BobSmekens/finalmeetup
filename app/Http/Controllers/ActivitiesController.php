@@ -97,13 +97,7 @@ class ActivitiesController extends Controller
                 $signedInUser = true;
             }
         }
-        //$signedInUser = Activity::findOrFail($allActivityUsers);
-
         
-        //dd($signedInUser);
-        
-
-
         return view('activities.show', [
             'activity' => $activity,
             'signedInUser' =>$signedInUser
@@ -183,6 +177,7 @@ class ActivitiesController extends Controller
         $messages = Chat::all()
         ->where('activity_id', '=', $activity->id);
         // dd($messages[0]);
+        // $activityName = $activity->name;
         return view('activities.chat', [
             'activity' => $activity,
             'messages' => $messages

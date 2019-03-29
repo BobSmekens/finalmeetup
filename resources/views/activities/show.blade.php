@@ -15,7 +15,7 @@
                     <button class="activity-subscribe-btn" type="submit">Uitschrijven</button>
                 </form>
             @else
-                    <h3>Je bent de organisator</h3>
+                    <h2>Je bent de organisator</h2>
 
             @endif
         @elseif ($activity->users->count()>=$activity->max_persons && $signedInUser == false)
@@ -54,7 +54,12 @@
         </div>
         <div class="activity-property">
             <span class="bold-text">Organisator:</span><br> 
-            {{$activity->users[0]->name}}
+            {{-- {{dd($activity->posted_by)}} --}}
+            @foreach($activity->users as $user)
+                @if($activity->posted_by == $user->id)
+                    {{$user->name}}
+                @endif
+            @endforeach
         </div>
     </div>
     @if($signedInUser ==true)

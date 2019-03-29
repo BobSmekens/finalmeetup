@@ -2,12 +2,12 @@
 
 @section('content-top')
 <div class="content-top section-flex">
-    <h3>Chat</h3>
+<h2>Chatroom <br><br> {{$activity->activity}}</h2>
 </div>
 @endsection
 
 @section('content-bottom')
-
+<div class="messages-container">
 {{-- {{dd($messages)}} --}}
 @foreach($messages as $message)
 
@@ -26,10 +26,10 @@
         </div>
     @endif
 @endforeach
-
+    </div>
 <form class="chat-message" action="/activities/{{$activity->id}}/chat" method="POST">
     {{ csrf_field() }}
     <input class="form-input" placeholder="Message" type="text" autofocus name="message">
-    <button type="submit">Send</button>
+    <button type="submit">-></button>
 </form>
 @endsection
