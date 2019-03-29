@@ -156,10 +156,11 @@ class ActivitiesController extends Controller
      */
     public function destroy(Activity $activity)
     {
+        // dd($activity);
         $activity->delete();
         
         //return redirect('/activities');
-        return redirect('/activities')->with('success', 'activity deleted');
+        return redirect('/activities')->with('success', 'activiteit deleted');
 
     }
 
