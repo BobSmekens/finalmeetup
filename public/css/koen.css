@@ -11,3 +11,15 @@
     transition-duration: 2s;
     height:0px;
 }
+
+
+.category-selector{
+    font-family: Nunito,sans-serif;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    height: 30px;
+    border-radius: 15px;
+}
+

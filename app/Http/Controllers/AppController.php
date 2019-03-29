@@ -103,4 +103,7 @@ class AppController extends Controller
     public function loggedInSucces (){
         return redirect('/')->with('success', 'You are succesfully logged in');
     }
+    public function loggedOutSucces(){
+        return redirect('/')->with('success', 'Succesvol uitgelogd');
+    }
 }

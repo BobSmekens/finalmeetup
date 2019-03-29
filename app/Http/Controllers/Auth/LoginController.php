@@ -38,9 +38,10 @@ class LoginController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
+    protected $redirectTo = '/loggedOutSucces';
+    // {
+    //     $this->middleware('guest')->except('logout');
 
-    }
+        @return void
+    // }
 }

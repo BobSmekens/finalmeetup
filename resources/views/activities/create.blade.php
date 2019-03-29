@@ -8,8 +8,8 @@
 
 @section('content-bottom')
 
-    <div class="my-row row m-4 p-4 ">
-    <form action="/activities" method="POST">
+    <div class="my-row row mt-4 p-0">
+    <form  class="login-form"  action="/activities" method="POST">
     {{ csrf_field() }}
 
     <span class="form-label">Activity:</span>
@@ -29,7 +29,7 @@
     <span class="form-label">Category:</span>
 
     <span>
-        <select name="category" id="">
+        <select class="form-input category-selector" name="category" id="">
             <option value="Skillup">Skillup</option>
             <option value="Chillup">Chillup</option>
         </select>
@@ -43,7 +43,7 @@
     </span>
     <br>
 
-    <button type="submit">Create activity</button>
+    <button class="activity-button-link" type="submit">Create activity</button>
 </form>
 </div>
 </div>
