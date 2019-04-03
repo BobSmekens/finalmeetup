@@ -32,6 +32,10 @@ button {
   background-color: rgba(0, 0, 0, 0);
 }
 
+.nav-link {
+  color: white !important;
+}
+
 /*                        layouts.app               */
 .navbar-container {
   position: absolute;
@@ -50,22 +54,6 @@ button {
   align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-}
-
-.navbar-container .nav-link {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  z-index: 10;
-  opacity: 1;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: none;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#FEAC5E), color-stop(#C779D0), to(#4BC0C8));
-  background: linear-gradient(to right, #FEAC5E, #C779D0, #4BC0C8);
-  display: block;
-  margin: auto;
 }
 
 .user-feedback {

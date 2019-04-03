@@ -30,6 +30,6 @@
 <form class="chat-message" action="/activities/{{$activity->id}}/chat" method="POST">
     {{ csrf_field() }}
     <input class="form-input" placeholder="Message" type="text" autofocus name="message">
-    <button type="submit">-></button>
+    <button id="send-message-btn" type="submit">-></button>
 </form>
 @endsection

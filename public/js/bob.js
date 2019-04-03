@@ -1,7 +1,4 @@
+document.getElementById( 'send-message-btn' ).scrollIntoView();
+const chatContainer = document.getElementsByClassName('messages-container');
 
-
-function stickynav () {
-    var navbar = document.getElementById('bob-navbar');
-    console.log(navbar);
-    navbar.style.position = "default";
-}
+chatContainer[0].scrollTop = chatContainer[0].scrollHeight;
