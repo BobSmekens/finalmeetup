@@ -50,7 +50,7 @@ a {
 }
 
 .chat-message {
-  width: 90%;
+  width: 80%;
   margin: 10px auto;
   display: block;
   text-align: center;
@@ -68,10 +68,10 @@ a {
 .chat-message button {
   position: absolute;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  bottom: -20px;
-  right: -20px;
+  height: 40px;
+  width: 40px;
+  bottom: -10px;
+  right: -10px;
   background-color: red;
 }
 
@@ -118,6 +118,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .section-flex h3 {

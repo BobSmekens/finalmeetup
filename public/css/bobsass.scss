@@ -32,6 +32,10 @@ button {
     background-color: rgba(0,0,0,0.0);
 }
 
+.nav-link {
+    color: white !important;
+}
+
 /*                        layouts.app               */
 .navbar-container {
     position: absolute;
@@ -43,18 +47,6 @@ button {
     justify-content: center;
     align-items: center;
     align-content: center;
-
-    .nav-link {
-        flex: 1;
-        z-index: 10;
-        opacity: 1;
-        box-sizing: border-box;
-        border: none;
-        background: -webkit-linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #FEAC5E,#C779D0, #4BC0C8);  
-        display: block;
-        margin: auto;
-    }
 }
 
 .user-feedback {

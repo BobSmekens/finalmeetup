@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 use \App\User;
 use \App\Account;
@@ -72,11 +73,16 @@ class UserController extends Controller
         if (Auth::user()->id==$id) {
             if($request->hasFile('photo')){
                 //  dd($request->photo);
-                $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+                // $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
+                Storage::put('public', $request->file('photo'));
+                // Storage::setVisibility($request->file('photo'), 'public');
             }
 
             $user = User::findOrFail($id);
-            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
+            // if($request->hasFile('photo')){
+            //     $user->photo = Storage::put('public', $request->file('photo'));
+            // }
+            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me', 'photo']));
             
             //return redirect('/account/' . $id);
             return redirect('/account/' . $id)->with('success', 'Account info updated');

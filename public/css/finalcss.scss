@@ -47,7 +47,7 @@ a   {
 }
 
 .chat-message {
-    width: 90%;
+    width: 80%;
     margin: 10px auto;
     display: block;
     text-align: center;
@@ -64,10 +64,10 @@ a   {
     button {
         position: absolute;
         border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        bottom: -20px;
-        right: -20px;
+        height: 40px;
+        width: 40px;
+        bottom: -10px;
+        right: -10px;
         background-color: red;
     }
 }
@@ -104,15 +104,12 @@ body {
     border: 1px solid white;
     margin: 20px;
 }
-.subscribe-activities-button-container {
-    button {
 
-    }
-}
 .section-flex {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 
     h3 {
         text-align: center;
