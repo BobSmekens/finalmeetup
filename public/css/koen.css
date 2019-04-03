@@ -75,3 +75,12 @@ padding-left:10px;
 .calendar-item:nth-last-child(){
     border-bottom: none;
 }
+.back-button{
+justify-content: flex-start;
+margin-left: 10px;
+}
+
+.back-button-box{
+width: 100%;
+display: flex;
+}

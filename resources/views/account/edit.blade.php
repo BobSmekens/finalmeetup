@@ -4,6 +4,8 @@
     <div class="content-top section-flex">
 
        <img id="edit-profile-pic" src="{{ URL::asset('storage/profilepics/profilepic' . $user->id . '.jpg') }}" alt="">
+      
+       <div class="back-button-box"> <a  class="back-button" href="{{URL::previous()}}">terug</a></div>
     </div>
 @endsection
 
