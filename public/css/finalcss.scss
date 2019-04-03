@@ -105,11 +105,18 @@ body {
     margin: 20px;
 }
 
+.back-button-bob {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
 .section-flex {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    position: relative;
 
     h3 {
         text-align: center;
