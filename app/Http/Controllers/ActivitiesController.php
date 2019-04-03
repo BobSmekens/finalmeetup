@@ -69,15 +69,6 @@ class ActivitiesController extends Controller
 
         $activity->users()->attach($user_id);
 
-         
-         
-
-        //  $chat[0]->save();
-         
-        //  dd($activity);
-
-
-        //return redirect('/activities');
         return redirect('/activities')->with('success', 'activity created');
     }
 
@@ -91,12 +82,17 @@ class ActivitiesController extends Controller
     {
         $activity = Activity::findOrFail($id);
         $allActivityUsers = $activity->users()->get();
+        // dd($allActivityUsers);
         $signedInUser = false;
-        foreach ($allActivityUsers as $user){
-            if($user->id == Auth::user()->id) {
-                $signedInUser = true;
+        if(Auth::check()) {
+            foreach ($allActivityUsers as $user){
+                if($user->id == Auth::user()->id) {
+                    $signedInUser = true;
+                }
             }
-        }
+        } else {
+            return redirect('/login')->with('success', 'log in om de activiteiten te kunnen zien');
+        };
         
         return view('activities.show', [
             'activity' => $activity,
