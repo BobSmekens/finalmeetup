@@ -71,7 +71,7 @@ class UserController extends Controller
     {
         if (Auth::user()->id==$id) {
             if($request->hasFile('photo')){
-                // dd($request->photo);
+                //  dd($request->photo);
                 $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
             }
 

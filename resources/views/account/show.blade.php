@@ -24,22 +24,22 @@
             @if(Auth::user()->id == $user->id)
             <a class="account-link-btn" href="/account/{{ $user->id }}/edit">
                 <i class="fas fa-user-edit edit-logo"></i>
-                <div class="logo-subscribt">edit</div>
+                {{-- <div class="logo-subscribt">edit</div> --}}
             </a>
    
             <a class="account-link-btn" href="/calendar">
                 <i class="fas fa-calendar-alt edit-logo"></i>                
-                <div class="logo-subscribt">agenda</div>
+                {{-- <div class="logo-subscribt">agenda</div> --}}
             </a>
       
             <form class="account-link-btn" action="/account/{{ $user->id }}" method="POST">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
         
-                <button  type="submit">
+                <button  type="submit" onclick="return confirm('Are you sure?')">
                     <i class="fas fa-dumpster-fire edit-logo"></i>
                 </button>
-                <div class="logo-subscribt">delete</div>
+                {{-- <div class="logo-subscribt">delete</div> --}}
             </form>
             @endif
         @endif

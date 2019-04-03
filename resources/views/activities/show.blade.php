@@ -71,7 +71,7 @@
             <form class="activity-button-link account-delete-button" action="/activities/{{ $activity->id }}" method="POST">
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
-                <button class="account-delete-button" type="submit">Delete</button>
+                <button class="account-delete-button" type="submit" onclick="return confirm('Are you sure?')">Delete</button>
             </form>
         @else
             <img class="chillup image-centered" src="{{ URL::asset('img/birdup.png') }}" alt="no picture chosen yet">
