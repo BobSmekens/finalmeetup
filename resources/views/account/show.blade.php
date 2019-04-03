@@ -23,12 +23,12 @@
         @if(Auth::check())
             @if(Auth::user()->id == $user->id)
             <a class="account-link-btn" href="/account/{{ $user->id }}/edit">
-                <img class="edit-logo" src="{{ URL::asset('img/editlogo.png') }}" alt="">
+                <i class="fas fa-user-edit edit-logo"></i>
                 <div class="logo-subscribt">edit</div>
             </a>
    
             <a class="account-link-btn" href="/calendar">
-                <img class="edit-logo" src="{{ URL::asset('img/calendarlogo.png') }}" alt="">
+                <i class="fas fa-calendar-alt edit-logo"></i>                
                 <div class="logo-subscribt">agenda</div>
             </a>
       
@@ -37,7 +37,7 @@
                 {{ csrf_field() }}
         
                 <button  type="submit">
-                    <img class="edit-logo" src="{{ URL::asset('img/deletelogo.png') }}" alt="">
+                    <i class="fas fa-dumpster-fire edit-logo"></i>
                 </button>
                 <div class="logo-subscribt">delete</div>
             </form>
