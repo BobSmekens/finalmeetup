@@ -5,7 +5,7 @@
     <div class="account-top">
         <div class="account-name toggle-content">{{ $user->name}}</div>
         <div class="account-image-container toggle-content ">
-            <img class="account-image" src="<?php echo asset('storage\VlwKdn820DixmAuDWMgN8EMWlwUZlMOaqNJNybAi.jpeg')?>" alt="no picture chosen yet">
+            <img class="account-image" src="<?php echo asset('storage/' . $user->photo)?>" alt="no picture chosen yet">
         </div>
     </div>
 

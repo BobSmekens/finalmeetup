@@ -75,14 +75,17 @@ class UserController extends Controller
                 //  dd($request->photo);
                 // $request->photo->storeAs('public/profilepics', 'profilepic' . $id .'.jpg');
                 Storage::put('public', $request->file('photo'));
+                // dd($request->file('photo')->hashName());
                 // Storage::setVisibility($request->file('photo'), 'public');
             }
 
             $user = User::findOrFail($id);
-            // if($request->hasFile('photo')){
-            //     $user->photo = Storage::put('public', $request->file('photo'));
-            // }
-            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me', 'photo']));
+            if($request->hasFile('photo')){
+                // dd($request->file('photo')->hashName());
+                $user->photo = $request->file('photo')->hashName();
+                $user->update();
+            }
+            $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
             
             //return redirect('/account/' . $id);
             return redirect('/account/' . $id)->with('success', 'Account info updated');
