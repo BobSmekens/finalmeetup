@@ -3,7 +3,6 @@
 @section('content-top')
     <div class="content-top section-flex">
         <h2 class="toggle-content">Edit "{{ $activity->activity}}"</h2>
-        <div class="back-button-bob"> <a href="{{URL::previous()}}"><img src="{{URL::asset('img/editlogo.png')}}" class="back-button"></a></div>
     </div>
 @endsection
 
