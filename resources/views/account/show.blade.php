@@ -36,7 +36,7 @@
                 {{ method_field('DELETE') }}
                 {{ csrf_field() }}
         
-                <button  type="submit" onclick="return confirm('Are you sure?')">
+                <button  type="submit" onclick="return confirm('Account verwijderen?')">
                     <i class="fas fa-dumpster-fire edit-logo"></i>
                 </button>
                 {{-- <div class="logo-subscribt">delete</div> --}}
