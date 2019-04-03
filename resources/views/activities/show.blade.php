@@ -36,6 +36,7 @@
             @endif
         @endif
     </div>
+    <div class="back-button-box"> <a href="{{URL::previous()}}"><img src="{{URL::asset('img/back-button.png')}}" class="back-button"></a></div>
 </div>
 @endsection
 

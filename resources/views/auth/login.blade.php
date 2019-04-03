@@ -3,6 +3,7 @@
 
 @section('content-top')
     <div class="content-top section-flex form-fixed">
+            <div class="back-button-box"> <a href="{{URL::previous()}}"><img src="{{URL::asset('img/back-button.png')}}" class="back-button"></a></div>
 
     </div>
 @endsection
