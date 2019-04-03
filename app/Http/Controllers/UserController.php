@@ -21,7 +21,7 @@ class UserController extends Controller
     {
         $users = \App\User::all();
         
-        return redirect('/account/' . Auth::user()->id)->with('success', 'You are successfully logged in');
+        return redirect('/account/' . Auth::user()->id)->with('success', 'Je bent ingelogged');
         // return view('account.index', [
         //     'users' => $users
         // ]);
@@ -88,7 +88,7 @@ class UserController extends Controller
             $user->update(request(['name', 'email', 'phone', 'skills', 'about_me']));
             
             //return redirect('/account/' . $id);
-            return redirect('/account/' . $id)->with('success', 'Account info updated');
+            return redirect('/account/' . $id)->with('success', 'Account info is aangepast');
 
             // $user->name = request('name');
             // $user->email = request('email');
@@ -117,12 +117,12 @@ class UserController extends Controller
 
         $user->delete();
         }
-        return redirect('/signup')->with('success', 'Account deleted');
+        return redirect('/signup')->with('success', 'Account verwijderd');
     }
 
     public function registered()
     {
-        return redirect('/account/' . Auth::user()->id)->with('success', 'Thank you for registering');
+        return redirect('/account/' . Auth::user()->id)->with('success', 'Bedankt voor je registratie');
         // return view('account.index', [
         //     'users' => $users
         // ]);
