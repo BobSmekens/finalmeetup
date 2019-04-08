@@ -87,6 +87,7 @@ class AppController extends Controller
     }
 
     public function deleteCalendarItem(Activity $activity) {
+        //$activity = Activity::with('users');  //is de relatie die nog niet gekoppeld is
         $user_id = \Auth::user()->id;
         $activity->users()->detach([$user_id]);
 
