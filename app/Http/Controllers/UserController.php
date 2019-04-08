@@ -114,8 +114,10 @@ class UserController extends Controller
     {
         if (Auth::user()->id==$id) {
         $user = User::findOrFail($id);
-
+        $path = '/public/' . $user->photo;  // the value is : localhost/project/image/filename.format
+        \File::delete($path);
         $user->delete();
+
         }
         return redirect('/signup')->with('success', 'Account verwijderd');
     }
