@@ -62,6 +62,10 @@
                 @endif
             @endforeach
         </div>
+        <div class="activity-property">
+            <span class="bold-text">Wanneer aangemaakt? </span><br>
+            {{ $activity->created_at}}
+        </div>
     </div>
     @if($signedInUser ==true)
         <a class="activity-button-link" href="/activities/{{ $activity->id }}/chat">Chat</a>
