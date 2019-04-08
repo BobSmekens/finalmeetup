@@ -220,6 +220,7 @@ body {
 .activities-align-bot .activities-table-titles-container {
   position: absolute;
   bottom: 0;
+  color: white;
 }
 
 .activities-signup-link {
@@ -237,7 +238,7 @@ body {
 
 .activities-signup-link a, .activities-signup-link .activity-subscribe-btn {
   padding: 10px 30px;
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 10px 30px;
   color: white;
   font-weight: bold;
@@ -268,10 +269,14 @@ body {
           flex: 1;
   margin: 20px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   text-align: center;
   opacity: .5;
+}
+
+.activities-sort-container a {
+  color: white;
 }
 
 .activities-sort-container .active {
