@@ -61,7 +61,8 @@ class ActivitiesController extends Controller
          $activity->posted_by = Auth::user()->id;
          $activity->max_persons = request('persons');
          $activity->category = request('category');
-         $activity->description = request('description');   
+         $activity->description = request('description');
+         $activity->photo = Auth::user()->id->photo;   
          
 
          $activity->save();

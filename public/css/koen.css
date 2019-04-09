@@ -91,3 +91,16 @@ flex-direction: column;
     width:25px;
     height: 25px;
 }
+
+.layout-activities:nth-child(even){
+background-color: lightgray;
+
+}
+
+.layout-activities:nth-child(odd){
+
+}
+.pagination{
+    margin-top:10px;
+}
+

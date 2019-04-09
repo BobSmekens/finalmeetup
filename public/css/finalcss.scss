@@ -196,6 +196,14 @@ body {
         bottom: 0;
         color:white;
     }
+    .activities-table-titles-container:nth-child(even) {
+  
+    }
+
+    .activities-table-titles-container:nth-child(odd) {
+        background: rgba(20, 20, 20, 0.521);
+    }
+
 }
 
 .activities-signup-link {
@@ -286,4 +294,13 @@ body {
     #fullscreen-div {
         display: none;
     }
+}
+.account-image-leader{
+    height:50px;
+    margin-left:16px;
+    border-radius: 50%;
+}
+
+.margin-koen{
+    margin:10px;
 }

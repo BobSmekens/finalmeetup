@@ -32,7 +32,7 @@
 
 <div class="activity-list-container">
 @foreach($activities->sortByDesc('created_at') as $activity)
-<div class="activities-table-titles-container">
+<div class="activities-table-titles-container layout-activities">
     <div class="activity-index-col">
         {{$activity->users->count()}}/{{$activity->max_persons}}
         @if ($activity->users->count()>=$activity->max_persons)
@@ -42,9 +42,9 @@
     <div class="activity-table">
         <a href="/activities/{{ $activity->id }}">{{ $activity->activity }}</a>
     </div>
-
-    <div class="activity-index-col">{{$activity->users[0]->name}}</div>
-    <div class="created-at">{{$activity->created_at->diffForHumans()}}</div>
+{{$activity->photo}}
+    <div class="activity-index-col account-image-leader">
+            <img class="account-image-leader" src="{{asset('public/' . $activity->users[0]->photo)}}" alt="nog geen profielfoto"></div>
 </div>
 
 @endforeach
@@ -54,7 +54,7 @@
 
 {{$activities->links()}}
 @if (Auth::check())
-    <div class="activity-add-container">
+    <div class="activity-add-container margin-koen">
         <a class="activity-index-add" href="/activities/create">Organiseer activiteit</a>
     </div>
 @endif
