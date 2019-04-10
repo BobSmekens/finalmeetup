@@ -62,7 +62,6 @@ class ActivitiesController extends Controller
          $activity->max_persons = request('persons');
          $activity->category = request('category');
          $activity->description = request('description');
-         $activity->photo = Auth::user()->id->photo;   
          
 
          $activity->save();
@@ -70,7 +69,7 @@ class ActivitiesController extends Controller
 
         $activity->users()->attach($user_id);
 
-        return redirect('/activities')->with('success', 'activity created');
+        return redirect('/activities')->with('success', 'Activiteit aangemaakt');
     }
 
     /**
@@ -136,7 +135,7 @@ class ActivitiesController extends Controller
         $activity->update();
 
         //return redirect('/activities/' . $id);
-        return redirect('/activities/' . $id)->with('success', 'activity updated');
+        return redirect('/activities/' . $id)->with('success', 'activiteit bijgewerkt');
     }
 
     /**
@@ -151,7 +150,7 @@ class ActivitiesController extends Controller
         $activity->delete();
         
         //return redirect('/activities');
-        return redirect('/activities')->with('success', 'activiteit deleted');
+        return redirect('/activities')->with('success', 'activiteit verwijderd');
 
     }
 
@@ -185,6 +184,6 @@ class ActivitiesController extends Controller
         $user_id = \Auth::user()->id;
         $activity->users()->detach([$user_id]);
 
-        return redirect('/activities/'.$activity->id)->with('success', 'You  unsubscribed from the activity');;
+        return redirect('/activities/'.$activity->id)->with('success', 'Je bent uitgeschreven voor de activiteit');;
     }
 }

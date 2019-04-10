@@ -42,7 +42,6 @@
     <div class="activity-table">
         <a href="/activities/{{ $activity->id }}">{{ $activity->activity }}</a>
     </div>
-{{$activity->photo}}
     <div class="activity-index-col account-image-leader">
             <img class="account-image-leader" src="{{asset('public/' . $activity->users[0]->photo)}}" alt="nog geen profielfoto"></div>
 </div>

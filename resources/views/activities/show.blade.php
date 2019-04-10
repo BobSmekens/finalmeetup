@@ -64,7 +64,7 @@
         </div>
         <div class="activity-property">
             <span class="bold-text">Wanneer aangemaakt? </span><br>
-            {{ $activity->created_at}}
+            {{ $activity->created_at->diffForHumans()}}
         </div>
     </div>
     @if($signedInUser ==true)
