@@ -126,7 +126,12 @@ body {
 .content-bottom {
     height: 70vh;
 }
-
+.home-link-button-left{
+background-color: #FEAC5E;
+}
+.home-link-button-right{
+background-color: #4BC0C8;
+}
 .home-link-button {
     flex: 1;
     position: relative;
@@ -137,7 +142,6 @@ body {
     height: 65%;
     margin: 10px;
     border-radius: 10px;
-    border: 1px solid pink;
     text-align: center;
 
     h2 {

@@ -9,14 +9,14 @@
 
 @section('content-bottom')
     <div class="content-bottom section-flex">
-        <div class="home-link-button">
+        <div class="home-link-button home-link-button-left">
             <p>Want to learn something?</p>
             <a href="/skillup">
                 <img class="home-link-image skillbird" src="{{ URL::asset('img/birdup.png') }}" alt="">
                 <h2> Skillup!</h2>  
             </a>
         </div>
-        <div class="home-link-button">
+        <div class="home-link-button home-link-button-right">
             <p>Just want to hang? </p>
             <a href="/chillup">
                 <img class="home-link-image chillbird" src="{{ URL::asset('img/birdup.png') }}" alt="">
